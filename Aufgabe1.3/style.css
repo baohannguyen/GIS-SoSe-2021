@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    
+}
+
+.navigation {
+    color: white;
+    background-color:black;
+}
+
+nav { 
+    position: sticky;
+    right: 0;
+}
