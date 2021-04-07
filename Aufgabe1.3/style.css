@@ -4,11 +4,16 @@ body {
 }
 
 .navigation {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    right: 0;
     color: white;
     background-color:black;
 }
 
-nav { 
-    position: sticky;
-    right: 0;
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
