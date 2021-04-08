@@ -1,24 +1,26 @@
-span {
-    color: white;
-    background-color: black;
-    text-decoration: none;  
-}
-
 body {
+    width: 800px;
+    margin: auto;
     font-family: sans-serif;
     background-image: url("bg.png");
 }
 
-strong:hover {
-    color: cornflowerblue;
+span {
+    color: yellow;
+    background-color:cornflowerblue;
+    text-decoration: none;  
 }
 
+strong:hover {
+    color: white;
+    background-color: black;
+}
 
 .navigation {
     position: sticky;
     overflow: auto;
     top: 0;
-   
+    right: 0; 
 }
 
 nav {
@@ -28,7 +30,15 @@ nav {
 }
 
 h1, h2 {
-    margin: auto;
     font-size: 5em;
 }
 
+a {
+    text-decoration: none;
+}
+
+input {
+    width: 200px;
+
+
+}
