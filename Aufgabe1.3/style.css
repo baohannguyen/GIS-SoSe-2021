@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    background-image: url("bg.png");
+}
+
+strong {
+    color: cornflowerblue;
+}
+
+
+span {
+    position: sticky;
+    overflow: auto;
+    top: 0;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
