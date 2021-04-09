@@ -61,10 +61,15 @@ nav {
 
 input {
     background-color:rgb(127, 157, 214);
-    width: 350px;
-    padding: 10px 20px 10px 70px;
+    width: 400px;
+    padding: 10px 20px 10px 10px;
     border: 2px solid cornflowerblue;
-    margin: 10x 30px 20px 10px;
     /* margin: top right bottom left  */
+}
 
+.message {
+    background-color:rgb(127, 157, 214);
+    width: 550px;
+    padding: 10px 10px 50px 10px;
+    border: 2px solid cornflowerblue;
 }
