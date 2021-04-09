@@ -5,22 +5,51 @@ body {
     background-image: url("bg.png");
 }
 
+h1, h2 {
+    font-size: 3em;
+    text-align: center;
+    color:cornflowerblue;
+}
+
+
 span {
-    color: yellow;
     background-color:cornflowerblue;
     text-decoration: none;  
 }
 
-strong:hover {
+strong {
     color: white;
-    background-color: black;
+    background-color: rgba(56, 113, 219, 0.863);
+    text-decoration-line: none;
+    font-size: 1.5em;
 }
+
+strong:hover {    
+   color: skyblue;
+} 
+
+.activetitle {
+    background-color: rgba(56, 113, 219, 0.863);
+    text-decoration: none;
+}
+
+#othertitle a:hover {
+    color: slateblue;
+    text-decoration: none;
+}
+/* dadurch werden die andere Bereiche gehovert */
+
+.normaltitle {
+     text-decoration: none;
+     font-size: 1.5em;
+}
+ /* macht die Unterlinien  */
 
 .navigation {
     position: sticky;
-    overflow: auto;
     top: 0;
     right: 0; 
+    
 }
 
 nav {
@@ -28,18 +57,14 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
 }
-
-h1, h2 {
-    font-size: 5em;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-}
+/* sorgt dafür, dass es rechts ist */
 
 input {
-    width: 200px;
-
+    background-color:rgb(127, 157, 214);
+    width: 350px;
+    padding: 10px 20px 10px 70px;
+    border: 2px solid cornflowerblue;
+    margin: 10x 30px 20px 10px;
+    /* margin: top right bottom left  */
 
 }
