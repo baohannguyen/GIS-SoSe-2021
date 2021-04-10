@@ -6,21 +6,21 @@ body {
 }
 
 h1, h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     color:cornflowerblue;
 }
 
-span {
+/* span { 
     background-color:cornflowerblue;
     text-decoration: none;  
-}
+}*/
 
 strong {
     color: white;
     background-color: rgba(56, 113, 219, 0.863);
     text-decoration-line: none;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 strong:hover {    
@@ -40,9 +40,9 @@ strong:hover {
 
 .normaltitle {
      text-decoration: none;
-     font-size: 1.3em;
+     font-size: 1.5em;
 }
- /* macht die Unterlinien  */
+ /* macht die Unterlinien weg */
 
 .navigation {
     position: sticky;
@@ -54,19 +54,72 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    background-color: cornflowerblue;
+    border: 1px solid cadetblue;
 }
 /* sorgt dafür, dass es rechts ist */
 
+.fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 10px 2px 10px;
+    width: 15px;
+    text-decoration: none;
+    margin: 0px 2px;
+}
+.fa:hover {
+    color:black;
+    opacity: 0.7;
+  }
+.fa-facebook {
+    background: rgb(52, 52, 172);
+    color:white;
+    text-align: center;
+  }
+
+.fa-twitter {
+    background: white;
+    color: black;
+    margin: 1px 50px;
+}
+
+.fa-instagram {
+    background:lightcoral;
+    color: black;
+    margin: 0px 100px;
+}
+
+/* Steckbrief-Seite */
 .picture {
+    border-radius: 10%;
     border: 1px solid gray;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.unipicture{
+    border: 1px solid cadetblue;
     display: block;
     margin-right: auto;
     margin-left: auto;
 }
 
 .university {
-    color: cornflowerblue;
+    color:cadetblue;
     font-size: 1.3em;
+}
+
+div {
+    width: 750px;
+    padding: 20px 10px 20px 20px;
+    margin: 20px 20px 20px 10px;
+    border: 2px solid cadetblue;
+}
+
+/* Portfolio-Seite */
+.colorportfolio {
+    color:cornflowerblue;
 }
 
 
