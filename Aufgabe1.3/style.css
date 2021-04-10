@@ -11,13 +11,6 @@ h1, h2 {
     color:cornflowerblue;
 }
 
-.picture {
-    border: 1px solid black;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 span {
     background-color:cornflowerblue;
     text-decoration: none;  
@@ -27,7 +20,7 @@ strong {
     color: white;
     background-color: rgba(56, 113, 219, 0.863);
     text-decoration-line: none;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 strong:hover {    
@@ -47,7 +40,7 @@ strong:hover {
 
 .normaltitle {
      text-decoration: none;
-     font-size: 1.5em;
+     font-size: 1.3em;
 }
  /* macht die Unterlinien  */
 
@@ -64,6 +57,20 @@ nav {
 }
 /* sorgt dafür, dass es rechts ist */
 
+.picture {
+    border: 1px solid gray;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.university {
+    color: cornflowerblue;
+    font-size: 1.3em;
+}
+
+
+/* Kontakt-Seite */
 table, td, tr {
     width: 50%;
     border-collapse: collapse;
