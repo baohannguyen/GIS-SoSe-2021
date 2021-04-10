@@ -11,7 +11,6 @@ h1, h2 {
     color:cornflowerblue;
 }
 
-
 span {
     background-color:cornflowerblue;
     text-decoration: none;  
@@ -48,8 +47,7 @@ strong:hover {
 .navigation {
     position: sticky;
     top: 0;
-    right: 0; 
-    
+    right: 0;   
 }
 
 nav {
