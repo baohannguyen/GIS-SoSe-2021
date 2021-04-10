@@ -11,6 +11,13 @@ h1, h2 {
     color:cornflowerblue;
 }
 
+.picture {
+    border: 1px solid black;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 span {
     background-color:cornflowerblue;
     text-decoration: none;  
@@ -57,17 +64,30 @@ nav {
 }
 /* sorgt dafür, dass es rechts ist */
 
+table, td, tr {
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px solid rgb(71, 118, 206);
+    text-decoration: none;
+
+}
+
 input {
-    background-color:rgb(127, 157, 214);
+    /* background-color:rgb(127, 157, 214); */
     width: 400px;
     padding: 10px 20px 10px 10px;
     border: 2px solid cornflowerblue;
     /* margin: top right bottom left  */
+    /* Vorname, Nachname, E-mail */
 }
 
 .message {
-    background-color:rgb(127, 157, 214);
+    /* background-color:rgb(127, 157, 214); */
     width: 550px;
     padding: 10px 10px 50px 10px;
     border: 2px solid cornflowerblue;
+}
+
+.text {
+    color:gray;
 }
