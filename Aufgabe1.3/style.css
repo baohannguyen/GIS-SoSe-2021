@@ -16,6 +16,10 @@ h1, h2 {
     color: white;
 }
 
+.links {
+    color: cornflowerblue;
+}
+
 strong {
     color: white;
     background-color: lightblue;
@@ -46,11 +50,14 @@ strong:hover {
 }
  /* macht die Unterlinien weg */
 
+ 
+
 .navigation {
     position: sticky;
     top: 0;
     right: 0;   
 }
+
 
 nav {
     display: flex;
@@ -140,7 +147,6 @@ div {
 }
 
 .video1 {
-    display: flex;
     color:white;
     text-align: center;
     font-size: 1.2em;
@@ -161,9 +167,17 @@ div {
 
 .audio {
     float: left;
-    width: 40%;
-    padding: 10px 50px 40px;
+    width: 50%;
+    padding: 10px 0px 20px 0px;
     box-sizing: border-box;
+}
+.audioposition {
+    display: flex; 
+}
+
+.music {
+    color: white;
+    font-size: 5em;
 }
 
 /* Kontakt-Seite */
