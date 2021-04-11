@@ -5,20 +5,20 @@ body {
     background-image: url("bg.png");
 }
 
+main {
+    background-color:rgb(157, 197, 211); 
+    color:white;
+}
+
 h1, h2 {
     font-size: 2.5em;
     text-align: center;
-    color:cornflowerblue;
+    color: white;
 }
-
-/* span { 
-    background-color:cornflowerblue;
-    text-decoration: none;  
-}*/
 
 strong {
     color: white;
-    background-color: rgba(56, 113, 219, 0.863);
+    background-color: lightblue;
     text-decoration-line: none;
     font-size: 1.5em;
 }
@@ -28,8 +28,9 @@ strong:hover {
 } 
 
 .activetitle {
-    background-color: rgba(56, 113, 219, 0.863);
+    background-color: lightblue;
     text-decoration: none;
+    padding-right: 15px;
 }
 
 #othertitle a:hover {
@@ -41,6 +42,7 @@ strong:hover {
 .normaltitle {
      text-decoration: none;
      font-size: 1.5em;
+     padding-right: 15px;
 }
  /* macht die Unterlinien weg */
 
@@ -54,7 +56,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-color: cornflowerblue;
+    background-color: lightblue;
     border: 1px solid cadetblue;
 }
 /* sorgt dafür, dass es rechts ist */
@@ -63,7 +65,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 10px 2px 10px;
+    padding: 8px 10px 3px 10px;
     width: 15px;
     text-decoration: none;
     margin: 0px 2px;
@@ -73,21 +75,24 @@ nav {
     opacity: 0.7;
   }
 .fa-facebook {
-    background: rgb(52, 52, 172);
-    color:white;
+    background: transparent;
+    color: black;
     text-align: center;
+    font-size: 18px;
   }
 
 .fa-twitter {
-    background: white;
+    background: transparent;
     color: black;
     margin: 1px 50px;
+    font-size: 18px;
 }
 
-.fa-instagram {
-    background:lightcoral;
+.fa-pinterest {
+    background:transparent;
     color: black;
     margin: 0px 100px;
+    font-size: 18px;
 }
 
 /* Steckbrief-Seite */
@@ -99,44 +104,93 @@ nav {
     margin-left: auto;
 }
 .unipicture{
-    border: 1px solid cadetblue;
+    border: 1px solid white;
     display: block;
     margin-right: auto;
     margin-left: auto;
 }
 
 .university {
-    color:cadetblue;
+    color: white;
     font-size: 1.3em;
+    text-align: center;
 }
 
 div {
     width: 750px;
     padding: 20px 10px 20px 20px;
-    margin: 20px 20px 20px 10px;
-    border: 2px solid cadetblue;
+    margin: 10px 20px 20px 10px;
+    border: 1px solid transparent;
+    
+}
+
+.animepicandtext {
+    padding-left: 12px;
+}
+
+#cat {
+    padding-left: 15;
 }
 
 /* Portfolio-Seite */
 .colorportfolio {
-    color:cornflowerblue;
+    color:white;
+    text-align: center;
+    font-size: 1.2em;
 }
 
+.video1 {
+    display: flex;
+    color:white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#videopad {
+    padding-left: 22px;
+    padding-bottom: 22px;
+}
+
+#treasurebox {
+    padding-left: 40px;
+}
+
+.blendertextandboat {
+    padding-left: 27px;
+}
+
+.audio {
+    float: left;
+    width: 40%;
+    padding: 10px 50px 40px;
+    box-sizing: border-box;
+}
 
 /* Kontakt-Seite */
 table, td, tr {
     width: 50%;
     border-collapse: collapse;
-    border: 2px solid rgb(71, 118, 206);
+    border: 2px solid lightblue;
+    background: white;
     text-decoration: none;
+    margin-left: 110px;
+    color:black;
 
+}
+
+.formular {
+    width: 590px;
+    padding: 30px 50px 20px;
+    margin: 20px 60px 20px 60px;
+    border: none;
+    background-color: rgb(157, 197, 211);
 }
 
 input {
     /* background-color:rgb(127, 157, 214); */
     width: 400px;
     padding: 10px 20px 10px 10px;
-    border: 2px solid cornflowerblue;
+    border: 2px solid white;
     /* margin: top right bottom left  */
     /* Vorname, Nachname, E-mail */
 }
@@ -145,9 +199,24 @@ input {
     /* background-color:rgb(127, 157, 214); */
     width: 550px;
     padding: 10px 10px 50px 10px;
-    border: 2px solid cornflowerblue;
+    border: 2px solid white;
 }
 
-.text {
+#text {
     color:gray;
+    margin-bottom: 40px;
+}
+
+.sendbutton {
+    background-color: white;
+    color: rgb(157, 197, 211);
+    padding: 15px 60px;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 40px 2px 30px 1px;
+}
+
+.contact {
+    color:white;
+    font-size: 1.5em;
 }

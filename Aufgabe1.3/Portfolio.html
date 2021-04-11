@@ -5,32 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navigation">
         <nav id="othertitle">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-               <a href="https://www.instagram.com/han.ngyn_/" class="fa fa-instagram"></a>
+               <a href="https://www.pinterest.de" class="fa fa-pinterest"></a>
                <a href="https://de-de.facebook.com/" class="fa fa-facebook"></a>
                <a href="https://twitter.com/?lang=de" class="fa fa-twitter"></a>
                <a href="Portfolio.html" class="activetitle"><strong>Portfolio</strong></a>
                <a href="index.html" class="normaltitle">Steckbrief</a>
-               <a href="kontakt.html" class="normaltitle">Kontakt</a>   
+               <a href="kontakt.html" class="normaltitle">Kontaktdaten</a>   
         </nav>
     </header>
     <main>
         <h1 id="portfolio">Portfolio</h1>
-        <b class="colorportfolio">Blender-Arbeiten</b>
-        <p>Ich hab erst vor ein paar Wochen angefangen mit <em>Blender</em> zu arbeiten, also sind das grad noch keine Meisterwerke ^^"</p>
-        <img src="bilder/U-boot2.jpeg" alt="Bild"> <img src="bilder/Schatztruhe2.jpg" alt="Bild">
-        <hr>
+        <p class="colorportfolio">Blender-Arbeiten</p>
+        <p class="blendertextandboat">Ich hab erst vor ein paar Wochen angefangen mit Blender zu arbeiten, also sind das grad noch keine Meisterwerke ^^"</p>
+        <img class="blendertextandboat" src="bilder/U-boot2.jpeg" alt="Bild von einem U-boot"> <img id="treasurebox" src="bilder/Schatztruhe2.jpg" alt="Bild von einer Schatztruhe">
         <p class="colorportfolio">Audio-Beispiele zum Arbeiten (Nicht von mir)</p>
-        <audio src="audios/bensound-cute.mp3" controls></audio> Royalty Free Music from<a href="https://www.bensound.com/royalty-free-music/track/cute"> Benjamin Tissot (also known as Bensound)</a>
-        <p><audio src="audios/bensound-retrosoul.mp3" controls></audio> Royalty Free Music from<a href="https://www.bensound.com/royalty-free-music/track/retro-soul"> Benjamin Tissot (also known as Bensound)</a></p>
-        <hr>
-        <p class="colorportfolio">Video-Beispiel für die Übung</p>
-        <video width="800"src="videos/HelloWorld.mp4" controls loop></video>
+        <div class="audio">
+        <audio src="audios/bensound-cute.mp3" controls></audio> <!--Royalty Free Music from<a href="https://www.bensound.com/royalty-free-music/track/cute"> Benjamin Tissot (also known as Bensound)</a> -->
+        </div>
+        <div class="audio">
+        <audio src="audios/bensound-retrosoul.mp3" controls></audio> <!--Royalty Free Music from<a href="https://www.bensound.com/royalty-free-music/track/retro-soul"> Benjamin Tissot (also known as Bensound)</a></p>-->
+        </div>
+        <p class="video1">Video-Beispiel für die Übung</p>
+        <video id="videopad" width="750" src="videos/HelloWorld.mp4" controls loop></video>
     </main>
     <footer>
         <p><small>Zurück zum <a href="#portfolio">Portfolio</a></small></p>
