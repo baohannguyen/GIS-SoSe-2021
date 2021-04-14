@@ -140,6 +140,11 @@ div {
 }
 
 /* Portfolio-Seite */
+div h1{
+    color: white;
+    font-size: 3em;
+
+}
 .colorportfolio {
     color:white;
     text-align: center;
@@ -181,15 +186,17 @@ div {
 }
 
 /* Kontakt-Seite */
-table, td, tr {
+div ~ table, td{
+    color: royalblue;
+}
+
+table, td, tr{
     width: 50%;
     border-collapse: collapse;
     border: 2px solid lightblue;
     background: white;
     text-decoration: none;
     margin-left: 110px;
-    color:black;
-
 }
 
 .formular {
