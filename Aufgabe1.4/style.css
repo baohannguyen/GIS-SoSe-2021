@@ -103,6 +103,11 @@ nav {
 }
 
 /* Steckbrief-Seite */
+img+p{
+    text-align: center;
+    background-color:skyblue;
+}
+
 .picture {
     border-radius: 10%;
     border: 1px solid gray;
@@ -143,8 +148,15 @@ div {
 div h1{
     color: white;
     font-size: 3em;
-
 }
+
+a[href="https://www.bensound.com/royalty-free-music/track/cute"]{
+    color: red;
+}
+a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"]{
+    color:salmon;
+}
+
 .colorportfolio {
     color:white;
     text-align: center;
@@ -190,6 +202,12 @@ div ~ table, td{
     color: royalblue;
 }
 
+span::before {
+    content:"Klick mich";
+    margin-left: 70px;
+    font-size: 0.75em;
+}
+
 table, td, tr{
     width: 50%;
     border-collapse: collapse;
@@ -228,6 +246,18 @@ input {
     margin-bottom: 40px;
 }
 
+@keyframes animation{
+    0%  {background-color: lightskyblue;}
+    25% {background-color: violet;}
+    50% {background-color: lightgoldenrodyellow;}
+    75% {background-color: lightsteelblue;}
+}
+#animatedbutton{
+    width: 70px;
+    height: 50px;
+    animation-duration: 5s;
+    animation-name: animation;
+}
 .sendbutton {
     background-color: white;
     color: rgb(157, 197, 211);
@@ -241,3 +271,4 @@ input {
     color:white;
     font-size: 1.5em;
 }
+
