@@ -8,13 +8,11 @@ body {
 
 .container{
     display: flex;
-    /* flex-direction: column; */
     flex-flow: column wrap;
 }
 
 @media screen and (max-width: 600px) {
     body{
-        background-color: yellow;
         width:100%;
         margin:auto;
     }
