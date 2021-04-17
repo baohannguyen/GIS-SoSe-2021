@@ -3,10 +3,13 @@ body {
     margin: auto;
     font-family: sans-serif;
     background-image: url("bg.png");
+
 }
 
-.grid{
-    display:grid;
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    flex-flow: column wrap;
 }
 
 @media screen and (max-width: 600px) {
