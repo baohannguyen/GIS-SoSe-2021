@@ -14,14 +14,6 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
-    body{
-        width:50%;
-
-        
-    }
-}
-
 main {
     background-color:rgb(157, 197, 211); 
     color:white;
@@ -250,7 +242,7 @@ table, td, tr{
     border: 2px solid lightblue;
     background: white;
     text-decoration: none;
-    margin-left: 110px;
+    margin-left: 10%;
 }
 
 .formular {
@@ -308,3 +300,24 @@ input {
     font-size: 1.5em;
 }
 
+@media screen and (max-width: 600px) {
+    h1, h2 {
+       font-size:1em;
+    }
+    table, td, tr{
+        width:30%;
+    }
+    .formular{
+        width:100%;
+        margin-left:10%;
+        padding: 0;
+    }
+    .icon-container {
+        display:flex;
+    }
+    .icon-container a {
+        margin:0 2%;
+        font-size: 20px;
+    }
+    
+}
