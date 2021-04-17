@@ -5,6 +5,10 @@ body {
     background-image: url("bg.png");
 }
 
+.grid{
+    display:grid;
+}
+
 @media screen and (max-width: 600px) {
     body{
         background-color: yellow;
