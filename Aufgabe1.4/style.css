@@ -1,5 +1,4 @@
 body {
-    width: 800px;
     margin: auto;
     font-family: sans-serif;
     background-image: url("bg.png");
@@ -10,6 +9,7 @@ body {
     display: flex;
     flex-flow: column wrap;
 }
+
 
 @media screen and (max-width: 600px) {
     body{
@@ -82,7 +82,7 @@ nav {
 /* sorgt dafür, dass es rechts ist */
 
 .fa {
-    position: absolute;
+    position: static;
     top: 0;
     left: 0;
     padding: 8px 10px 3px 10px;
