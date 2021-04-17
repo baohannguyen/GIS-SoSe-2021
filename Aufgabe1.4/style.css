@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+
 }
 
 
@@ -163,9 +164,11 @@ img+p{
 }
 
 div {
-    width: 750px;
+    /* width: 750px; */
+    width:402px;
     /* padding: 20px 10px 20px 20px; */
     border: 1px solid transparent;
+    margin-right: auto;
     
 }
 
