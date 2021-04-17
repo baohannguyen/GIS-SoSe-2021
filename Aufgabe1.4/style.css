@@ -1,4 +1,5 @@
 body {
+    width:800px;
     margin: auto;
     font-family: sans-serif;
     background-image: url("bg.png");
@@ -37,7 +38,7 @@ strong {
     color: white;
     background-color: lightblue;
     text-decoration-line: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 strong:hover {    
@@ -78,6 +79,7 @@ nav {
     justify-content: flex-end;
     background-color: lightblue;
     border: 1px solid cadetblue;
+    padding:1rem 0;
 }
 /* sorgt dafür, dass es rechts ist */
 
@@ -85,8 +87,8 @@ nav {
     position: static;
     top: 0;
     left: 0;
-    padding: 8px 10px 3px 10px;
-    width: 15px;
+    /* padding: 8px 10px 3px 10px; */
+    /* width: 15px; */
     text-decoration: none;
     margin: 0px 2px;
 }
@@ -94,7 +96,7 @@ nav {
     color:black;
     opacity: 0.7;
   }
-.fa-facebook {
+/* .fa-facebook {
     background: transparent;
     color: black;
     text-align: center;
@@ -111,10 +113,27 @@ nav {
 .fa-pinterest {
     background:transparent;
     color: black;
-    margin: 0px 100px;
+    margin: 0px 10%;
     font-size: 18px;
+} */
+
+.icon-container {
+    display:flex;
 }
 
+.icon-container a {
+    margin:0 10%;
+    font-size: 25px;
+}
+
+.nav-container {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.nav-container a {
+    font-size: 1.2em;
+}
 /* Steckbrief-Seite */
 img+p{
     text-align: center;
@@ -143,8 +162,7 @@ img+p{
 
 div {
     width: 750px;
-    padding: 20px 10px 20px 20px;
-    margin: 10px 20px 20px 10px;
+    /* padding: 20px 10px 20px 20px; */
     border: 1px solid transparent;
     
 }
