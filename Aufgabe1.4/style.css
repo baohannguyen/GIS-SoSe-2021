@@ -357,7 +357,17 @@ input {
     }
     .colorportfolio {
         color:white;
-        font-size: 1.2em;
+        font-size: 0.9em;
+        margin-left: 1%;
+    }
+    #blendertext{
+        column-count: 2;
+        font-size: 0.75em;
+       
+    }
+    img{
+        height:190px;
+        width:230px;
     }
    
     .container{
