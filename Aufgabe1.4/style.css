@@ -156,9 +156,7 @@ img+p{
 }
 
 div {
-    /* width: 750px; */
     width:402px;
-    /* padding: 20px 10px 20px 20px; */
     border: 1px solid transparent;
     margin-right: auto;
     
@@ -176,13 +174,14 @@ div {
 div h1{
     color: white;
     font-size: 3em;
+    margin-left: 75%;
 }
 
 a[href="https://www.bensound.com/royalty-free-music/track/cute"]{
-    color: red;
+    color: lightseagreen;
 }
 a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"]{
-    color:salmon;
+    color:mediumaquamarine;
 }
 
 .colorportfolio {
@@ -191,29 +190,23 @@ a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"]{
     font-size: 1.2em;
 }
 
+#blendertext{
+    margin-left: 1%;
+}
 .video1 {
     color:white;
     text-align: center;
     font-size: 1.2em;
 }
 
-#videopad {
-    padding-left: 22px;
+#videopadding {
     padding-bottom: 22px;
 }
 
-#treasurebox {
-    padding-left: 40px;
-}
-
-.blendertextandboat {
-    padding-left: 27px;
-}
-
 .audio {
-    float: left;
-    width: 50%;
-    padding: 10px 0px 20px 0px;
+    /* float: left;
+    width: 50%; */
+    padding: 1% 12%;
     box-sizing: border-box;
 }
 .audioposition {
