@@ -427,7 +427,7 @@
             /*Tablet (600-1024px)*/
             body {
                 font-size: 1.3em;
-                width: 100%;
+                /* width: 100%; */
             }
         }
         
