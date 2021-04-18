@@ -1,25 +1,23 @@
 body {
-    width:800px;
+    width: 800px;
     margin: auto;
     font-family: sans-serif;
     background-image: url("bg.png");
-
 }
 
-.container{
+.container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-
 }
-
 
 main {
-    background-color:rgb(157, 197, 211); 
-    color:white;
+    background-color: rgb(157, 197, 211);
+    color: white;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-size: 2.5em;
     text-align: center;
     color: white;
@@ -36,9 +34,9 @@ strong {
     font-size: 1.2em;
 }
 
-strong:hover {    
-   color: skyblue;
-} 
+strong:hover {
+    color: skyblue;
+}
 
 .activetitle {
     background-color: lightblue;
@@ -50,23 +48,24 @@ strong:hover {
     color: slateblue;
     text-decoration: none;
 }
+
+
 /* dadurch werden die andere Bereiche gehovert */
 
 .normaltitle {
-     text-decoration: none;
-     font-size: 1.5em;
-     padding-right: 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-right: 15px;
 }
- /* macht die Unterlinien weg */
 
- 
+
+/* macht die Unterlinien weg */
 
 .navigation {
     position: sticky;
     top: 0;
-    right: 0;   
+    right: 0;
 }
-
 
 nav {
     display: flex;
@@ -74,8 +73,10 @@ nav {
     justify-content: flex-end;
     background-color: lightblue;
     border: 1px solid cadetblue;
-    padding:1rem 0;
+    padding: 1rem 0;
 }
+
+
 /* sorgt dafür, dass es rechts ist */
 
 .fa {
@@ -85,10 +86,13 @@ nav {
     text-decoration: none;
     margin: 0px 2px;
 }
+
 .fa:hover {
-    color:black;
+    color: black;
     opacity: 0.7;
-  }
+}
+
+
 /* .fa-facebook {
     background: transparent;
     color: black;
@@ -111,26 +115,29 @@ nav {
 } */
 
 .icon-container {
-    display:flex;
+    display: flex;
 }
 
 .icon-container a {
-    margin:0 10%;
+    margin: 0 10%;
     font-size: 25px;
 }
 
 .nav-container {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
 }
 
 .nav-container a {
     font-size: 1.2em;
 }
+
+
 /* Steckbrief-Seite */
-img+p{
+
+img+p {
     text-align: center;
-    background-color:skyblue;
+    background-color: skyblue;
 }
 
 .picture {
@@ -140,7 +147,8 @@ img+p{
     margin-right: auto;
     margin-left: auto;
 }
-.unipicture{
+
+.unipicture {
     border: 1px solid white;
     display: block;
     margin-right: auto;
@@ -154,51 +162,55 @@ img+p{
 }
 
 div {
-    width:402px;
+    width: 402px;
     border: 1px solid transparent;
     margin-right: auto;
-    
 }
-#steckbrieftext{
-     width:800px;
+
+#steckbrieftext {
+    width: 800px;
     /* column-gap: 0; */
     margin-bottom: 5%;
     margin-left: 1%;
-    
 }
 
 .animepicandtext {
     padding-left: 12px;
 }
+
 #cat {
     padding-left: 15;
 }
 
+
 /* Portfolio-Seite */
-div h1{
+
+div h1 {
     color: white;
     font-size: 3em;
     margin-left: 75%;
 }
 
-a[href="https://www.bensound.com/royalty-free-music/track/cute"]{
+a[href="https://www.bensound.com/royalty-free-music/track/cute"] {
     color: lightseagreen;
 }
-a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"]{
-    color:mediumaquamarine;
+
+a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"] {
+    color: mediumaquamarine;
 }
 
 .colorportfolio {
-    color:white;
+    color: white;
     text-align: center;
     font-size: 1.2em;
 }
 
-#blendertext{
+#blendertext {
     margin-left: 1%;
 }
+
 .video1 {
-    color:white;
+    color: white;
     text-align: center;
     font-size: 1.2em;
 }
@@ -213,8 +225,9 @@ a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"]{
     padding: 1% 12%;
     box-sizing: border-box;
 }
+
 .audioposition {
-    display: flex; 
+    display: flex;
 }
 
 .music {
@@ -222,18 +235,23 @@ a[href="https://www.bensound.com/royalty-free-music/track/retro-soul"]{
     font-size: 5em;
 }
 
+
 /* Kontakt-Seite */
-div ~ table, td{
+
+div~table,
+td {
     color: royalblue;
 }
 
 span::before {
-    content:"Klick mich";
+    content: "Klick mich";
     margin-left: 70px;
     font-size: 0.75em;
 }
 
-table, td, tr{
+table,
+td,
+tr {
     width: 50%;
     border-collapse: collapse;
     border: 2px solid lightblue;
@@ -267,22 +285,32 @@ input {
 }
 
 #text {
-    color:gray;
+    color: gray;
     margin-bottom: 40px;
 }
 
-@keyframes animation{
-    0%  {background-color: lightskyblue;}
-    25% {background-color: violet;}
-    50% {background-color: lightgoldenrodyellow;}
-    75% {background-color: lightsteelblue;}
+@keyframes animation {
+    0% {
+        background-color: lightskyblue;
+    }
+    25% {
+        background-color: violet;
+    }
+    50% {
+        background-color: lightgoldenrodyellow;
+    }
+    75% {
+        background-color: lightsteelblue;
+    }
 }
-#animatedbutton{
+
+#animatedbutton {
     width: 70px;
     height: 50px;
     animation-duration: 5s;
     animation-name: animation;
 }
+
 .sendbutton {
     background-color: white;
     color: rgb(157, 197, 211);
@@ -293,107 +321,132 @@ input {
 }
 
 .contact {
-    color:white;
+    color: white;
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 600px) { /*für iPhone 5/SE*/
-    body{
-        width:100%;
+@media screen and (max-width: 600px) {
+    /*für iPhone 5/SE*/
+    body {
+        width: 100%;
     }
-    nav{
+    nav {
         padding: 0.2rem 0;
     }
     h2 {
-       font-size:1em;
-        margin:1% 2% 1%;
+        font-size: 1em;
+        margin: 1% 2% 1%;
     }
-    span::before{
+    span::before {
         margin-left: 4.5%;
     }
-    table, td, tr{
-        width:30%;
-        margin:0% 2% 2%;
+    table,
+    td,
+    tr {
+        width: 30%;
+        margin: 0% 2% 2%;
         font-size: 80%;
     }
-    input{
+    input {
         width: 30%;
         font-size: 50%;
         padding: 1% 2% 2%;
     }
-    .formular{
-        width:100%;
-        margin-bottom:10%;
+    .formular {
+        width: 100%;
+        margin-bottom: 10%;
         margin: 0% 2%;
-        padding:0;   
+        padding: 0;
     }
-    .message{
-        width:45%;
+    .message {
+        width: 45%;
         padding: 1% 1% 3%;
     }
-    #text{
+    #text {
         font-size: 0.7em;
-        margin-bottom:3%;
+        margin-bottom: 3%;
     }
-    .sendbutton{
+    .sendbutton {
         font-size: 0.8em;
         margin-bottom: 10%;
         padding: 2% 5%;
     }
-    .contact{
-        font-size:0.8em;
+    .contact {
+        font-size: 0.8em;
         margin: 1% 0% 1%;
     }
     .icon-container {
-        display:flex;
+        display: flex;
     }
     .icon-container a {
-        margin:0 2%;
+        margin: 0 2%;
         font-size: 18px;
     }
     .nav-container a {
         font-size: 0.8em;
     }
-    div h1{
+    div h1 {
         font-size: 1em;
-        margin:0 1%;
+        margin: 0 1%;
     }
     .colorportfolio {
         font-size: 0.9em;
         margin-left: 1%;
     }
-    #blendertext{
-        width:320px;
+    #blendertext {
+        width: 320px;
         column-count: 1;
         font-size: 0.75em;
-       
     }
-    img{
-        height:170px;
-        width:220px;
+    img {
+        height: 170px;
+        width: 220px;
         margin-left: 1%;
     }
-   
-    .container{
+    .container {
         display: flex;
         flex-flow: column wrap;
-        align-items: flex-start; 
+        align-items: flex-start;
         /* flex-direction: row; */
     }
     .audio {
-        width:250px;
+        width: 250px;
         box-sizing: border-box;
     }
     .video1 {
         font-size: 0.8em;
         margin-left: 1%;
     }
-    video{
-        height:250px;
-        width:320px;
+    video {
+        height: 250px;
+        width: 320px;
     }
-    #videopadding{
-        padding-top:1%;
+    #videopadding {
+        padding-top: 1%;
     }
-
+    .burger-nav {
+        overflow: hidden;
+        background-color: red;
+        position: relative;
+    }
+    .burger-nav #myLinks {
+        display: none;
+    }
+    .burger-nav a {
+        font-size: 14px;
+        background-color: #fff;
+        box-shadow: 0 5px 20px #efefef;
+        margin: 0;
+        padding: 0 1em;
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+    }
+    #myLinks {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        max-height: 120px;
+        position: relative;
+    }
 }
