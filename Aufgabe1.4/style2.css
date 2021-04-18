@@ -123,6 +123,10 @@
     .nav-container a {
         font-size: 1.2em;
     }
+    
+    li {
+        list-style: none;
+    }
     /* Steckbrief-Seite */
     
     img+p {
@@ -318,7 +322,7 @@
         }
         nav {
             padding: 0.2rem 0;
-            width: 340px;
+            width: 60%;
         }
         h2 {
             font-size: 1em;
