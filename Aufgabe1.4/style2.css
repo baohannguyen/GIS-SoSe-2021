@@ -400,9 +400,15 @@
             align-items: flex-start;
             /* flex-direction: row; */
         }
+        audio {
+            width: 150px;
+            overflow: hidden;
+            margin-left: 1%;
+        }
         .audio {
             width: 250px;
             box-sizing: border-box;
+            padding: 0;
         }
         .video1 {
             font-size: 0.8em;
@@ -412,7 +418,7 @@
             height: 250px;
             width: 420px;
         }
-        /* #videopadding {
-        padding-top: 1%;
-    } */
+        #videopadding {
+            padding-top: 1%;
+        }
     }
