@@ -300,13 +300,10 @@ input {
     nav{
         padding: 0.2rem 0;
     }
-    h1, h2 {
+    h2 {
        font-size:1em;
         margin:1% 2% 1%;
     }
-    /* div{
-        width:none;
-    } */
     span::before{
         margin-left: 4.5%;
     }
@@ -314,7 +311,6 @@ input {
         width:30%;
         margin:0% 2% 2%;
         font-size: 80%;
-
     }
     input{
         width: 30%;
@@ -354,11 +350,21 @@ input {
     .nav-container a {
         font-size: 0.8em;
     }
+    div h1{
+        color: white;
+        font-size: 1em;
+        margin:0 1%;
+    }
+    .colorportfolio {
+        color:white;
+        font-size: 1.2em;
+    }
+   
     .container{
         display: flex;
         flex-flow: column wrap;
         align-items: flex-start; 
-        flex-direction: row;
+        /* flex-direction: row; */
     }
 
 }
