@@ -82,8 +82,6 @@ nav {
     position: static;
     top: 0;
     left: 0;
-    /* padding: 8px 10px 3px 10px; */
-    /* width: 15px; */
     text-decoration: none;
     margin: 0px 2px;
 }
@@ -161,11 +159,16 @@ div {
     margin-right: auto;
     
 }
+#steckbrieftext{
+     width:800px;
+    /* column-gap: 0; */
+    margin-bottom: 5%;
+    
+}
 
 .animepicandtext {
     padding-left: 12px;
 }
-
 #cat {
     padding-left: 15;
 }
@@ -293,7 +296,7 @@ input {
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { /*für iPhone 5/SE*/
     body{
         width:100%;
     }
