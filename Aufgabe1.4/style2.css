@@ -395,9 +395,11 @@
                 margin-left: 1%;
             }
             .container {
-                display: flex;
-                flex-flow: column wrap;
-                align-items: flex-start;
+                display: grid;
+                grid-template-columns: "nav" "main" "footer";
+                grid-template-rows: 20% 20% 40%;
+                /* flex-flow: column wrap;
+                align-items: flex-start; */
                 /* flex-direction: row; */
             }
             audio {
@@ -427,6 +429,7 @@
             /*Tablet (600-1024px)*/
             body {
                 font-size: 1.3em;
+
                 /* width: 100%; */
             }
         }
