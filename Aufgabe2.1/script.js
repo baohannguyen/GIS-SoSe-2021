@@ -2,16 +2,17 @@
 function a1() {
     let h = "Alles";
     console.log(h);
-    func1();
+    funct1();
     console.log("Logo!");
 }
 a1(); // Dadurch wird die Funktion aufgerufen
-function func1() {
+function funct1() {
     console.log("Klar?");
 }
 // Aufgabe 1
 // a) "Alles" "Klar?" "Logo!" wird in dieser Reihenfolge in der Konsole ausgegeben
-// Beide Funktionen haben keinen Rückgabewerte, deswegen sind sie zulässig
+// In dem Code sind alle Variablenamen zulässig, weil Buchstaben von a-z und A-Z, Ziffern von 0-9, der Unterstrich und das Dollar-Zeichen für Variablenamen erlaubt sind
+// Was nicht erlaubt ist, dass der Name mit einer Ziffer beginnt oder man Bindestriche, Leerzeichen und Schlüsselwörter benutzt 
 //c)
 function a3() {
     let h = "Alles Gute!";
@@ -75,6 +76,10 @@ function func2() {
 function func3() {
     x = "Test";
 }
-// Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
+// a) Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
 // Die Ausgabe: "Hallo" "Bla" "Hallo" "Blubb" "Test"
+// b) Lokale Variablen: Sie werden in Klassen, Schleifen, Attribute usw. benutzt
+// Globale Variablen: Sie sind im ganzen Code bekannt, also immer sichtbar
+// Übergabeparameter: Da werden die benutzten Parameter in den normalen Klammern definiert
+// Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr Anweisungen durchgeführt.
 //# sourceMappingURL=script.js.map
