@@ -55,4 +55,26 @@ a2();
 //     } while ( i > 0):
 // }
 // b2();
+// Dadurch, dass bewusst Fehler vorkommen, hab ich den ganzen Code auskommentiert, damit sie die anderen Codes nicht beeinflussen
+//Aufgabe 4
+let x = "Hallo";
+console.log(x);
+func1(x);
+console.log(x);
+func2();
+func3();
+console.log(x);
+function func1(y) {
+    y = "Bla";
+    console.log(y);
+}
+function func2() {
+    let x = "Blubb";
+    console.log(x);
+}
+function func3() {
+    x = "Test";
+}
+// Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
+// Die Ausgabe: "Hallo" "Bla" "Hallo" "Blubb" "Test"
 //# sourceMappingURL=script.js.map

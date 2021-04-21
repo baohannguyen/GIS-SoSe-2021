@@ -42,6 +42,7 @@ a2();
 // Die Zahl 9 wird nach jedem Aufruf um die Zahl 1 veringert bis die Endzahl genauso groß ist wie 0 und danach wird die Funktion a2() aufgerufen
 // Ausgabe: 9 8 7 6 5 4 3 2 1
 
+
 //Aufgabe 3 Fehlerfindung für Melanie
 //Code von A1
 // function b1(): void {
@@ -68,3 +69,30 @@ a2();
 // }
 
 // b2();
+// Dadurch, dass bewusst Fehler vorkommen, hab ich den ganzen Code auskommentiert, damit sie die anderen Codes nicht beeinflussen
+
+
+//Aufgabe 4
+let x: string = "Hallo";
+console.log(x);
+func1(x);
+console.log(x);
+func2();
+func3();
+console.log(x);
+
+function func1(y: string): void {
+    y = "Bla";
+    console.log(y);
+}
+
+function func2(): void {
+    let x: string = "Blubb";
+    console.log(x);
+}
+
+function func3(): void {
+    x = "Test";
+}
+// Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
+// Die Ausgabe: "Hallo" "Bla" "Hallo" "Blubb" "Test"
