@@ -56,30 +56,61 @@ a2();
 //     } while ( i > 0):
 // }
 // b2();
+// Fehlerfindung für mich (von Melanie)
+// function a1(): void {
+//     let a: string = "Alles"; 
+//     console.log(a);
+//     funktion1();                     Fehler: funktion1() wird nicht genutzt oder ist nicht deklariert
+//     console.log("Logo!"); 
+// }
+// a1();
+// function funktion2(): void {
+//     console.log("Klar?");
+// }
+// a2();
+// function funktion2(): void {
+//     console.log("Alles Klar?");
+// }
+// function a2(): number {              Fehler: Da musst void stehen anstatt number
+//     let i: number = 9;
+//     do {
+//         console.log(i);
+//         i = i - 1;
+//     } while ( i > 0);
+// }
+// a2(); 
 // Dadurch, dass bewusst Fehler vorkommen, hab ich den ganzen Code auskommentiert, damit sie die anderen Codes nicht beeinflussen
-//Aufgabe 4
-let x = "Hallo";
-console.log(x);
-func1(x);
-console.log(x);
-func2();
+//Aufgabe 4  (x und func2 vom Original-Code hab ich umbenannt, damit keine Fehlermeldung vorkommt)
+let m = "Hallo";
+console.log(m);
+func1(m);
+console.log(m);
+funct2();
 func3();
-console.log(x);
+console.log(m);
 function func1(y) {
     y = "Bla";
     console.log(y);
 }
-function func2() {
-    let x = "Blubb";
-    console.log(x);
+function funct2() {
+    let m = "Blubb";
+    console.log(m);
 }
 function func3() {
-    x = "Test";
+    m = "Test";
 }
 // a) Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
 // Die Ausgabe: "Hallo" "Bla" "Hallo" "Blubb" "Test"
+// Zuerst wird "Hallo" ausgegeben, weil "Hallo" in der Variable m gespeichert wurde und dies als erstes ausgegeben wird(siehe Z.110), danach gehen wir zur Funktion funct1(), wo eine neue Variable deklariert wird mit dem Wert "Bla" und wird als zweites in der Konsole ausgegeben
+// Als drittes wird wieder "Hallo" ausgegeben, weil console.log(m) (Z.112) nochmal vorkommt und in m noch immer den Wert "Hallo" besitzt. Im nächsten Schritt sind wir in funct2(), wo m den neuen Wert "Blubb" bekommt und dies wir als viertes ausgegeben.
+// Zuletzt wird in func3() m nochmal geändert und kriegt den Wert "Test". In dem letzten console.log(m) (Z.115) wird "Test" ausgegeben. 
 // b) Lokale Variablen: Sie werden in Klassen, Schleifen, Attribute usw. benutzt
 // Globale Variablen: Sie sind im ganzen Code bekannt, also immer sichtbar
 // Übergabeparameter: Da werden die benutzten Parameter in den normalen Klammern definiert
 // Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr Anweisungen durchgeführt.
+//Aufgabe 5
+function multipy(_firstnumber, _secondnumber) {
+    let e = _firstnumber * _secondnumber;
+    return e;
+}
 //# sourceMappingURL=script.js.map
