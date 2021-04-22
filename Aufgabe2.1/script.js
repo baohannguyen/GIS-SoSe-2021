@@ -115,12 +115,29 @@ function multipy(_firstnumber, _secondnumber) {
     return e;
 }
 //b)
-// function max(_smallnum: number, _bignum: number): number {
-// }
+function max(_smallnum, _bignum) {
+    let s = 2;
+    let b = 10;
+    if (s < b) {
+        return b;
+    }
+    else {
+        return s;
+    }
+}
 //c)
 let k = 1;
-while (1 <= 100) {
-    k = k + 1;
+while (1 < 100) {
+    if (k < 100) {
+        k++;
+    }
+    else {
+        break;
+    }
 }
 console.log(k);
+//d)
+for (let i = 0; i < 100; i++) {
+    console.log(Math.random);
+}
 //# sourceMappingURL=script.js.map

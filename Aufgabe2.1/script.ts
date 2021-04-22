@@ -146,13 +146,28 @@ function multipy(_firstnumber: number, _secondnumber: number): number {
     return e;
 }
 //b)
-// function max(_smallnum: number, _bignum: number): number {
-
-// }
+function max(_smallnum: number, _bignum: number): number {
+    let s: number = 2;
+    let b: number = 10;
+    if (s < b) {
+        return b;
+    } else {
+        return s;
+    }
+}
 
 //c)
 let k: number = 1;
-while (1 <= 100) {
-    k = k + 1;
+while (1 < 100) {
+    if (k < 100) {
+        k++;
+    } else {
+        break;
+    }
 }
 console.log(k);
+
+//d)
+for (let i: number = 0; i < 100; i++) {
+    console.log(Math.random);
+}
