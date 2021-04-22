@@ -70,30 +70,62 @@ a2();
 // }
 
 // b2();
+
+// Fehlerfindung für mich (von Melanie)
+// function a1(): void {
+//     let a: string = "Alles"; 
+//     console.log(a);
+//     funktion1();                     Fehler: funktion1() wird nicht genutzt oder ist nicht deklariert
+//     console.log("Logo!"); 
+// }
+
+// a1();
+
+// function funktion2(): void {
+//     console.log("Klar?");
+// }
+
+// a2();
+
+// function funktion2(): void {
+//     console.log("Alles Klar?");
+// }
+
+// function a2(): number {              Fehler: Da musst void stehen anstatt number
+//     let i: number = 9;
+
+
+//     do {
+//         console.log(i);
+//         i = i - 1;
+//     } while ( i > 0);
+// }
+
+// a2(); 
 // Dadurch, dass bewusst Fehler vorkommen, hab ich den ganzen Code auskommentiert, damit sie die anderen Codes nicht beeinflussen
 
 
-//Aufgabe 4
-let x: string = "Hallo";
-console.log(x);
-func1(x);
-console.log(x);
-func2();
+//Aufgabe 4  (x und func2 vom Original-Code hab ich umbenannt, damit keine Fehlermeldung zur doppelten Funktionsimplementierung vorkommt)
+let m: string = "Hallo";
+console.log(m);
+func1(m);
+console.log(m);
+funct2();
 func3();
-console.log(x);
+console.log(m);
 
 function func1(y: string): void {
     y = "Bla";
     console.log(y);
 }
 
-function func2(): void {
-    let x: string = "Blubb";
-    console.log(x);
+function funct2(): void {
+    let m: string = "Blubb";
+    console.log(m);
 }
 
 function func3(): void {
-    x = "Test";
+    m = "Test";
 }
 // a) Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
 // Die Ausgabe: "Hallo" "Bla" "Hallo" "Blubb" "Test"
