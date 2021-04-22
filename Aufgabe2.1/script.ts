@@ -140,7 +140,19 @@ function func3(): void {
 
 
 //Aufgabe 5
-function multipy(_firstnumber: 2, _secondnumber: 3): number {
+//a)
+function multipy(_firstnumber: number, _secondnumber: number): number {
     let e: number = _firstnumber * _secondnumber;
     return e;
 }
+//b)
+// function max(_smallnum: number, _bignum: number): number {
+
+// }
+
+//c)
+let k: number = 1;
+while (1 <= 100) {
+    k = k + 1;
+}
+console.log(k);

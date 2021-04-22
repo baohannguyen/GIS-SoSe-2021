@@ -109,8 +109,18 @@ function func3() {
 // Übergabeparameter: Da werden die benutzten Parameter in den normalen Klammern definiert
 // Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr Anweisungen durchgeführt.
 //Aufgabe 5
+//a)
 function multipy(_firstnumber, _secondnumber) {
     let e = _firstnumber * _secondnumber;
     return e;
 }
+//b)
+// function max(_smallnum: number, _bignum: number): number {
+// }
+//c)
+let k = 1;
+while (1 <= 100) {
+    k = k + 1;
+}
+console.log(k);
 //# sourceMappingURL=script.js.map
