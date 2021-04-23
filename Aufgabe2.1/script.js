@@ -119,9 +119,9 @@ function multiply(_a, _b) {
 }
 multiply(_a, _b);
 //b)
-let _smallnum = 2;
-let _bignum = 10;
-function max(_smallnum, _bignum) {
+function max() {
+    let _smallnum = 2;
+    let _bignum = 10;
     if (_smallnum < _bignum) {
         console.log(_bignum);
         return _bignum;
@@ -131,7 +131,7 @@ function max(_smallnum, _bignum) {
         return _smallnum;
     }
 }
-max(_smallnum, _bignum);
+max();
 //c)
 function counter() {
     let k = 1;
@@ -144,8 +144,68 @@ function counter() {
 }
 console.log(counter());
 //d)
-// for (let i: number = 0; i <= 100; i++) {
-//     console.log(Math.random());
-// }
+for (let i = 0; i < 10; i++) {
+    console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt
+}
 //e)
+function factorial(_n) {
+    let result = 1;
+    for (let i = 2; i <= _n; i++) {
+        result *= i;
+    }
+    return result;
+}
+console.log(factorial(4));
+//f)
+function leapyears() {
+    for (let i = 1900; i <= 2021; i++) {
+        if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0)) {
+            console.log(i);
+        }
+    }
+}
+leapyears();
+//Aufgabe 6
+//a)
+function hashtag() {
+    let line = "";
+    for (let i = 0; i < 7; i++) {
+        line += "#";
+        console.log(line);
+    }
+}
+hashtag();
+//b)
+function buzzfizz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+            console.log("Fizz");
+        }
+        else if (i % 5 == 0) {
+            console.log("Buzz");
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
+buzzfizz();
+//c)
+function fizzbuzz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("FizzBuzz");
+        }
+        else if (i % 3 == 0) {
+            console.log("Fizz");
+        }
+        else if (i % 5 == 0) {
+            console.log("Buzz");
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
+fizzbuzz();
 //# sourceMappingURL=script.js.map

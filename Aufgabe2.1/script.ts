@@ -152,20 +152,19 @@ function multiply(_a: number, _b: number): number {
 multiply(_a, _b);
 
 //b)
+function max(): number {
 let _smallnum: number = 2;
 let _bignum: number = 10;
-
-function max(_smallnum: number, _bignum: number): number {
-    if (_smallnum < _bignum) {
-        console.log(_bignum);
-        return _bignum;
+if (_smallnum < _bignum) {
+    console.log(_bignum);
+    return _bignum;
     } else {
         console.log(_smallnum);
         return _smallnum;
     }
     
 }
-max(_smallnum, _bignum);
+max();
 
 //c)
 function counter(): number {
@@ -181,8 +180,70 @@ console.log(counter());
 
 
 //d)
-// for (let i: number = 0; i <= 100; i++) {
-//     console.log(Math.random());
-// }
+
+for (let i: number = 0; i < 10; i++) {
+    console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt
+}
 
 //e)
+function factorial(_n: number): number {
+let result: number = 1;
+for (let i: number = 2; i <= _n; i++) {
+    result *= i;
+}
+return result;
+}
+console.log(factorial(4));
+
+//f)
+function leapyears(): void {
+for (let i: number = 1900; i <= 2021; i++) {
+    
+    if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0)) { 
+        console.log(i);
+    }
+}
+}
+leapyears();
+
+
+//Aufgabe 6
+//a)
+function hashtag(): void {
+let line: string = "";
+for (let i: number = 0; i < 7; i++) {
+    line += "#";
+    console.log(line);
+    }
+}
+hashtag();
+
+//b)
+function buzzfizz(): void {
+for (let i: number = 1; i <= 100; i++) {
+    if (i % 3 == 0) {
+        console.log("Fizz");
+    } else if (i % 5 == 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
+}
+buzzfizz();
+
+//c)
+function fizzbuzz(): void {
+    for (let i: number = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 == 0) {
+            console.log("Fizz");
+        } else if (i % 5 == 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+    }
+fizzbuzz();
