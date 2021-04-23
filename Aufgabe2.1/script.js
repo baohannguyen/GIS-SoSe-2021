@@ -110,14 +110,14 @@ function func3() {
 // Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr Anweisungen durchgeführt.
 //Aufgabe 5
 //a)
-let _a = 10;
-let _b = 4;
-function multiply(_a, _b) {
-    let result = _a * _b;
+function multiply() {
+    let _firstnumber = 10;
+    let _secondnumber = 4;
+    let result = _firstnumber * _secondnumber;
     console.log(result);
     return result;
 }
-multiply(_a, _b);
+multiply();
 //b)
 function max() {
     let _smallnum = 2;
@@ -144,12 +144,12 @@ function counter() {
 }
 console.log(counter());
 //d)
-for (let i = 0; i < 10; i++) {
-    console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt
+for (let i = 0; i < 10; i++) { // i < 10 -> begrenzt die Zahl auf 10
+    console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt und Math.random * 100, damit wir Zahlen zwischen 1 und 100 kriegen, sonst würden wir nur Zahlen zwischen 0 und 1 kriegen
 }
 //e)
 function factorial(_n) {
-    let result = 1;
+    let result = 1; // Bei der Fakultät ist die Zahl 1 immer da
     for (let i = 2; i <= _n; i++) {
         result *= i;
     }
@@ -168,9 +168,9 @@ leapyears();
 //Aufgabe 6
 //a)
 function hashtag() {
-    let line = "";
+    let line = ""; // leerer String = neue Zeile
     for (let i = 0; i < 7; i++) {
-        line += "#";
+        line += "#"; // dem leeren String wird jedes Mal ein "#" hinzugefügt
         console.log(line);
     }
 }
@@ -190,7 +190,7 @@ function buzzfizz() {
     }
 }
 buzzfizz();
-//c)
+//c) 
 function fizzbuzz() {
     for (let i = 1; i <= 100; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
@@ -208,4 +208,5 @@ function fizzbuzz() {
     }
 }
 fizzbuzz();
+//haben nur die offentsichliche Lösung
 //# sourceMappingURL=script.js.map

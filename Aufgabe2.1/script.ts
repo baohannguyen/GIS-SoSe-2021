@@ -141,15 +141,14 @@ function func3(): void {
 
 //Aufgabe 5
 //a)
-let _a: number = 10;
-let _b: number = 4;
-
-function multiply(_a: number, _b: number): number {
-    let result: number = _a * _b;
+function multiply(): number {
+    let _firstnumber: number = 10;
+    let _secondnumber: number = 4;
+    let result: number = _firstnumber * _secondnumber;
     console.log(result);
     return result;
 }
-multiply(_a, _b);
+multiply();
 
 //b)
 function max(): number {
@@ -161,8 +160,7 @@ if (_smallnum < _bignum) {
     } else {
         console.log(_smallnum);
         return _smallnum;
-    }
-    
+    } 
 }
 max();
 
@@ -180,14 +178,13 @@ console.log(counter());
 
 
 //d)
-
-for (let i: number = 0; i < 10; i++) {
-    console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt
+for (let i: number = 0; i < 10; i++) { // i < 10 -> begrenzt die Zahl auf 10
+    console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt und Math.random * 100, damit wir Zahlen zwischen 1 und 100 kriegen, sonst würden wir nur Zahlen zwischen 0 und 1 kriegen
 }
 
 //e)
 function factorial(_n: number): number {
-let result: number = 1;
+let result: number = 1; // Bei der Fakultät ist die Zahl 1 immer da
 for (let i: number = 2; i <= _n; i++) {
     result *= i;
 }
@@ -210,9 +207,9 @@ leapyears();
 //Aufgabe 6
 //a)
 function hashtag(): void {
-let line: string = "";
+let line: string = ""; // leerer String = neue Zeile
 for (let i: number = 0; i < 7; i++) {
-    line += "#";
+    line += "#"; // dem leeren String wird jedes Mal ein "#" hinzugefügt
     console.log(line);
     }
 }
@@ -232,7 +229,7 @@ for (let i: number = 1; i <= 100; i++) {
 }
 buzzfizz();
 
-//c)
+//c) 
 function fizzbuzz(): void {
     for (let i: number = 1; i <= 100; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
@@ -247,3 +244,4 @@ function fizzbuzz(): void {
     }
     }
 fizzbuzz();
+//haben nur die offentsichliche Lösung
