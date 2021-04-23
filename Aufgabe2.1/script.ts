@@ -141,33 +141,48 @@ function func3(): void {
 
 //Aufgabe 5
 //a)
-function multipy(_firstnumber: number, _secondnumber: number): number {
-    let e: number = _firstnumber * _secondnumber;
-    return e;
+let _a: number = 10;
+let _b: number = 4;
+
+function multiply(_a: number, _b: number): number {
+    let result: number = _a * _b;
+    console.log(result);
+    return result;
 }
+multiply(_a, _b);
+
 //b)
+let _smallnum: number = 2;
+let _bignum: number = 10;
+
 function max(_smallnum: number, _bignum: number): number {
-    let s: number = 2;
-    let b: number = 10;
-    if (s < b) {
-        return b;
+    if (_smallnum < _bignum) {
+        console.log(_bignum);
+        return _bignum;
     } else {
-        return s;
+        console.log(_smallnum);
+        return _smallnum;
     }
+    
 }
+max(_smallnum, _bignum);
 
 //c)
+function counter(): number {
 let k: number = 1;
-while (1 < 100) {
-    if (k < 100) {
-        k++;
-    } else {
-        break;
-    }
+let result: number = 0;
+while (k <= 100) {
+   result += k;
+   k++;
 }
-console.log(k);
+return result;
+}
+console.log(counter());
+
 
 //d)
-for (let i: number = 0; i < 100; i++) {
-    console.log(Math.random);
-}
+// for (let i: number = 0; i <= 100; i++) {
+//     console.log(Math.random());
+// }
+
+//e)

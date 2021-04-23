@@ -110,34 +110,42 @@ function func3() {
 // Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr Anweisungen durchgeführt.
 //Aufgabe 5
 //a)
-function multipy(_firstnumber, _secondnumber) {
-    let e = _firstnumber * _secondnumber;
-    return e;
+let _a = 10;
+let _b = 4;
+function multiply(_a, _b) {
+    let result = _a * _b;
+    console.log(result);
+    return result;
 }
+multiply(_a, _b);
 //b)
+let _smallnum = 2;
+let _bignum = 10;
 function max(_smallnum, _bignum) {
-    let s = 2;
-    let b = 10;
-    if (s < b) {
-        return b;
+    if (_smallnum < _bignum) {
+        console.log(_bignum);
+        return _bignum;
     }
     else {
-        return s;
+        console.log(_smallnum);
+        return _smallnum;
     }
 }
+max(_smallnum, _bignum);
 //c)
-let k = 1;
-while (1 < 100) {
-    if (k < 100) {
+function counter() {
+    let k = 1;
+    let result = 0;
+    while (k <= 100) {
+        result += k;
         k++;
     }
-    else {
-        break;
-    }
+    return result;
 }
-console.log(k);
+console.log(counter());
 //d)
-for (let i = 0; i < 100; i++) {
-    console.log(Math.random);
-}
+// for (let i: number = 0; i <= 100; i++) {
+//     console.log(Math.random());
+// }
+//e)
 //# sourceMappingURL=script.js.map
