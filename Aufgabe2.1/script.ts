@@ -251,18 +251,18 @@ console.log(chessboard());
 
 function chessboard(): string {
     let hashpattern: string = "";
-    for (let i: number = 0; 1 < 8; i++) {
-        for (let k: number = 0; k < 8; k++) {
-            if (i % 2 == 0) { // gerade 
-                if (k % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
+    for (let line: number = 0; line < 8; line++) {
+        for (let column: number = 0; column < 8; column++) {
+            if (line % 2 == 0) { // gerade 
+                if (column % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
                     hashpattern += " ";
                     continue;
                 }
                 hashpattern += "#";
                 continue;
             }
-            if (i % 2 == 1) { // ungerade
-                if (k % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
+            else if (line % 2 == 1) { // ungerade
+                if (column % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
                     hashpattern += " ";
                     continue;
                 }
@@ -276,3 +276,32 @@ function chessboard(): string {
 }
 
 chessboard();
+
+//e)
+console.log(chessboard1(2, 6));
+
+function chessboard1(_height: number, _width: number): string {
+    let hashpattern: string = "";
+    for (let line: number = 0; line < _width; line++) {
+        for (let column: number = 0; column < _height; column++) {
+            if (line % 2 == 0) { // gerade 
+                if (column % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
+                    hashpattern += " ";
+                    continue;
+                }
+                hashpattern += "#";
+                continue;
+            }
+            else if (line % 2 == 1) { // ungerade
+                if (column % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
+                    hashpattern += " ";
+                    continue;
+                }
+                hashpattern += "#";
+                continue;
+            }
+        }
+        hashpattern += "\n";
+    }
+    return hashpattern;
+}

@@ -213,18 +213,18 @@ fizzbuzz();
 console.log(chessboard());
 function chessboard() {
     let hashpattern = "";
-    for (let i = 0; 1 < 8; i++) {
-        for (let k = 0; k < 8; k++) {
-            if (i % 2 == 0) { // gerade 
-                if (k % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
+    for (let line = 0; line < 8; line++) {
+        for (let column = 0; column < 8; column++) {
+            if (line % 2 == 0) { // gerade 
+                if (column % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
                     hashpattern += " ";
                     continue;
                 }
                 hashpattern += "#";
                 continue;
             }
-            if (i % 2 == 1) { // ungerade
-                if (k % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
+            else if (line % 2 == 1) { // ungerade
+                if (column % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
                     hashpattern += " ";
                     continue;
                 }
@@ -237,4 +237,31 @@ function chessboard() {
     return hashpattern;
 }
 chessboard();
+//e)
+console.log(chessboard1(2, 6));
+function chessboard1(_height, _width) {
+    let hashpattern = "";
+    for (let line = 0; line < _width; line++) {
+        for (let column = 0; column < _height; column++) {
+            if (line % 2 == 0) { // gerade 
+                if (column % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
+                    hashpattern += " ";
+                    continue;
+                }
+                hashpattern += "#";
+                continue;
+            }
+            else if (line % 2 == 1) { // ungerade
+                if (column % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
+                    hashpattern += " ";
+                    continue;
+                }
+                hashpattern += "#";
+                continue;
+            }
+        }
+        hashpattern += "\n";
+    }
+    return hashpattern;
+}
 //# sourceMappingURL=script.js.map
