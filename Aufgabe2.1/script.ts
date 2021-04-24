@@ -247,20 +247,32 @@ fizzbuzz();
 //haben nur die offentsichliche Lösung
 
 //d)
-function chessboard(): void {
+console.log(chessboard());
+
+function chessboard(): string {
     let hashpattern: string = "";
     for (let i: number = 0; 1 < 8; i++) {
-        for (let k: number = 0; k < 0; k++) {
-            if (i % 2 == 0) {
-                if (i % 2 == 0) {
-                hashpattern = " ";
-                console.log(hashpattern);
+        for (let k: number = 0; k < 8; k++) {
+            if (i % 2 == 0) { // gerade 
+                if (k % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
+                    hashpattern += " ";
+                    continue;
                 }
-                hashpattern = "#";
-                console.log(hashpattern);
+                hashpattern += "#";
+                continue;
+            }
+            if (i % 2 == 1) { // ungerade
+                if (k % 2 == 1) { // Zeichen auch für gerade und ungerade Zahlen
+                    hashpattern += " ";
+                    continue;
                 }
+                hashpattern += "#";
+                continue;
             }
         }
+        hashpattern += "\n";
     }
+    return hashpattern;
+}
 
 chessboard();
