@@ -245,3 +245,22 @@ function fizzbuzz(): void {
     }
 fizzbuzz();
 //haben nur die offentsichliche Lösung
+
+//d)
+function chessboard(): void {
+    let hashpattern: string = "";
+    for (let i: number = 0; 1 < 8; i++) {
+        for (let k: number = 0; k < 0; k++) {
+            if (i % 2 == 0) {
+                if (i % 2 == 0) {
+                hashpattern = " ";
+                console.log(hashpattern);
+                }
+                hashpattern = "#";
+                console.log(hashpattern);
+                }
+            }
+        }
+    }
+
+chessboard();

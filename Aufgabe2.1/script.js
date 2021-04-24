@@ -209,4 +209,21 @@ function fizzbuzz() {
 }
 fizzbuzz();
 //haben nur die offentsichliche Lösung
+//d)
+function chessboard() {
+    let hashpattern = "";
+    for (let i = 0; 1 < 8; i++) {
+        for (let k = 0; k < 0; k++) {
+            if (i % 2 == 0) {
+                if (i % 2 == 0) {
+                    hashpattern = " ";
+                    console.log(hashpattern);
+                }
+                hashpattern = "#";
+                console.log(hashpattern);
+            }
+        }
+    }
+}
+chessboard();
 //# sourceMappingURL=script.js.map
