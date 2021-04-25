@@ -40,7 +40,7 @@ function a2(): void {
 }
 
 a2();
-// Die Zahl 9 wird nach jedem Aufruf um die Zahl 1 veringert bis die Endzahl genauso groß ist wie 0 und danach wird die Funktion a2() aufgerufen
+// Die Zahl 9 wird nach jedem Aufruf um die Zahl 1 veringert bis die Endzahl genauso groß ist wie 0 
 // Ausgabe: 9 8 7 6 5 4 3 2 1
 
 
@@ -48,7 +48,7 @@ a2();
 //Code von A1
 // function b1(): void {
 //     let i: string = "Alles";
-//     console.log(j);
+//     console.log(j);                 Fehler: i anstatt j
 //     fun1();
 //     console.log("Logo!");
 // }
@@ -66,7 +66,7 @@ a2();
 //     do {
 //         console.log(i);
 //         i = i - 1;
-//     } while ( i > 0):
+//     } while ( i > 0):                Fehler: ; statt : -> Syntaxfehler
 // }
 
 // b2();
@@ -129,14 +129,14 @@ function func3(): void {
 }
 // a) Unsere Annahme: "Hallo" "Hallo" "Blubb" "Hallo"
 // Die Ausgabe: "Hallo" "Bla" "Hallo" "Blubb" "Test"
-// Zuerst wird "Hallo" ausgegeben, weil "Hallo" in der Variable m gespeichert wurde und dies als erstes ausgegeben wird(siehe Z.110), danach gehen wir zur Funktion funct1(), wo eine neue Variable deklariert wird mit dem Wert "Bla" und wird als zweites in der Konsole ausgegeben
-// Als drittes wird wieder "Hallo" ausgegeben, weil console.log(m) (Z.112) nochmal vorkommt und in m noch immer den Wert "Hallo" besitzt. Im nächsten Schritt sind wir in funct2(), wo m den neuen Wert "Blubb" bekommt und dies wir als viertes ausgegeben.
+// Zuerst wird "Hallo" ausgegeben, weil "Hallo" in der Variable m gespeichert wurde und dies als erstes ausgegeben wird(siehe Z.110), danach gehen wir zur Funktion funct1(), wo eine neue Variable deklariert wird mit dem Wert "Bla" und die wird als zweites in der Konsole ausgegeben
+// Als drittes wird wieder "Hallo" ausgegeben, weil console.log(m) (Z.112) nochmal vorkommt und m noch immer den Wert "Hallo" besitzt. Im nächsten Schritt sind wir in funct2(), wo m den neuen Wert "Blubb" bekommt und dies wir als viertes ausgegeben.
 // Zuletzt wird in func3() m nochmal geändert und kriegt den Wert "Test". In dem letzten console.log(m) (Z.115) wird "Test" ausgegeben. 
-// b) Lokale Variablen: Sie werden in Klassen, Schleifen, Attribute usw. benutzt
-// Globale Variablen: Sie sind im ganzen Code bekannt, also immer sichtbar
-// Übergabeparameter: Da werden die benutzten Parameter in den normalen Klammern definiert
+// b) Lokale Variablen: Sie werden in innerhalb von Klassen, Schleifen, Funktionen, Attribute usw. benutzt
+// Globale Variablen: Sie sind im ganzen Code bekannt, also immer sichtbar. D.h. es kann leicht zur Fehlermeldung einer doppelten Funktionsimplementierung kommen, wenn man die selben Variablennamen benutzt 
+// Übergabeparameter: Da werden die in den Code benutzten Parameter in den normalen Klammern definiert
 
-// Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr Anweisungen durchgeführt.
+// Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr mit den Werten gearbeitet und Anweisungen durchgeführt.
 
 
 //Aufgabe 5
@@ -146,29 +146,29 @@ function multiply(): number {
     let _secondnumber: number = 4;
     let result: number = _firstnumber * _secondnumber;
     console.log(result);
-    return result;
+    return result; // Ergebnis = 40
 }
 multiply();
 
 //b)
 function max(): number {
-let _smallnum: number = 2;
-let _bignum: number = 10;
-if (_smallnum < _bignum) {
-    console.log(_bignum);
-    return _bignum;
+let _smallnumber: number = 2;
+let _bignumber: number = 10;
+if (_smallnumber < _bignumber) {
+    console.log(_bignumber);
+    return _bignumber;
     } else {
-        console.log(_smallnum);
-        return _smallnum;
+        console.log(_smallnumber);
+        return _smallnumber;
     } 
 }
 max();
 
 //c)
 function counter(): number {
-let k: number = 1;
+let k: number = 1; //fängt bei 1 an
 let result: number = 0;
-while (k <= 100) {
+while (k <= 100) { //hört bei 100 auf
    result += k;
    k++;
 }
@@ -178,7 +178,7 @@ console.log(counter());
 
 
 //d)
-for (let i: number = 0; i < 10; i++) { // i < 10 -> begrenzt die Zahl auf 10
+for (let i: number = 0; i < 10; i++) { // i < 10 -> gibt uns 10 Zahlen auf der Konsole aus
     console.log(Math.floor(Math.random() * 100)); // mit Math.floor kriegen wir ganzzahlige Zahlen, sonst werden uns Kommazahlen angezeigt und Math.random * 100, damit wir Zahlen zwischen 1 und 100 kriegen, sonst würden wir nur Zahlen zwischen 0 und 1 kriegen
 }
 
@@ -190,7 +190,7 @@ for (let i: number = 2; i <= _n; i++) {
 }
 return result;
 }
-console.log(factorial(4));
+console.log(factorial(4)); //Ergebnis = 24
 
 //f)
 function leapyears(): void {
@@ -223,7 +223,7 @@ for (let i: number = 1; i <= 100; i++) {
     } else if (i % 5 == 0) {
         console.log("Buzz");
     } else {
-        console.log(i);
+        console.log(i); //Die restlichen Zahlen werden hier ausgegeben
     }
 }
 }
@@ -244,15 +244,14 @@ function fizzbuzz(): void {
     }
     }
 fizzbuzz();
-//haben nur die offentsichliche Lösung
+//hab nur die offentsichliche Lösung
 
 //d)
 console.log(chessboard());
-
 function chessboard(): string {
     let hashpattern: string = "";
-    for (let line: number = 0; line < 8; line++) {
-        for (let column: number = 0; column < 8; column++) {
+    for (let line: number = 0; line < 8; line++) { //für die Zeilen
+        for (let column: number = 0; column < 8; column++) { // Character innerhalb der Zeile
             if (line % 2 == 0) { // gerade 
                 if (column % 2 == 0) { // Zeichen auch für gerade und ungerade Zahlen
                     hashpattern += " ";
@@ -278,7 +277,7 @@ function chessboard(): string {
 chessboard();
 
 //e)
-console.log(chessboard1(2, 6));
+console.log(chessboard1(4, 4));
 
 function chessboard1(_height: number, _width: number): string {
     let hashpattern: string = "";
