@@ -13,7 +13,9 @@ function funct1(): void {
 // Aufgabe 1
 // a) "Alles" "Klar?" "Logo!" wird in dieser Reihenfolge in der Konsole ausgegeben
 // In dem Code sind alle Variablenamen zulässig, weil Buchstaben von a-z und A-Z, Ziffern von 0-9, der Unterstrich und das Dollar-Zeichen für Variablenamen erlaubt sind
-// Was nicht erlaubt ist, dass der Name mit einer Ziffer beginnt oder man Bindestriche, Leerzeichen und Schlüsselwörter benutzt 
+// Was nicht erlaubt ist, dass der Name mit einer Ziffer beginnt oder man Bindestriche, Leerzeichen und Schlüsselwörter benutzt
+// b) console.log(h) wird direkt als erstes ausgeführt, danach gehen wir in die funct1() rein, wo console.log("Klar"?) als nächstest auf der Konsole ausgegeben wird
+// Am Ende gehen wir aus der funct1() raus und als Letztes wid console.log("Logo!") ausgegeben und danach endet die Ausgabe
 
 //c)
 function a3(): void {
@@ -277,7 +279,7 @@ function chessboard(): string {
 chessboard();
 
 //e)
-console.log(chessboard1(4, 4));
+console.log(chessboard1(5, 5));
 
 function chessboard1(_height: number, _width: number): string {
     let hashpattern: string = "";
