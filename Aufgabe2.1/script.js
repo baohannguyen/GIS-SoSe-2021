@@ -120,9 +120,7 @@ function multiply(_firstnumber, _secondnumber) {
 let mult = multiply(4, 10);
 console.log(mult);
 //b)
-function max() {
-    let _smallnumber = 2;
-    let _bignumber = 10;
+function max(_smallnumber, _bignumber) {
     if (_smallnumber < _bignumber) {
         console.log(_bignumber);
         return _bignumber;
@@ -132,7 +130,8 @@ function max() {
         return _smallnumber;
     }
 }
-max();
+let maxnumber = max(2, 10);
+console.log(maxnumber);
 //c)
 function counter() {
     let k = 1; //fängt bei 1 an

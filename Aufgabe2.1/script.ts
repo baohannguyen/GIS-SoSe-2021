@@ -152,9 +152,7 @@ let mult: number = multiply(4, 10);
 console.log(mult);
 
 //b)
-function max(): number {
-    let _smallnumber: number = 2;
-    let _bignumber: number = 10;
+function max(_smallnumber: number, _bignumber: number): number {
     if (_smallnumber < _bignumber) {
         console.log(_bignumber);
         return _bignumber;
@@ -163,7 +161,8 @@ function max(): number {
         return _smallnumber;
     }
 }
-max();
+let maxnumber: number = max(2, 10);
+console.log(maxnumber);
 
 //c)
 function counter(): number {
