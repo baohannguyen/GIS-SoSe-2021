@@ -36,9 +36,9 @@ function a2(): void {
     let i: number = 9;
 
     do {
-        console.log(i); 
+        console.log(i);
         i = i - 1; // da wird die aktuelle Zahl um eins verringert
-    } while ( i > 0); // die neue Zahl muss größer als 0 sein
+    } while (i > 0); // die neue Zahl muss größer als 0 sein
 }
 
 a2();
@@ -134,7 +134,7 @@ function func3(): void {
 // Zuerst wird "Hallo" ausgegeben, weil "Hallo" in der Variable m gespeichert wurde und dies als erstes ausgegeben wird(siehe Z.110), danach gehen wir zur Funktion funct1(), wo eine neue Variable deklariert wird mit dem Wert "Bla" und die wird als zweites in der Konsole ausgegeben
 // Als drittes wird wieder "Hallo" ausgegeben, weil console.log(m) (Z.112) nochmal vorkommt und m noch immer den Wert "Hallo" besitzt. Im nächsten Schritt sind wir in funct2(), wo m den neuen Wert "Blubb" bekommt und dies wir als viertes ausgegeben.
 // Zuletzt wird in func3() m nochmal geändert und kriegt den Wert "Test". In dem letzten console.log(m) (Z.115) wird "Test" ausgegeben. 
-// b) Lokale Variablen: Sie werden in innerhalb von Klassen, Schleifen, Funktionen, Attribute usw. benutzt
+// b) Lokale Variablen: Sie werden innerhalb von Klassen, Schleifen, Funktionen, Attribute usw. benutzt
 // Globale Variablen: Sie sind im ganzen Code bekannt, also immer sichtbar. D.h. es kann leicht zur Fehlermeldung einer doppelten Funktionsimplementierung kommen, wenn man die selben Variablennamen benutzt 
 // Übergabeparameter: Da werden die in den Code benutzten Parameter in den normalen Klammern definiert
 
@@ -143,38 +143,37 @@ function func3(): void {
 
 //Aufgabe 5
 //a)
-function multiply(): number {
-    let _firstnumber: number = 10;
-    let _secondnumber: number = 4;
+function multiply(_firstnumber: number, _secondnumber: number): number {
     let result: number = _firstnumber * _secondnumber;
-    console.log(result);
     return result; // Ergebnis = 40
 }
-multiply();
+// multiply(4, 10);
+let mult: number = multiply(4, 10);
+console.log(mult);
 
 //b)
 function max(): number {
-let _smallnumber: number = 2;
-let _bignumber: number = 10;
-if (_smallnumber < _bignumber) {
-    console.log(_bignumber);
-    return _bignumber;
+    let _smallnumber: number = 2;
+    let _bignumber: number = 10;
+    if (_smallnumber < _bignumber) {
+        console.log(_bignumber);
+        return _bignumber;
     } else {
         console.log(_smallnumber);
         return _smallnumber;
-    } 
+    }
 }
 max();
 
 //c)
 function counter(): number {
-let k: number = 1; //fängt bei 1 an
-let result: number = 0;
-while (k <= 100) { //hört bei 100 auf
-   result += k;
-   k++;
-}
-return result;
+    let k: number = 1; //fängt bei 1 an
+    let result: number = 0;
+    while (k <= 100) { //hört bei 100 auf
+        result += k;
+        k++;
+    }
+    return result;
 }
 console.log(counter());
 
@@ -186,22 +185,22 @@ for (let i: number = 0; i < 10; i++) { // i < 10 -> gibt uns 10 Zahlen auf der K
 
 //e)
 function factorial(_n: number): number {
-let result: number = 1; // Bei der Fakultät ist die Zahl 1 immer da
-for (let i: number = 2; i <= _n; i++) {
-    result *= i;
-}
-return result;
+    let result: number = 1; // Bei der Fakultät ist die Zahl 1 immer da
+    for (let i: number = 2; i <= _n; i++) {
+        result *= i;
+    }
+    return result;
 }
 console.log(factorial(4)); //Ergebnis = 24
 
 //f)
 function leapyears(): void {
-for (let i: number = 1900; i <= 2021; i++) {
-    
-    if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0)) { 
-        console.log(i);
+    for (let i: number = 1900; i <= 2021; i++) {
+
+        if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0)) {
+            console.log(i);
+        }
     }
-}
 }
 leapyears();
 
@@ -209,25 +208,25 @@ leapyears();
 //Aufgabe 6
 //a)
 function hashtag(): void {
-let line: string = ""; // leerer String = neue Zeile
-for (let i: number = 0; i < 7; i++) {
-    line += "#"; // dem leeren String wird jedes Mal ein "#" hinzugefügt
-    console.log(line);
+    let line: string = ""; // leerer String = neue Zeile
+    for (let i: number = 0; i < 7; i++) {
+        line += "#"; // dem leeren String wird jedes Mal ein "#" hinzugefügt
+        console.log(line);
     }
 }
 hashtag();
 
 //b)
 function buzzfizz(): void {
-for (let i: number = 1; i <= 100; i++) {
-    if (i % 3 == 0) {
-        console.log("Fizz");
-    } else if (i % 5 == 0) {
-        console.log("Buzz");
-    } else {
-        console.log(i); //Die restlichen Zahlen werden hier ausgegeben
+    for (let i: number = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+            console.log("Fizz");
+        } else if (i % 5 == 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i); //Die restlichen Zahlen werden hier ausgegeben
+        }
     }
-}
 }
 buzzfizz();
 
@@ -244,7 +243,7 @@ function fizzbuzz(): void {
             console.log(i);
         }
     }
-    }
+}
 fizzbuzz();
 //hab nur die offentsichliche Lösung
 

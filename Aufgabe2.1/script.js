@@ -106,20 +106,19 @@ function func3() {
 // Zuerst wird "Hallo" ausgegeben, weil "Hallo" in der Variable m gespeichert wurde und dies als erstes ausgegeben wird(siehe Z.110), danach gehen wir zur Funktion funct1(), wo eine neue Variable deklariert wird mit dem Wert "Bla" und die wird als zweites in der Konsole ausgegeben
 // Als drittes wird wieder "Hallo" ausgegeben, weil console.log(m) (Z.112) nochmal vorkommt und m noch immer den Wert "Hallo" besitzt. Im nächsten Schritt sind wir in funct2(), wo m den neuen Wert "Blubb" bekommt und dies wir als viertes ausgegeben.
 // Zuletzt wird in func3() m nochmal geändert und kriegt den Wert "Test". In dem letzten console.log(m) (Z.115) wird "Test" ausgegeben. 
-// b) Lokale Variablen: Sie werden in innerhalb von Klassen, Schleifen, Funktionen, Attribute usw. benutzt
+// b) Lokale Variablen: Sie werden innerhalb von Klassen, Schleifen, Funktionen, Attribute usw. benutzt
 // Globale Variablen: Sie sind im ganzen Code bekannt, also immer sichtbar. D.h. es kann leicht zur Fehlermeldung einer doppelten Funktionsimplementierung kommen, wenn man die selben Variablennamen benutzt 
 // Übergabeparameter: Da werden die in den Code benutzten Parameter in den normalen Klammern definiert
 // Bei "normalen" Variablen, wie Zahlen und Strings, wird ihnen nur Werte zugewiesen und bei Funktionen wird mehr mit den Werten gearbeitet und Anweisungen durchgeführt.
 //Aufgabe 5
 //a)
-function multiply() {
-    let _firstnumber = 10;
-    let _secondnumber = 4;
+function multiply(_firstnumber, _secondnumber) {
     let result = _firstnumber * _secondnumber;
-    console.log(result);
     return result; // Ergebnis = 40
 }
-multiply();
+// multiply(4, 10);
+let mult = multiply(4, 10);
+console.log(mult);
 //b)
 function max() {
     let _smallnumber = 2;
