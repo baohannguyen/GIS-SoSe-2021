@@ -1,18 +1,16 @@
 "use strict";
 var Aufgabe1;
 (function (Aufgabe1) {
-    function min(_firstnumber, _secondnumber, _thirdnumber) {
-        if (_firstnumber < _secondnumber) {
-            return _firstnumber;
+    let minnumber = [1, 5, 7, 19, -30];
+    function min(_a) {
+        let save = _a[0];
+        for (let i = 0; i < _a.length; i++) {
+            if (_a[i] < save) {
+                save = _a[i];
+            }
         }
-        else if (_secondnumber < _thirdnumber) {
-            return _secondnumber;
-        }
-        else {
-            return _thirdnumber;
-        }
+        return save;
     }
-    let minnumber = min(0, 1, 5);
-    console.log(minnumber);
+    console.log(min(minnumber));
 })(Aufgabe1 || (Aufgabe1 = {}));
 //# sourceMappingURL=script.js.map

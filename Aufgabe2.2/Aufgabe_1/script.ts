@@ -1,13 +1,14 @@
 namespace Aufgabe1 {
-    function min(_firstnumber: number, _secondnumber: number, _thirdnumber: number): number {
-        if (_firstnumber < _secondnumber) {
-            return _firstnumber;
-        } else if (_secondnumber < _thirdnumber) {
-            return _secondnumber;
-        } else {
-            return _thirdnumber;
+    let minnumber: number[] = [1, 5, 7, 19, -30];
+    function min(_a: number[]): number {
+        let save: number = _a[0];
+        for (let i: number = 0; i < _a.length; i++) {
+            if (_a[i] < save) {
+               save = _a[i];
+               
+            }
         }
+        return save;
     }
-    let minnumber: number = min(0, 1, 5);
-    console.log(minnumber);
+    console.log(min(minnumber));
 }
