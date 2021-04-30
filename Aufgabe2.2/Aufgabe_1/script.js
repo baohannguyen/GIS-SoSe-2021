@@ -1,6 +1,7 @@
 "use strict";
 var Aufgabe1;
 (function (Aufgabe1) {
+    //a)
     let minArr = [1, 5, 7, 19, -30];
     function min(_a) {
         let storage = _a[0]; //Speicherplatz
@@ -13,12 +14,12 @@ var Aufgabe1;
     }
     console.log(min(minArr));
 })(Aufgabe1 || (Aufgabe1 = {}));
+//b)
 function isEven(_n) {
-    let n = 0;
-    if (n == 0) {
+    if (_n == 0) {
         return true;
     }
-    else if (n == 1) {
+    else if (_n == 1) {
         return false;
     }
     else {
@@ -26,7 +27,7 @@ function isEven(_n) {
         return isEven(_n);
     }
 }
-console.log(isEven(5));
+console.log(isEven(-1));
 let stud1 = { name: "Melanie", matricnumber: 123456, studycourse: "MIB" };
 let stud2 = { name: "Peter", matricnumber: 198765, studycourse: "OMB" };
 let stud3 = { name: "Lotte", matricnumber: 236823, studycourse: "MKB" };

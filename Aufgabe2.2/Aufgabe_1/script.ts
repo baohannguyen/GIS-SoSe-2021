@@ -1,4 +1,5 @@
 namespace Aufgabe1 {
+    //a)
     let minArr: number[] = [1, 5, 7, 19, -30];
     function min(_a: number[]): number {
         let storage: number = _a[0]; //Speicherplatz
@@ -12,19 +13,22 @@ namespace Aufgabe1 {
     }
     console.log(min(minArr));
 }
-
+//b)
 function isEven(_n: number): boolean {
-    let n: number = 0;
-    if (n == 0) {
+    if (_n == 0) {
         return true;
-    } else if (n == 1) {
+    } else if (_n == 1) {
         return false;
     } else {
         _n -= 2;
         return isEven(_n);
     }
 }
-console.log(isEven(5));
+console.log(isEven(-1));
+// 50 = true
+// 75 = false
+// -1 = Stackoverflow
+
 
 interface Student {
     name: string;
