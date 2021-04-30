@@ -24,7 +24,7 @@ function isEven(_n: number): boolean {
         return isEven(_n);
     }
 }
-console.log(isEven(6));
+console.log(isEven(5));
 
 interface Student {
     name: string;
@@ -41,8 +41,25 @@ console.log(students[2].name + " " + students[1].matricnumber + " " + students[0
 
 function showInfo (_info: Student): void {
     console.log(_info.name + " " + _info.matricnumber + " " + _info.studycourse);
-    
+
 }
 showInfo(stud1);
 showInfo(stud2);
 showInfo(stud3);
+
+class Student1 {
+    name: string;
+    matricnumber: number;
+    studycourse: string;
+
+    constructor(_name: string, _matricnumber: number = 0, _studycourse: string) {
+        this.name = _name;
+        this.matricnumber = _matricnumber;
+        this.studycourse = _studycourse;
+    }
+    showInfo(): void {
+        console.log(this.name + " " + this.matricnumber + " " + this.studycourse);
+    }
+}
+let s: Student1 = new Student1("Melanie", 123456, "MIB");
+s.showInfo();
