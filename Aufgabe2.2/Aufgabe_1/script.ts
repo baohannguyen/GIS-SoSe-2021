@@ -33,14 +33,14 @@ interface Student {
 }
 
 let s1: Student = {name: "Melanie", matrikelnummer: 123456, studiengang: "MIB"};
-let s2: Student = {name: "Peter", matrikelnummer: 098765, studiengang: "OMB"};
+let s2: Student = {name: "Peter", matrikelnummer: 198765, studiengang: "OMB"};
 let s3: Student = {name: "Lotte", matrikelnummer: 236823, studiengang: "MKB"};
 
 let students: Student[] = [s1, s2, s3, {name: "Luis", matrikelnummer: 234566, studiengang: "OMB"}];
 console.log(students[2].name + " " + students[1].matrikelnummer + " " + students[0].studiengang);
 
 function showInfo (_info: Student): void {
-    console.log(_info.name + _info.matrikelnummer + _info.studiengang);
+    console.log(_info.name + " " + _info.matrikelnummer + " " + _info.studiengang);
     
 }
 showInfo(s2);
