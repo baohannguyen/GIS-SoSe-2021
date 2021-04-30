@@ -1,16 +1,16 @@
 namespace Aufgabe1 {
-    let minnumber: number[] = [1, 5, 7, 19, -30];
+    let minArr: number[] = [1, 5, 7, 19, -30];
     function min(_a: number[]): number {
-        let save: number = _a[0]; //Speicherplatz
+        let storage: number = _a[0]; //Speicherplatz
         for (let i: number = 0; i < _a.length; i++) {
-            if (_a[i] < save) {
-                save = _a[i];
+            if (_a[i] < storage) {
+                storage = _a[i];
 
             }
         }
-        return save;
+        return storage;
     }
-    console.log(min(minnumber));
+    console.log(min(minArr));
 }
 
 function isEven(_n: number): boolean {
@@ -28,19 +28,21 @@ console.log(isEven(6));
 
 interface Student {
     name: string;
-    matrikelnummer: number;
-    studiengang: string;
+    matricnumber: number;
+    studycourse: string;
 }
 
-let s1: Student = {name: "Melanie", matrikelnummer: 123456, studiengang: "MIB"};
-let s2: Student = {name: "Peter", matrikelnummer: 198765, studiengang: "OMB"};
-let s3: Student = {name: "Lotte", matrikelnummer: 236823, studiengang: "MKB"};
+let stud1: Student = {name: "Melanie", matricnumber: 123456, studycourse: "MIB"};
+let stud2: Student = {name: "Peter", matricnumber: 198765, studycourse: "OMB"};
+let stud3: Student = {name: "Lotte", matricnumber: 236823, studycourse: "MKB"};
 
-let students: Student[] = [s1, s2, s3, {name: "Luis", matrikelnummer: 234566, studiengang: "OMB"}];
-console.log(students[2].name + " " + students[1].matrikelnummer + " " + students[0].studiengang);
+let students: Student[] = [stud1, stud2, stud3, {name: "Luis", matricnumber: 234566, studycourse: "OMB"}];
+console.log(students[2].name + " " + students[1].matricnumber + " " + students[0].studycourse);
 
 function showInfo (_info: Student): void {
-    console.log(_info.name + " " + _info.matrikelnummer + " " + _info.studiengang);
+    console.log(_info.name + " " + _info.matricnumber + " " + _info.studycourse);
     
 }
-showInfo(s2);
+showInfo(stud1);
+showInfo(stud2);
+showInfo(stud3);

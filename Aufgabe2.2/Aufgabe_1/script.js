@@ -1,17 +1,17 @@
 "use strict";
 var Aufgabe1;
 (function (Aufgabe1) {
-    let minnumber = [1, 5, 7, 19, -30];
+    let minArr = [1, 5, 7, 19, -30];
     function min(_a) {
-        let save = _a[0]; //Speicherplatz
+        let storage = _a[0]; //Speicherplatz
         for (let i = 0; i < _a.length; i++) {
-            if (_a[i] < save) {
-                save = _a[i];
+            if (_a[i] < storage) {
+                storage = _a[i];
             }
         }
-        return save;
+        return storage;
     }
-    console.log(min(minnumber));
+    console.log(min(minArr));
 })(Aufgabe1 || (Aufgabe1 = {}));
 function isEven(_n) {
     let n = 0;
@@ -27,13 +27,15 @@ function isEven(_n) {
     }
 }
 console.log(isEven(6));
-let s1 = { name: "Melanie", matrikelnummer: 123456, studiengang: "MIB" };
-let s2 = { name: "Peter", matrikelnummer: 198765, studiengang: "OMB" };
-let s3 = { name: "Lotte", matrikelnummer: 236823, studiengang: "MKB" };
-let students = [s1, s2, s3, { name: "Luis", matrikelnummer: 234566, studiengang: "OMB" }];
-console.log(students[2].name + " " + students[1].matrikelnummer + " " + students[0].studiengang);
+let stud1 = { name: "Melanie", matricnumber: 123456, studycourse: "MIB" };
+let stud2 = { name: "Peter", matricnumber: 198765, studycourse: "OMB" };
+let stud3 = { name: "Lotte", matricnumber: 236823, studycourse: "MKB" };
+let students = [stud1, stud2, stud3, { name: "Luis", matricnumber: 234566, studycourse: "OMB" }];
+console.log(students[2].name + " " + students[1].matricnumber + " " + students[0].studycourse);
 function showInfo(_info) {
-    console.log(_info.name + " " + _info.matrikelnummer + " " + _info.studiengang);
+    console.log(_info.name + " " + _info.matricnumber + " " + _info.studycourse);
 }
-showInfo(s2);
+showInfo(stud1);
+showInfo(stud2);
+showInfo(stud3);
 //# sourceMappingURL=script.js.map
