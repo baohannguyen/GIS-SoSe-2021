@@ -12,10 +12,10 @@ context.fill();
 context.beginPath();
 context.strokeStyle = "teal";
 context.fillStyle = "teal";
-context.moveTo(0, 255);
+context.moveTo(0, 255); //Startpunkt
 // context.lineTo(0, 460);
 // context.lineTo(0, 255);
-context.lineTo(500, 255);
+context.lineTo(500, 255); //Endpunkt
 context.lineTo(500, 400);
 context.lineTo(400, 500);
 context.closePath();
