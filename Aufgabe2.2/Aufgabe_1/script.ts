@@ -13,14 +13,14 @@ namespace Aufgabe1 {
     console.log(min(minArr));
 }
 //b)
-function isEven(_nNumber: number): boolean {
-    if (_nNumber == 0) {
+function isEven(_n: number): boolean {
+    if (_n == 0) {
         return true;
-    } else if (_nNumber == 1) {
+    } else if (_n == 1) {
         return false;
     } else {
-        _nNumber -= 2;
-        return isEven(_nNumber);
+        _n -= 2;
+        return isEven(_n);
     }
 }
 console.log(isEven(-1));
