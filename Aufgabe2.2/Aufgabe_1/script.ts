@@ -6,7 +6,6 @@ namespace Aufgabe1 {
         for (let i: number = 0; i < _Arrmin.length; i++) {
             if (_Arrmin[i] < storage) {
                 storage = _Arrmin[i];
-
             }
         }
         return storage;
@@ -14,21 +13,20 @@ namespace Aufgabe1 {
     console.log(min(minArr));
 }
 //b)
-function isEven(_n: number): boolean {
-    if (_n == 0) {
+function isEven(_nNumber: number): boolean {
+    if (_nNumber == 0) {
         return true;
-    } else if (_n == 1) {
+    } else if (_nNumber == 1) {
         return false;
     } else {
-        _n -= 2;
-        return isEven(_n);
+        _nNumber -= 2;
+        return isEven(_nNumber);
     }
 }
 console.log(isEven(-1));
 // 50 = true
 // 75 = false
 // -1 = StackOverflow
-
 
 interface Student {
     name: string;

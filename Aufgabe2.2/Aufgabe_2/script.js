@@ -2,7 +2,7 @@
 //a)
 function backwards(_arrBack) {
     let randomArr = [];
-    for (let i = _arrBack.length - 1; i >= 0; i--) {
+    for (let i = _arrBack.length - 1; i >= 0; i--) { //wird rückwärts gezählt
         randomArr.push(_arrBack[i]);
     }
     return randomArr;
