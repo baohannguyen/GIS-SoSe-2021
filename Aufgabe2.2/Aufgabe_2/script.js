@@ -1,10 +1,13 @@
 "use strict";
 //a)
-let randomArr = [3, 5, 9, 20, 40];
-function backwards() {
-    randomArr.reverse();
+function backwards(_arrBack) {
+    let randomArr = [];
+    for (let i = _arrBack.length - 1; i >= 0; i--) {
+        randomArr.push(_arrBack[i]);
+    }
+    return randomArr;
 }
-console.log(randomArr.reverse());
+console.log(backwards([1, 2, 3, 4, 5]));
 //b)
 let firstArr = [6, 10, 15, 8];
 let secondArr = [10, 4, 27, 9];
@@ -19,6 +22,11 @@ console.log(firstArr);
 //c)
 let splitArr = [2, 6, 10, 18, 35, 47];
 function split(_indexOne, _indexTwo, _split) {
-    return [1];
+    let emptyArr = []; //Speicherplatz erstellen
+    for (let j = _indexOne; j <= _indexTwo; j++) {
+        emptyArr.push(_split[j]);
+    }
+    return emptyArr;
 }
+console.log(split(2, 5, [2, 6, 10, 18, 35, 47]));
 //# sourceMappingURL=script.js.map

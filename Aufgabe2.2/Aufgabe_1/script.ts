@@ -1,11 +1,11 @@
 namespace Aufgabe1 {
     //a)
     let minArr: number[] = [1, 5, 7, 19, -30];
-    function min(_a: number[]): number {
-        let storage: number = _a[0]; //Speicherplatz
-        for (let i: number = 0; i < _a.length; i++) {
-            if (_a[i] < storage) {
-                storage = _a[i];
+    function min(_Arrmin: number[]): number {
+        let storage: number = _Arrmin[0]; //Speicherplatz
+        for (let i: number = 0; i < _Arrmin.length; i++) {
+            if (_Arrmin[i] < storage) {
+                storage = _Arrmin[i];
 
             }
         }
@@ -27,7 +27,7 @@ function isEven(_n: number): boolean {
 console.log(isEven(-1));
 // 50 = true
 // 75 = false
-// -1 = Stackoverflow
+// -1 = StackOverflow
 
 
 interface Student {

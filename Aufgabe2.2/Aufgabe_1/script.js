@@ -3,11 +3,11 @@ var Aufgabe1;
 (function (Aufgabe1) {
     //a)
     let minArr = [1, 5, 7, 19, -30];
-    function min(_a) {
-        let storage = _a[0]; //Speicherplatz
-        for (let i = 0; i < _a.length; i++) {
-            if (_a[i] < storage) {
-                storage = _a[i];
+    function min(_Arrmin) {
+        let storage = _Arrmin[0]; //Speicherplatz
+        for (let i = 0; i < _Arrmin.length; i++) {
+            if (_Arrmin[i] < storage) {
+                storage = _Arrmin[i];
             }
         }
         return storage;
