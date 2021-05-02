@@ -23,7 +23,7 @@ function isEven(_n: number): boolean {
         return isEven(_n);
     }
 }
-console.log(isEven(-1));
+console.log(isEven(5));
 // 50 = true
 // 75 = false
 // -1 = StackOverflow
