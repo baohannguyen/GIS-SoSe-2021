@@ -1,7 +1,7 @@
 "use strict";
 var L2_3_Load;
 (function (L2_3_Load) {
-    window.addEventListener("load", handleLoad);
+    window.addEventListener("DOMContentLoaded", handleLoad);
     function handleLoad(_event) {
         console.log(_event);
     }
