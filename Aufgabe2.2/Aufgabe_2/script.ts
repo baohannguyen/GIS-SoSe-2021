@@ -6,7 +6,7 @@ function backwards(_arrBack: number[]): number[] {
     }
     return randomArr;
 }
-console.log(backwards([1, 2, 3 , 4 , 5]));
+console.log(backwards([1, 2, 3, 4, 5]));
 
 
 //b)
@@ -14,10 +14,9 @@ let firstArr: number[] = [6, 10, 15, 8];
 let secondArr: number[] = [10, 4, 27, 9];
 firstArr = join(firstArr, secondArr);
 function join(_arrOne: number[], _arrTwo: number[]): number[] {
-    for (let i: number = 0; i < 1; i++) { // i < 1 -> damit das Array nur 1-mal drangehängt wird
-        firstArr.push(10, 4, 27, 9); //Zahlen vom 2.Array werden dem 1.Array hinzugefügt
-    }
-    return firstArr;
+    firstArr.push(); //Zahlen vom 2.Array werden dem 1.Array hinzugefügt
+}
+return firstArr;
 }
 console.log(firstArr);
 
