@@ -25,7 +25,7 @@ function otherjoin(_arrOne: number[], ..._arrTwo: number[]): number[] {
     let storageArr: number [] = [];
     for (let i: number = 0; i < _arrTwo.length; i++) {
         storageArr = _arrOne; // Dem Speicherplatz werden die Werte des 1. Parameters überwiesen
-        storageArr.push(_arrTwo[i]); //Zahlen vom 2.Array werden dem 1.Array hinzugefügt
+        storageArr.push(_arrTwo[i]);
     }
     return storageArr;
 }
