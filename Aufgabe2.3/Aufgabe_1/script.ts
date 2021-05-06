@@ -5,21 +5,32 @@ namespace Aufgabe2_3 {
     h1.style.fontFamily = "sans-serif";
     h1.appendChild(document.createTextNode("Aufgabe 1"));
     body.appendChild(h1);
-    
+
     let div: HTMLDivElement = document.createElement("div");
-    // div.style.height = (Math.random() * 100).toString() + "px";
+    // div.style.height = (Math.random() * 80).toString() + "px";
     div.style.height = "100px";
     div.style.width = "200px";
     div.style.backgroundColor = "black";
     div.style.position = "relative";
-    // div.classList.add("rectangle");
     body.appendChild(div);
+    
+    
+    let button: HTMLButtonElement = document.createElement("button");
+    // document.getElementById("test");
+    button.style.color = "black";
+    button.appendChild(document.createTextNode("Hello World"));
+    body.appendChild(button);
+    // document.getElementById("test").appendChild(button);
+    
+    let p: HTMLParagraphElement = document.createElement("p");
+    body.appendChild(p);
+    p.setAttribute("id", "test");
+    
+    // document.getElementById("test").addEventListener("click", handleButton);
 
-    function handleButton(_event: Event): void {
-        let p: HTMLParagraphElement = document.createElement("p");
-        p.style.color = "red";
-        p.appendChild(document.createTextNode("Hello World"));
-        body.appendChild(p);
+
+    function handleButton(): void {
+        document.getElementById("test").appendChild(document.createTextNode("Testen ob es klappt "));
     }
     document.addEventListener("click", handleButton);
 
