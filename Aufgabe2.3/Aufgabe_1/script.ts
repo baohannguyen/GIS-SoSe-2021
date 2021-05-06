@@ -15,6 +15,14 @@ namespace Aufgabe2_3 {
     // div.classList.add("rectangle");
     body.appendChild(div);
 
+    function handleButton(_event: Event): void {
+        let p: HTMLParagraphElement = document.createElement("p");
+        p.style.color = "red";
+        p.appendChild(document.createTextNode("Hello World"));
+        body.appendChild(p);
+    }
+    document.addEventListener("click", handleButton);
+
 
 
 }
