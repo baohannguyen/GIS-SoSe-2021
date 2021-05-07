@@ -1,9 +1,6 @@
 "use strict";
 var Aufgabe2_3;
 (function (Aufgabe2_3) {
-    // function createRect(): Rectangle {
-    //     let rect: Rectangle = {}
-    // }
     let body = document.body;
     let h1 = document.createElement("h1");
     h1.style.color = "royalblue";
@@ -33,14 +30,10 @@ var Aufgabe2_3;
     div.style.top = (Math.random() * 300).toString() + "px";
     div.style.left = (Math.random() * 300).toString() + "px";
     div.style.backgroundColor = "black";
-    body.appendChild(div);
     function handleButton() {
-        let rectArr = [];
-        for (let i = 0; i < 3; i++) {
-            rectArr.push();
-            document.getElementById("test").appendChild(div);
-            // document.getElementById("test2").appendChild();
-        }
+        document.getElementById("test").appendChild(div);
+        body.appendChild(div);
+        // document.getElementById("test2").appendChild();
     }
     document.addEventListener("click", handleButton);
 })(Aufgabe2_3 || (Aufgabe2_3 = {}));
