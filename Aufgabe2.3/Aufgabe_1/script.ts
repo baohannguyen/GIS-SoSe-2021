@@ -20,11 +20,11 @@ namespace Aufgabe2_3 {
 
     let p: HTMLParagraphElement = document.createElement("p");
     body.appendChild(p);
-    p.setAttribute("id", "test");
+    p.setAttribute("id", "zeigeReckteck");
 
     let p1: HTMLParagraphElement = document.createElement("p");
     body.appendChild(p1);
-    p1.setAttribute("id", "test2");
+    p1.setAttribute("id", "löscheRechteck");
 
 
     // document.getElementById("test").addEventListener("click", handleButton);
@@ -37,16 +37,17 @@ namespace Aufgabe2_3 {
     div.style.top = (Math.random() * 300).toString() + "px";
     div.style.left = (Math.random() * 300).toString() + "px";
     div.style.backgroundColor = "black";
-
+    button.appendChild(div);
 
     function handleButton(): void {
         document.getElementById("test").appendChild(div);
-        body.appendChild(div);
+        // body.appendChild(div);
         // document.getElementById("test2").appendChild();
     }
-    document.addEventListener("click", handleButton);
+    // document.addEventListener("click", handleButton);
+    document.getElementById("test").addEventListener("click", handleButton);
 }
-    
-    
-    
+
+
+
 
