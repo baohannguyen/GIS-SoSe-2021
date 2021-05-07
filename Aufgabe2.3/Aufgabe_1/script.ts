@@ -1,5 +1,5 @@
 namespace Aufgabe2_3 {
-
+    //Aufgabe 1
     let body: HTMLElement = document.body;
     let h1: HTMLElement = document.createElement("h1");
     h1.style.color = "royalblue";
@@ -10,21 +10,21 @@ namespace Aufgabe2_3 {
 
     let button: HTMLButtonElement = document.createElement("button");
     button.style.color = "black";
-    button.appendChild(document.createTextNode("Rechtecke"));
+    button.appendChild(document.createTextNode("Rectangle"));
     body.appendChild(button);
     // document.getElementById("test").appendChild(button);
     let buttonTwo: HTMLButtonElement = document.createElement("button");
     buttonTwo.style.color = "black";
-    buttonTwo.appendChild(document.createTextNode("Zurücksetzen"));
+    buttonTwo.appendChild(document.createTextNode("Reset"));
     body.appendChild(buttonTwo);
 
     let p: HTMLParagraphElement = document.createElement("p");
     body.appendChild(p);
-    p.setAttribute("id", "zeigeRechteck");
+    p.setAttribute("id", "showRect");
 
     let p1: HTMLParagraphElement = document.createElement("p");
     body.appendChild(p1);
-    p1.setAttribute("id", "löscheRechteck");
+    p1.setAttribute("id", "deleteRect");
 
 
     // document.getElementById("test").addEventListener("click", handleButton);
@@ -37,17 +37,31 @@ namespace Aufgabe2_3 {
     div.style.top = (Math.random() * 300).toString() + "px";
     div.style.left = (Math.random() * 300).toString() + "px";
     div.style.backgroundColor = "black";
-    button.appendChild(div);
 
+
+    function removeButton(): void {
+        let removeRect: HTMLElement = document.querySelector("div");
+        removeRect.remove();
+    }
+    document.addEventListener("click", removeButton);
+    
     function handleButton(): void {
-        document.getElementById("zeigeRechteck").appendChild(div);
+        document.getElementById("showRect").appendChild(div);
+        button.appendChild(div);
         // body.appendChild(div);
         // document.getElementById("test2").appendChild();
     }
-    // document.addEventListener("click", handleButton);
-    document.getElementById("zeigeRechteck").addEventListener("click", handleButton);
+    document.addEventListener("click", handleButton);
+
+    //Aufgabe 2
+    interface Cat {
+        race: string;
+        color: string;
+        homecountry: string;
+    }
+    let cat1: Cat = { race: "Europäisch Kurzhaar", color: "schwarz", homecountry: "USA"};
 }
-
-
-
-
+    
+    
+    
+    
