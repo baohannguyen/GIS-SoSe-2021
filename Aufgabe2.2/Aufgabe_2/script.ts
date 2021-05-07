@@ -22,14 +22,17 @@ function join(_arrOne: number[], _arrTwo: number[]): number[] {
 console.log(firstArr);
 
 function otherjoin(_arrOne: number[], ..._arrTwo: number[]): number[] {
-    let storageArr: number [] = [];
+    let storageArr: number[] = [];
+    for (let i: number = 0; i < _arrOne.length; i++) {
+        storageArr = _arrOne;
+    }
     for (let i: number = 0; i < _arrTwo.length; i++) {
-        storageArr = _arrOne; // Dem Speicherplatz werden die Werte des 1. Parameters überwiesen
+        storageArr = _arrOne;
         storageArr.push(_arrTwo[i]);
     }
     return storageArr;
 }
-console.log(otherjoin([2, 10, 18, 50, 100] , 6, 7, 8, 9, 10));
+console.log(otherjoin([2, 10, 18, 50, 100], 6, 7, 8, 9, 10));
 
 //c)
 let splitArr: number[] = [2, 6, 10, 18, 35, 47];

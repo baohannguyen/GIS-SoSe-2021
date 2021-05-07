@@ -11,7 +11,7 @@ namespace Aufgabe2_3 {
     div.style.height = "100px";
     div.style.width = "200px";
     div.style.backgroundColor = "black";
-    div.style.position = "relative";
+    div.setAttribute ("position", "absolute");
     body.appendChild(div);
     
     
