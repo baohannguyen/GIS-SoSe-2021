@@ -21,8 +21,11 @@ function join(_arrOne, _arrTwo) {
 console.log(firstArr);
 function otherjoin(_arrOne, ..._arrTwo) {
     let storageArr = [];
+    for (let i = 0; i < _arrOne.length; i++) {
+        storageArr = _arrOne;
+    }
     for (let i = 0; i < _arrTwo.length; i++) {
-        storageArr = _arrOne; // Dem Speicherplatz werden die Werte des 1. Parameters überwiesen
+        storageArr = _arrOne;
         storageArr.push(_arrTwo[i]);
     }
     return storageArr;
