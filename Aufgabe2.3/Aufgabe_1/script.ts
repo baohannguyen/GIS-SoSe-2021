@@ -20,7 +20,7 @@ namespace Aufgabe2_3 {
 
     let p: HTMLParagraphElement = document.createElement("p");
     body.appendChild(p);
-    p.setAttribute("id", "zeigeReckteck");
+    p.setAttribute("id", "zeigeRechteck");
 
     let p1: HTMLParagraphElement = document.createElement("p");
     body.appendChild(p1);
@@ -40,12 +40,12 @@ namespace Aufgabe2_3 {
     button.appendChild(div);
 
     function handleButton(): void {
-        document.getElementById("test").appendChild(div);
+        document.getElementById("zeigeRechteck").appendChild(div);
         // body.appendChild(div);
         // document.getElementById("test2").appendChild();
     }
     // document.addEventListener("click", handleButton);
-    document.getElementById("test").addEventListener("click", handleButton);
+    document.getElementById("zeigeRechteck").addEventListener("click", handleButton);
 }
 
 

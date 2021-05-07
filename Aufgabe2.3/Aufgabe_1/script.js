@@ -18,10 +18,10 @@ var Aufgabe2_3;
     body.appendChild(buttonTwo);
     let p = document.createElement("p");
     body.appendChild(p);
-    p.setAttribute("id", "test");
+    p.setAttribute("id", "zeigeRechteck");
     let p1 = document.createElement("p");
     body.appendChild(p1);
-    p1.setAttribute("id", "test2");
+    p1.setAttribute("id", "löscheRechteck");
     // document.getElementById("test").addEventListener("click", handleButton);
     let div = document.createElement("div");
     div.style.height = (Math.random() * 200).toString() + "px";
@@ -30,11 +30,13 @@ var Aufgabe2_3;
     div.style.top = (Math.random() * 300).toString() + "px";
     div.style.left = (Math.random() * 300).toString() + "px";
     div.style.backgroundColor = "black";
+    button.appendChild(div);
     function handleButton() {
-        document.getElementById("test").appendChild(div);
-        body.appendChild(div);
+        document.getElementById("zeigeRechteck").appendChild(div);
+        // body.appendChild(div);
         // document.getElementById("test2").appendChild();
     }
-    document.addEventListener("click", handleButton);
+    // document.addEventListener("click", handleButton);
+    document.getElementById("zeigeRechteck").addEventListener("click", handleButton);
 })(Aufgabe2_3 || (Aufgabe2_3 = {}));
 //# sourceMappingURL=script.js.map
