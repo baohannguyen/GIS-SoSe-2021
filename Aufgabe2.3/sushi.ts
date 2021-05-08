@@ -1,10 +1,9 @@
-//Aufgabe 2
 namespace Aufgab2 {
-    // interface Sushi {
-    //     selection: string;
-    //     filling: string;
-    //     extras: string;
-    // }
+    interface Sushi {
+        selection: Selection;
+        filling: Filling;
+        extras: Extras;
+    }
     interface Selection {
         type: string;
         typePicture: string;
@@ -21,10 +20,5 @@ namespace Aufgab2 {
         extra2: string;
         extra3: string;
         price: number;
-    }
-    interface Sushi {
-        selection: Selection;
-        filling: Filling;
-        Extras: Extras;
     }
 }
