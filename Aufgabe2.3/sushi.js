@@ -55,6 +55,15 @@ var Aufgabe2;
             canvas.setAttribute("style", "width:250px; height:200px");
             canvas.setAttribute("id", "canvas" + i);
             container.appendChild(canvas);
+            let list = document.createElement("ul");
+            container.appendChild(list);
+            let listelement = document.createElement("li");
+            listelement.appendChild(document.createTextNode(allSelection[i].type));
+            let listelement2 = document.createElement("li");
+            listelement2.appendChild(document.createTextNode("Preis: " + allSelection[i].price));
+            container.appendChild(list);
+            list.appendChild(listelement);
+            list.appendChild(listelement2);
         }
     }
     seeVar();
