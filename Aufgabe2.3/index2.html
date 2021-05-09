@@ -7,42 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
     <script src="sushi.js" defer></script>
 </head>
 
 <body>
     <header class="container">
         <h1>Sushi-Creator</h1>
-        <nav>
-            <li class="navigation">Auswahl</li>
-            <li class="navigation">Füllung</li>
-            <li class="navigation">Extras</li>
+        <nav class="container.Navigation">
+            <p class="navigation">Auswahl</p>
+            <p class="navigation">Füllung</p>
+            <p class="navigation">Extras</p>
         </nav>
     </header>
-    <main class="container">
-        <div>
-            <p><canvas id="hosomaki" width="300" height="200"></canvas>
-            <li class="typeOne">Hoso-Maki</li>
-            <li class="typeOne">Preis: 0,70€</li>
-            <li class="typeOne">Stückzahl: 1</li>
-            </p>
+    <main>
+        <div class="containerMaki">
+            <canvas id="hosomaki" width="250" height="200"></canvas>
+            <ul>
+                <li class="typeOne">Hoso-Maki</li>
+                <li class="typeOne">Preis: 0,70€</li>
+                <li class="typeOne">Stückzahl: 1</li>
+            </ul>
+            <button>Hoso-Maki auswählen</button>
         </div>
-        <div>
-            <p><canvas id="nigiri" width="300" height="200"></canvas></p>
-            <li class="typeTwo">Nigiri</li>
-            <li class="typeTwo">Preis: 1€</li>
-            <li class="typeTwo">Stückzahl: 1</li>
+        <div class="containerNigiri">
+            <p><canvas id="nigiri" width="250" height="200"></canvas></p>
+            <ul>
+                <li>Nigiri</li>
+                <li>Preis: 1€</li>
+                <li>Stückzahl: 1</li>
+            </ul>
+            <button id="typeTwo">Nigiri auswählen</button>
         </div>
-        <div>
-            <p><canvas id="temaki" width="300" height="200"></canvas></p>
+        <div class="containerTemaki">
+            <p><canvas id="temaki" width="250" height="200"></canvas></p>
+            <ul>
+                <li>Temaki</li>
+                <li>Preis: 3.50€</li>
+                <li>Stückzahl: 1</li>
+            </ul>
+            <button id="typeThree">Temaki auswählen</button>
         </div>
-
-
-
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>

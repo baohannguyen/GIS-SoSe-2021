@@ -1,34 +1,59 @@
 .container {
-    /* display:grid;
-    grid-template-rows: [header]120% [type1]230% [type2]240% [type3]280%;
-    grid-template-columns: 35% 35% 35%;
-     */
      display: flex;
      flex-direction: column;
      align-items: flex-start;
 }
+.containerNavigation {
+    display: flex;
+    align-items: flex-start;
+}
+.containerMaki {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.containerNigiri {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.containerTemaki {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 h1 {
-    color: black;
+    color: lightblue;
     font-family: sans-serif;
     grid-column-start: 1;
     grid-column-end: 5;
 }
 nav {
+    color: royalblue;
+    font-size: 1em;
     font-family: sans-serif;
-    /* position: absolute;
-    top: 12%;
-    left: 7%; */
     list-style: none;
+    
 }
 .navigation {
     display: inline;
+
+    
+}
+button {
+    background-color: lightblue;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 20%;
+   
     
 }
 /* .typeContainer {
     display: flex;
 
 } */
-.typeOne {
+/* .typeOne {
     list-style: none;
     font-family: sans-serif;
     position: relative;
@@ -40,4 +65,19 @@ nav {
     font-family: sans-serif;
     position: relative;
     left: 140%;
+} */
+div li {
+    list-style: none;
+    font-family: sans-serif;
+    position: relative;
+    left: 140%; 
+}
+.containerSelection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+canvas {
+    background-color: gray;
+    border: 1px solid black;
 }
