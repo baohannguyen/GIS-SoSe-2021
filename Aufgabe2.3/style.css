@@ -1,6 +1,43 @@
+.container {
+    /* display:grid;
+    grid-template-rows: [header]120% [type1]230% [type2]240% [type3]280%;
+    grid-template-columns: 35% 35% 35%;
+     */
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
 h1 {
-    color: red;
-    position: absolute;
-    top: 80px;
-    left: 100px;
+    color: black;
+    font-family: sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+nav {
+    font-family: sans-serif;
+    /* position: absolute;
+    top: 12%;
+    left: 7%; */
+    list-style: none;
+}
+.navigation {
+    display: inline;
+    
+}
+/* .typeContainer {
+    display: flex;
+
+} */
+.typeOne {
+    list-style: none;
+    font-family: sans-serif;
+    position: relative;
+    left: 140%;
+    top: 30%; 
+}
+.typeTwo {
+    list-style: none;
+    font-family: sans-serif;
+    position: relative;
+    left: 140%;
 }

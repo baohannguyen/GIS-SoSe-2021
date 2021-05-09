@@ -1,2 +1,38 @@
 "use strict";
+var Aufgab2;
+(function (Aufgab2) {
+    let canvas = document.getElementById("hosomaki");
+    let context = canvas.getContext("2d");
+    context.lineWidth = 3;
+    context.beginPath();
+    context.strokeStyle = "black";
+    context.moveTo(0, 0);
+    context.lineTo(0, 200);
+    context.lineTo(300, 200);
+    context.lineTo(300, 0);
+    context.closePath();
+    context.stroke();
+    let cvs = document.getElementById("nigiri");
+    let ctx = cvs.getContext("2d");
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, 200);
+    ctx.lineTo(300, 200);
+    ctx.lineTo(300, 0);
+    ctx.closePath();
+    ctx.stroke();
+    let canv = document.getElementById("temaki");
+    let cont = canv.getContext("2d");
+    cont.lineWidth = 3;
+    cont.beginPath();
+    cont.strokeStyle = "black";
+    cont.moveTo(0, 0);
+    cont.lineTo(0, 200);
+    cont.lineTo(300, 200);
+    cont.lineTo(300, 0);
+    cont.closePath();
+    cont.stroke();
+})(Aufgab2 || (Aufgab2 = {}));
 //# sourceMappingURL=sushi.js.map

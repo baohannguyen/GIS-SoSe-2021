@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="sushi.js"></script>
+    <script src="sushi.js" defer></script>
 </head>
+
 <body>
-    <header>
+    <header class="container">
+        <h1>Sushi-Creator</h1>
         <nav>
-            
+            <li class="navigation">Auswahl</li>
+            <li class="navigation">Füllung</li>
+            <li class="navigation">Extras</li>
         </nav>
     </header>
-    <main>
-        <h1>Sushi-Creator</h1>
+    <main class="container">
+        <div>
+            <p><canvas id="hosomaki" width="300" height="200"></canvas>
+            <li class="typeOne">Hoso-Maki</li>
+            <li class="typeOne">Preis: 0,70€</li>
+            <li class="typeOne">Stückzahl: 1</li>
+            </p>
+        </div>
+        <div>
+            <p><canvas id="nigiri" width="300" height="200"></canvas></p>
+            <li class="typeTwo">Nigiri</li>
+            <li class="typeTwo">Preis: 1€</li>
+            <li class="typeTwo">Stückzahl: 1</li>
+        </div>
+        <div>
+            <p><canvas id="temaki" width="300" height="200"></canvas></p>
+        </div>
+
+
+
     </main>
-    
+    <footer>
+
+    </footer>
 </body>
+
 </html>
