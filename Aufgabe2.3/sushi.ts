@@ -22,49 +22,6 @@ namespace Aufgabe2 {
         price: number;
     }
 
-    let canvas: HTMLCanvasElement = <HTMLCanvasElement>
-        document.getElementById("hosomaki");
-    let context: CanvasRenderingContext2D = canvas.getContext("2d");
-    context.lineWidth = 3;
-
-    context.beginPath();
-    context.strokeStyle = "black";
-    context.moveTo(0, 0);
-    context.lineTo(0, 200);
-    context.lineTo(250, 200);
-    context.lineTo(250, 0);
-    context.closePath();
-    context.stroke();
-
-    let cvs: HTMLCanvasElement = <HTMLCanvasElement>
-        document.getElementById("nigiri");
-    let ctx: CanvasRenderingContext2D = cvs.getContext("2d");
-    ctx.lineWidth = 3;
-
-    ctx.beginPath();
-    ctx.strokeStyle = "black";
-    ctx.moveTo(0, 0);
-    ctx.lineTo(0, 200);
-    ctx.lineTo(250, 200);
-    ctx.lineTo(250, 0);
-    ctx.closePath();
-    ctx.stroke();
-
-    let canv: HTMLCanvasElement = <HTMLCanvasElement>
-        document.getElementById("temaki");
-    let cont: CanvasRenderingContext2D = canv.getContext("2d");
-
-    cont.lineWidth = 3;
-
-    cont.beginPath();
-    cont.strokeStyle = "black";
-    cont.moveTo(0, 0);
-    cont.lineTo(0, 200);
-    cont.lineTo(250, 200);
-    cont.lineTo(250, 0);
-    cont.closePath();
-    cont.stroke();
-
     let allSelection: Selection[] = [];
     seeData();
     function seeData(): void {
