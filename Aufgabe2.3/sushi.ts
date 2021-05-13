@@ -13,7 +13,7 @@ namespace Aufgabe2 {
     interface Filling {
         type: string;
         typePicture: string;
-        price: string;
+        price: number;
     }
     interface Extras {
         extra1: string;
@@ -39,7 +39,7 @@ namespace Aufgabe2 {
             let attributeStorage: string[] = data[i].split("+");
             switch (attributeStorage[0]) {
                 case "Filling":
-                    allFilling[allFilling.length] = { type: attributeStorage[1], typePicture: attributeStorage[2], price: Number(attributeStorage[3]), numberOfPieces: Number(attributeStorage[4]) };
+                    allFilling[allFilling.length] = { type: attributeStorage[1], typePicture: attributeStorage[2], price: Number(attributeStorage[3]) };
                     break;
             }
         }
@@ -47,7 +47,7 @@ namespace Aufgabe2 {
             let attributeStorage: string[] = data[i].split("+");
             switch (attributeStorage[0]) {
                 case "Extras":
-                    allExtras[allExtras.length] = { extra1: attributeStorage[1], extra2: attributeStorage[2], extra3: attributeStorage[3], }
+                    allExtras[allExtras.length] = { extra1: attributeStorage[1], extra2: attributeStorage[2], extra3: attributeStorage[3], price: Number(attributeStorage[4]) };
             }
             function seeVar(): void {
                 for (let i: number = 0; i < allSelection.length; i++) {
@@ -64,9 +64,12 @@ namespace Aufgabe2 {
                     listelement.appendChild(document.createTextNode(allSelection[i].type));
                     let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
                     listelement2.appendChild(document.createTextNode("Preis: " + allSelection[i].price));
+                    let listelement3: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+                    listelement3.appendChild(document.createTextNode("Stückzahl: " + allSelection[i].numberOfPieces));
                     container.appendChild(list);
                     list.appendChild(listelement);
                     list.appendChild(listelement2);
+                    list.appendChild(listelement3);
                 }
             }
             seeVar();
@@ -86,3 +89,5 @@ namespace Aufgabe2 {
             }
             document.querySelector("#typeThree").addEventListener("click", electTypeThree);
         }
+    }
+}
