@@ -70,6 +70,18 @@ namespace Aufgabe2 {
                     list.appendChild(listelement);
                     list.appendChild(listelement2);
                     list.appendChild(listelement3);
+                    let buttonMaki: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+                    buttonMaki.setAttribute("id", "typeOne");
+                    buttonMaki.appendChild(document.createTextNode("Hoso-Maki auswählen"));
+                    let buttonNigiri: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+                    buttonNigiri.setAttribute("id", "typeTwo");
+                    buttonNigiri.appendChild(document.createTextNode("Nigiri auswählen"));
+                    let buttonTemaki: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+                    buttonTemaki.setAttribute("id", "typeThree");
+                    buttonTemaki.appendChild(document.createTextNode("Temaki auswählen"));
+                    container.appendChild(buttonMaki);
+                    // container.appendChild(buttonNigiri);
+                    // container.appendChild(buttonTemaki);
                 }
             }
             seeVar();
@@ -77,7 +89,7 @@ namespace Aufgabe2 {
             function electTypeOne(): void {
                 console.log("Sie haben sich für Hoso-Maki entschieden");
             }
-            document.querySelector("button").addEventListener("click", electTypeOne);
+            document.querySelector("#typeOne").addEventListener("click", electTypeOne);
 
             function electTypeTwo(): void {
                 console.log("Sie haben sich für Nigiri entschieden");

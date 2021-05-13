@@ -12,7 +12,7 @@
     flex-direction: row;
     align-items: center;
 }
-.containerNigiri {
+/* .containerNigiri {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-}
+} */
 h1 {
     color: lightblue;
     font-family: sans-serif;
@@ -78,6 +78,6 @@ div li {
     align-items: center;
 }
 canvas {
-    background-color: gray;
+    background-color: lightblue;
     border: 1px solid black;
 }
