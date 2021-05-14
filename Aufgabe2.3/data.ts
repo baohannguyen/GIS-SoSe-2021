@@ -8,11 +8,53 @@ namespace Aufgabe2 {
                                      "Extras+Vegan+Scharf+Frittiert+0.50",
                                      "Extras+Vegan+none+Frittiert+0.50",
                                      "Extras+None+Scharf+Frittiert+0.50"];
-        // export let data: string = {
-        //         Selection: [{type: "Hoso-Maki", typePicture: "hososmaki.jpg", price: 0.70, numberOfPieces: 1.0}, {type: "Nigiri", typePicture: "nigiri.jpg", price: 1.0, numberOfPieces: 1.0}, {type: "Temaki", typePicture: "temaki.jpg", price: 3.50, numberOfPieces: 1.0}],
-        //         Filling: [{type: "Lachs", typePicture: "lachs.jpg", price: 0.50}, {type: "Avocado", typePicture: "avocado.jpg", price: 0.50}, {type: "Thunfisch", typePicture: "thunfisch.jpg", price: 0.50}],
-        //         Extras: [{extra1: "Vegan", extra2: "Scharf", extra3: "Frittiert", price: 0.50}, {extra1: "Vegan", extra2: "None", extra3: "Frittiert", price: 0.50}, {extra1: "None", extra2: "Scharf", extra3: "Frittiert", price: 0.50}]
-        // };
+
+        export interface Sushi {
+                selection: Selection[];
+                filling: Filling[];
+                extras: Extras[];
+        }
+        export interface Selection {
+                type: string;
+                typePicture: string;
+                numberOfPieces: number;
+                price: number;
+        }
+        export interface Filling {
+                type: string;
+                typePicture: string;
+                price: number;
+        }
+        export interface Extras {
+                extra1: string;
+                extra2: string;
+                extra3: string;
+                price: number;
+        }
+        
+        export let datas: Sushi = {
+                selection: [ { type: "Hoso-Maki", typePicture: "hoso-maki.jpg", numberOfPieces: 1, price: 0.70},
+                             { type: "Nigiri", typePicture: "nigiri.jpg", numberOfPieces: 1, price: 1},
+                             { type: "Temaki", typePicture: "temaki.jpg", numberOfPieces: 1, price: 3.50} ],
+                filling: [ { type: "Lachs", typePicture: "lachs.jpg", price: 0.50},
+                           { type: "Avocado", typePicture: "avocado.jpg", price: 0.20},
+                           { type: "Thunfisch", typePicture: "thunfisch.jpg", price: 0.50} ],
+                extras: [ { extra1: "Vegan", extra2: "None", extra3: "None", price: 0.50},
+                          { extra1: "None", extra2: "Scharf", extra3: "None", price: 0.50},
+                          { extra1: "None", extra2: "None", extra3: "Frittiert", price: 0.50}]
+        };
+
+        export let dataJSON: string = `{"selection": [ { "type": "Hoso-Maki", "typePicture": "hoso-maki.jpg", "numberOfPieces": 1, "price": 0.70},
+                                                       { "type": "Nigiri", "typePicture": "nigiri.jpg", "numberOfPieces": 1, "price": 1}.
+                                                       { "type": "Temaki", "typePicture": "temaki.jpg", "numberOfPieces": 1, "price": 3.50}],
+                                        "fillings": [ { "type": "Lachs", "typePicture": "lachs.jpg", "price": 0.50},
+                                                      { "type": "Avocado", "typePicture": "avocado.jpg", "price": 0.20},
+                                                      { "type": "Thunfisch", "typePicture": "thunfisch.jpg", "price": 0.50}],
+                                        "extras": [ { "extra1": "Vegan", "extra2": "None", "extra3": "None", "price": 0.50},
+                                                    { "extra1": "None", "extra2": "Scharf", "extra3": "None", "price": 0.50},
+                                                    { "extra1": "None", "extra2": "None", "extra3": "Frittiert", "price": 0.50}]
+}
+                                        `;
 
 
 }

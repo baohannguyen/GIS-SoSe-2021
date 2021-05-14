@@ -10,10 +10,27 @@ var Aufgabe2;
         "Extras+Vegan+Scharf+Frittiert+0.50",
         "Extras+Vegan+none+Frittiert+0.50",
         "Extras+None+Scharf+Frittiert+0.50"];
-    // export let data: string = {
-    //         Selection: [{type: "Hoso-Maki", typePicture: "hososmaki.jpg", price: 0.70, numberOfPieces: 1.0}, {type: "Nigiri", typePicture: "nigiri.jpg", price: 1.0, numberOfPieces: 1.0}, {type: "Temaki", typePicture: "temaki.jpg", price: 3.50, numberOfPieces: 1.0}],
-    //         Filling: [{type: "Lachs", typePicture: "lachs.jpg", price: 0.50}, {type: "Avocado", typePicture: "avocado.jpg", price: 0.50}, {type: "Thunfisch", typePicture: "thunfisch.jpg", price: 0.50}],
-    //         Extras: [{extra1: "Vegan", extra2: "Scharf", extra3: "Frittiert", price: 0.50}, {extra1: "Vegan", extra2: "None", extra3: "Frittiert", price: 0.50}, {extra1: "None", extra2: "Scharf", extra3: "Frittiert", price: 0.50}]
-    // };
+    Aufgabe2.datas = {
+        selection: [{ type: "Hoso-Maki", typePicture: "hoso-maki.jpg", numberOfPieces: 1, price: 0.70 },
+            { type: "Nigiri", typePicture: "nigiri.jpg", numberOfPieces: 1, price: 1 },
+            { type: "Temaki", typePicture: "temaki.jpg", numberOfPieces: 1, price: 3.50 }],
+        filling: [{ type: "Lachs", typePicture: "lachs.jpg", price: 0.50 },
+            { type: "Avocado", typePicture: "avocado.jpg", price: 0.20 },
+            { type: "Thunfisch", typePicture: "thunfisch.jpg", price: 0.50 }],
+        extras: [{ extra1: "Vegan", extra2: "None", extra3: "None", price: 0.50 },
+            { extra1: "None", extra2: "Scharf", extra3: "None", price: 0.50 },
+            { extra1: "None", extra2: "None", extra3: "Frittiert", price: 0.50 }]
+    };
+    Aufgabe2.dataJSON = `{"selection": [ { "type": "Hoso-Maki", "typePicture": "hoso-maki.jpg", "numberOfPieces": 1, "price": 0.70},
+                                                       { "type": "Nigiri", "typePicture": "nigiri.jpg", "numberOfPieces": 1, "price": 1}.
+                                                       { "type": "Temaki", "typePicture": "temaki.jpg", "numberOfPieces": 1, "price": 3.50}],
+                                        "fillings": [ { "type": "Lachs", "typePicture": "lachs.jpg", "price": 0.50},
+                                                      { "type": "Avocado", "typePicture": "avocado.jpg", "price": 0.20},
+                                                      { "type": "Thunfisch", "typePicture": "thunfisch.jpg", "price": 0.50}],
+                                        "extras": [ { "extra1": "Vegan", "extra2": "None", "extra3": "None", "price": 0.50},
+                                                    { "extra1": "None", "extra2": "Scharf", "extra3": "None", "price": 0.50},
+                                                    { "extra1": "None", "extra2": "None", "extra3": "Frittiert", "price": 0.50}]
+}
+                                        `;
 })(Aufgabe2 || (Aufgabe2 = {}));
 //# sourceMappingURL=data.js.map

@@ -1,6 +1,11 @@
 "use strict";
 var Aufgabe2;
 (function (Aufgabe2) {
+    let dataStorage = null;
+    function daten() {
+        dataStorage = JSON.parse(Aufgabe2.dataJSON);
+    }
+    daten();
     let allSelection = [];
     let allFilling = [];
     let allExtras = [];
@@ -11,7 +16,7 @@ var Aufgabe2;
             switch (attributeStorage[0]) {
                 case "Selection":
                     allSelection[allSelection.length] = { type: attributeStorage[1], typePicture: attributeStorage[2], price: Number(attributeStorage[3]), numberOfPieces: Number(attributeStorage[4]) };
-                    break; // für Filling und Extras das selbe machen, wenn man die anderen Seiten auch sehen möchte 
+                    break;
             }
         }
         for (let i = 0; i < Aufgabe2.data.length; i++) {
@@ -49,33 +54,28 @@ var Aufgabe2;
                     list.appendChild(listelement);
                     list.appendChild(listelement2);
                     list.appendChild(listelement3);
-                    let buttonMaki = document.createElement("button");
-                    buttonMaki.setAttribute("id", "typeOne");
-                    buttonMaki.appendChild(document.createTextNode("Hoso-Maki auswählen"));
-                    let buttonNigiri = document.createElement("button");
-                    buttonNigiri.setAttribute("id", "typeTwo");
-                    buttonNigiri.appendChild(document.createTextNode("Nigiri auswählen"));
-                    let buttonTemaki = document.createElement("button");
-                    buttonTemaki.setAttribute("id", "typeThree");
-                    buttonTemaki.appendChild(document.createTextNode("Temaki auswählen"));
-                    container.appendChild(buttonMaki);
-                    // container.appendChild(buttonNigiri);
-                    // container.appendChild(buttonTemaki);
+                    let button = document.createElement("button");
+                    button.setAttribute("id", "button" + allSelection[i].type);
+                    button.appendChild(document.createTextNode(allSelection[i].type + " auswählen"));
+                    button.addEventListener("click", electTypeOne);
+                    container.appendChild(button);
                 }
             }
             seeVar();
-            function electTypeOne() {
-                console.log("Sie haben sich für Hoso-Maki entschieden");
+            function electTypeOne(_event) {
+                let button = _event.target;
+                switch (button.id) {
+                    case "buttonHoso-Maki":
+                        console.log("Sie haben sich für Hoso-Maki entschieden");
+                        break;
+                    case "buttonNigiri":
+                        console.log("Sie haben sich für Nigiri entschieden");
+                        break;
+                    case "buttonTemaki":
+                        console.log("Sie haben sich für Temaki entschieden");
+                        break;
+                }
             }
-            document.querySelector("#typeOne").addEventListener("click", electTypeOne);
-            function electTypeTwo() {
-                console.log("Sie haben sich für Nigiri entschieden");
-            }
-            document.querySelector("#typeTwo").addEventListener("click", electTypeTwo);
-            function electTypeThree() {
-                console.log("Sie haben sich für Temaki entschieden");
-            }
-            document.querySelector("#typeThree").addEventListener("click", electTypeThree);
         }
     }
 })(Aufgabe2 || (Aufgabe2 = {}));
