@@ -1,7 +1,7 @@
 "use strict";
 var Aufgabe2;
 (function (Aufgabe2) {
-    let dataStorage = null;
+    let dataStorage = undefined;
     function daten() {
         dataStorage = JSON.parse(Aufgabe2.dataJSON);
     }

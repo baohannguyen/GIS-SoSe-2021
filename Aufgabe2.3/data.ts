@@ -44,17 +44,18 @@ namespace Aufgabe2 {
                           { extra1: "None", extra2: "None", extra3: "Frittiert", price: 0.50}]
         };
 
-        export let dataJSON: string = `{"selection": [ { "type": "Hoso-Maki", "typePicture": "hoso-maki.jpg", "numberOfPieces": 1, "price": 0.70},
-                                                       { "type": "Nigiri", "typePicture": "nigiri.jpg", "numberOfPieces": 1, "price": 1}.
-                                                       { "type": "Temaki", "typePicture": "temaki.jpg", "numberOfPieces": 1, "price": 3.50}],
-                                        "fillings": [ { "type": "Lachs", "typePicture": "lachs.jpg", "price": 0.50},
-                                                      { "type": "Avocado", "typePicture": "avocado.jpg", "price": 0.20},
-                                                      { "type": "Thunfisch", "typePicture": "thunfisch.jpg", "price": 0.50}],
-                                        "extras": [ { "extra1": "Vegan", "extra2": "None", "extra3": "None", "price": 0.50},
-                                                    { "extra1": "None", "extra2": "Scharf", "extra3": "None", "price": 0.50},
-                                                    { "extra1": "None", "extra2": "None", "extra3": "Frittiert", "price": 0.50}]
-}
-                                        `;
+//         export let dataJSON: string = `{"selection": [ { "type": "Hoso-Maki", "typePicture": "hoso-maki.jpg", "numberOfPieces": 1, "price": 0.70},
+//                                                        { "type": "Nigiri", "typePicture": "nigiri.jpg", "numberOfPieces": 1, "price": 1}.
+//                                                        { "type": "Temaki", "typePicture": "temaki.jpg", "numberOfPieces": 1, "price": 3.50}],
+//                                         "fillings": [ { "type": "Lachs", "typePicture": "lachs.jpg", "price": 0.50},
+//                                                       { "type": "Avocado", "typePicture": "avocado.jpg", "price": 0.20},
+//                                                       { "type": "Thunfisch", "typePicture": "thunfisch.jpg", "price": 0.50}],
+//                                         "extras": [ { "extra1": "Vegan", "extra2": "None", "extra3": "None", "price": 0.50},
+//                                                     { "extra1": "None", "extra2": "Scharf", "extra3": "None", "price": 0.50},
+//                                                     { "extra1": "None", "extra2": "None", "extra3": "Frittiert", "price": 0.50}]
+// }
+//                                         `;
+        export let dataJSON: string = JSON.stringify(datas);
 
 
 }

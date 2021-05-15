@@ -21,7 +21,7 @@ namespace Aufgabe2 {
         extra3: string;
         price: number;
     }
-    let dataStorage: Sushi = null;
+    let dataStorage: Sushi = undefined;
 
     function daten(): void {
         dataStorage = JSON.parse(dataJSON);
