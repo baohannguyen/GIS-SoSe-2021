@@ -119,9 +119,7 @@ namespace Aufgabe2 {
                             break;
                     }
                 }
-            }
-
-            
+            } 
         }
         function storage(): void {
             localStorage.setItem("Auswahl", "Hoso-Maki");
@@ -137,7 +135,7 @@ namespace Aufgabe2 {
         
         let actualSite: string = undefined;
 
-        if (document.URL.includes("index2")) {
+        if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
             let selectionSite: Selection[] = undefined;
             selectionSite = allSelection;
             actualSite = dataStorage.selection.toString();
