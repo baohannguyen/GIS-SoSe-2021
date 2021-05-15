@@ -78,12 +78,15 @@ var Aufgabe2;
                 }
             }
         }
-        localStorage.setItem("Auswahl", "Hoso-Maki");
-        console.log(localStorage.getItem("Auswahl"));
-        localStorage.setItem("Auswahl", "Nigiri");
-        console.log(localStorage.getItem("Auswahl"));
-        localStorage.setItem("Auswahl", "Temaki");
-        console.log(localStorage.getItem("Auswahl"));
+        function storage() {
+            localStorage.setItem("Auswahl", "Hoso-Maki");
+            console.log(localStorage.getItem("Auswahl"));
+            localStorage.setItem("Auswahl", "Nigiri");
+            console.log(localStorage.getItem("Auswahl"));
+            localStorage.setItem("Auswahl", "Temaki");
+            console.log(localStorage.getItem("Auswahl"));
+        }
+        storage();
     }
 })(Aufgabe2 || (Aufgabe2 = {}));
 //# sourceMappingURL=sushi.js.map

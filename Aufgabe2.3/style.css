@@ -7,21 +7,6 @@
     display: flex;
     align-items: flex-start;
 }
-.containerMaki {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-/* .containerNigiri {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.containerTemaki {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-} */
 h1 {
     color: lightblue;
     font-family: sans-serif;
@@ -49,23 +34,6 @@ button {
    
     
 }
-/* .typeContainer {
-    display: flex;
-
-} */
-/* .typeOne {
-    list-style: none;
-    font-family: sans-serif;
-    position: relative;
-    left: 140%;
-    top: 30%; 
-}
-.typeTwo {
-    list-style: none;
-    font-family: sans-serif;
-    position: relative;
-    left: 140%;
-} */
 div li {
     list-style: none;
     font-family: sans-serif;
