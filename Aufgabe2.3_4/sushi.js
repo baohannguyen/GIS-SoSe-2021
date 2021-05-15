@@ -33,15 +33,16 @@ var Aufgabe2;
                 case "Extras":
                     allExtras[allExtras.length] = { extra1: attributeStorage[1], extra2: attributeStorage[2], extra3: attributeStorage[3], price: Number(attributeStorage[4]) };
             }
+            seeVar();
+            break;
             function seeVar() {
                 for (let i = 0; i < allSelection.length; i++) {
                     let container = document.createElement("div");
                     container.setAttribute("class", "containerSelection");
                     document.querySelector("main").appendChild(container);
-                    let canvas = document.createElement("canvas");
-                    canvas.setAttribute("style", "width:250px; height:200px");
-                    canvas.setAttribute("id", "canvas" + i);
-                    container.appendChild(canvas);
+                    let image = document.createElement("img");
+                    image.setAttribute("src", allSelection[i].typePicture);
+                    container.appendChild(image);
                     let list = document.createElement("ul");
                     container.appendChild(list);
                     let listelement = document.createElement("li");
@@ -60,21 +61,40 @@ var Aufgabe2;
                     button.addEventListener("click", electTypeOne);
                     container.appendChild(button);
                 }
-            }
-            seeVar();
-            break;
-            function electTypeOne(_event) {
-                let button = _event.target;
-                switch (button.id) {
-                    case "buttonHoso-Maki":
-                        console.log("Sie haben sich für Hoso-Maki entschieden");
-                        break;
-                    case "buttonNigiri":
-                        console.log("Sie haben sich für Nigiri entschieden");
-                        break;
-                    case "buttonTemaki":
-                        console.log("Sie haben sich für Temaki entschieden");
-                        break;
+                for (let i = 0; i < allFilling.length; i++) {
+                    let ctn = document.createElement("div");
+                    ctn.setAttribute("class", "containerFilling");
+                    document.querySelector("main").appendChild(ctn);
+                    let image = document.createElement("img");
+                    image.setAttribute("src", allFilling[i].typePicture);
+                    ctn.appendChild(image);
+                    let list = document.createElement("ul");
+                    ctn.appendChild(list);
+                    let listelement = document.createElement("li");
+                    listelement.appendChild(document.createTextNode(allFilling[i].type));
+                    let listelement2 = document.createElement("li");
+                    listelement2.appendChild(document.createTextNode("Preis: " + allFilling[i].price));
+                    ctn.appendChild(list);
+                    list.appendChild(listelement);
+                    list.appendChild(listelement2);
+                    let button = document.createElement("button");
+                    button.setAttribute("id", "button" + allFilling[i].type);
+                    button.appendChild(document.createTextNode(allFilling[i].type + " auswählen"));
+                    ctn.appendChild(button);
+                }
+                function electTypeOne(_event) {
+                    let button = _event.target;
+                    switch (button.id) {
+                        case "buttonHoso-Maki":
+                            console.log("Sie haben sich für Hoso-Maki entschieden");
+                            break;
+                        case "buttonNigiri":
+                            console.log("Sie haben sich für Nigiri entschieden");
+                            break;
+                        case "buttonTemaki":
+                            console.log("Sie haben sich für Temaki entschieden");
+                            break;
+                    }
                 }
             }
         }
@@ -87,6 +107,17 @@ var Aufgabe2;
             console.log(localStorage.getItem("Auswahl"));
         }
         storage();
+        let fillingSite = undefined;
+        let actualSite = undefined;
+        if (document.URL.includes("index2")) {
+            let selectionSite = undefined;
+            selectionSite = allSelection;
+            actualSite = dataStorage.selection.toString();
+        }
+        else if (document.URL.includes("filling")) {
+            fillingSite = allFilling;
+            actualSite = dataStorage.filling.toString();
+        }
     }
 })(Aufgabe2 || (Aufgabe2 = {}));
 //# sourceMappingURL=sushi.js.map

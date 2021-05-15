@@ -17,13 +17,11 @@ nav {
     color: royalblue;
     font-size: 1em;
     font-family: sans-serif;
-    list-style: none;
-    
+    list-style: none;   
 }
 .navigation {
     display: inline;
-
-    
+    text-decoration: none;
 }
 button {
     background-color: lightblue;
@@ -31,8 +29,6 @@ button {
     height: 50px;
     position: relative;
     left: 20%;
-   
-    
 }
 div li {
     list-style: none;
@@ -45,7 +41,12 @@ div li {
     flex-direction: row;
     align-items: center;
 }
-canvas {
-    background-color: lightblue;
-    border: 1px solid black;
+.containerFilling {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img {
+    height: 200px;
+    width: 240px;
 }

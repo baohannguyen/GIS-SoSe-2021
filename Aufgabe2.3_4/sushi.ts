@@ -55,15 +55,16 @@ namespace Aufgabe2 {
                 case "Extras":
                     allExtras[allExtras.length] = { extra1: attributeStorage[1], extra2: attributeStorage[2], extra3: attributeStorage[3], price: Number(attributeStorage[4]) };
             }
+            seeVar();
+            break;
             function seeVar(): void {
                 for (let i: number = 0; i < allSelection.length; i++) {
                     let container: HTMLDivElement = <HTMLDivElement>document.createElement("div");
                     container.setAttribute("class", "containerSelection");
                     document.querySelector("main").appendChild(container);
-                    let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.createElement("canvas");
-                    canvas.setAttribute("style", "width:250px; height:200px");
-                    canvas.setAttribute("id", "canvas" + i);
-                    container.appendChild(canvas);
+                    let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+                    image.setAttribute("src", allSelection[i].typePicture);
+                    container.appendChild(image);
                     let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
                     container.appendChild(list);
                     let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
@@ -82,37 +83,68 @@ namespace Aufgabe2 {
                     button.addEventListener("click", electTypeOne);
                     container.appendChild(button);
                 }
-            }
-            seeVar();
-            break;
+                for (let i: number = 0; i < allFilling.length; i++) {
+                    let ctn: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+                    ctn.setAttribute("class", "containerFilling");
+                    document.querySelector("main").appendChild(ctn);
+                    let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+                    image.setAttribute("src", allFilling[i].typePicture);
+                    ctn.appendChild(image);
+                    let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
+                    ctn.appendChild(list);
+                    let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+                    listelement.appendChild(document.createTextNode(allFilling[i].type));
+                    let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+                    listelement2.appendChild(document.createTextNode("Preis: " + allFilling[i].price));
+                    ctn.appendChild(list);
+                    list.appendChild(listelement);
+                    list.appendChild(listelement2);
+                    let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+                    button.setAttribute("id", "button" + allFilling[i].type);
+                    button.appendChild(document.createTextNode(allFilling[i].type + " auswählen"));
+                    ctn.appendChild(button);
+                }
 
-            function electTypeOne(_event: Event): void {
-                let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
-                switch (button.id) {
-                    case "buttonHoso-Maki":
-                        console.log("Sie haben sich für Hoso-Maki entschieden");
-                        break;
-                    case "buttonNigiri":
-                        console.log("Sie haben sich für Nigiri entschieden");
-                        break;
-                    case "buttonTemaki":
-                        console.log("Sie haben sich für Temaki entschieden");
-                        break;
+                function electTypeOne(_event: Event): void {
+                    let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
+                    switch (button.id) {
+                        case "buttonHoso-Maki":
+                            console.log("Sie haben sich für Hoso-Maki entschieden");
+                            break;
+                        case "buttonNigiri":
+                            console.log("Sie haben sich für Nigiri entschieden");
+                            break;
+                        case "buttonTemaki":
+                            console.log("Sie haben sich für Temaki entschieden");
+                            break;
+                    }
                 }
             }
+
+            
         }
-        function storage (): void {
+        function storage(): void {
             localStorage.setItem("Auswahl", "Hoso-Maki");
             console.log(localStorage.getItem("Auswahl"));
             localStorage.setItem("Auswahl", "Nigiri");
             console.log(localStorage.getItem("Auswahl"));
             localStorage.setItem("Auswahl", "Temaki");
             console.log(localStorage.getItem("Auswahl"));
-        }    
+        }
         storage();
+
+        let fillingSite: Filling[] = undefined;
         
-        
+        let actualSite: string = undefined;
+
+        if (document.URL.includes("index2")) {
+            let selectionSite: Selection[] = undefined;
+            selectionSite = allSelection;
+            actualSite = dataStorage.selection.toString();
+        } else if (document.URL.includes("filling")) {
+            fillingSite = allFilling;
+            actualSite = dataStorage.filling.toString();
+        }
+
     }
-
 }
-
