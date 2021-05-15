@@ -1,9 +1,9 @@
 "use strict";
 var Aufgabe2;
 (function (Aufgabe2) {
-    let dataStorage = undefined;
+    let dataStorage = null;
     function daten() {
-        dataStorage = JSON.parse(Aufgabe2.dataJSON);
+        dataStorage = JSON.parse(Aufgabe2.dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
     }
     daten();
     let allSelection = [];
@@ -62,6 +62,7 @@ var Aufgabe2;
                 }
             }
             seeVar();
+            break;
             function electTypeOne(_event) {
                 let button = _event.target;
                 switch (button.id) {
@@ -77,6 +78,12 @@ var Aufgabe2;
                 }
             }
         }
+        localStorage.setItem("Auswahl", "Hoso-Maki");
+        console.log(localStorage.getItem("Auswahl"));
+        localStorage.setItem("Auswahl", "Nigiri");
+        console.log(localStorage.getItem("Auswahl"));
+        localStorage.setItem("Auswahl", "Temaki");
+        console.log(localStorage.getItem("Auswahl"));
     }
 })(Aufgabe2 || (Aufgabe2 = {}));
 //# sourceMappingURL=sushi.js.map

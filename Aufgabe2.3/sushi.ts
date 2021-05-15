@@ -21,10 +21,10 @@ namespace Aufgabe2 {
         extra3: string;
         price: number;
     }
-    let dataStorage: Sushi = undefined;
 
+    let dataStorage: Sushi = null;
     function daten(): void {
-        dataStorage = JSON.parse(dataJSON);
+        dataStorage = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
     }
     daten();
 
@@ -84,7 +84,7 @@ namespace Aufgabe2 {
                 }
             }
             seeVar();
-
+            break;
 
             function electTypeOne(_event: Event): void {
                 let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
@@ -100,7 +100,16 @@ namespace Aufgabe2 {
                         break;
                 }
             }
-
         }
+        localStorage.setItem("Auswahl", "Hoso-Maki");
+        console.log(localStorage.getItem("Auswahl"));
+        localStorage.setItem("Auswahl", "Nigiri");
+        console.log(localStorage.getItem("Auswahl"));
+        localStorage.setItem("Auswahl", "Temaki");
+        console.log(localStorage.getItem("Auswahl"));
+        
+        
     }
+
 }
+
