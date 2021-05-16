@@ -150,18 +150,18 @@ namespace Aufgabe2 {
         }
         storage();
 
-        let fillingSite: Filling[] = undefined;
+    //     let fillingSite: Filling[] = undefined;
         
-        let actualSite: string = undefined;
+    //     let actualSite: string = undefined;
 
-        if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
-            let selectionSite: Selection[] = undefined;
-            selectionSite = allSelection;
-            actualSite = dataStorage.selection.toString();
-        } else if (document.URL.includes("filling")) {
-            fillingSite = allFilling;
-            actualSite = dataStorage.filling.toString();
-        }
+    //     if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
+    //         let selectionSite: Selection[] = undefined;
+    //         selectionSite = allSelection;
+    //         actualSite = dataStorage.selection.toString();
+    //     } else if (document.URL.includes("filling")) {
+    //         fillingSite = allFilling;
+    //         actualSite = dataStorage.filling.toString();
+    //     }
 
     }
 }

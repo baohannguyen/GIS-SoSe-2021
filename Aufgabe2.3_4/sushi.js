@@ -128,17 +128,16 @@ var Aufgabe2;
             console.log(localStorage.getItem("Auswahl"));
         }
         storage();
-        let fillingSite = undefined;
-        let actualSite = undefined;
-        if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
-            let selectionSite = undefined;
-            selectionSite = allSelection;
-            actualSite = dataStorage.selection.toString();
-        }
-        else if (document.URL.includes("filling")) {
-            fillingSite = allFilling;
-            actualSite = dataStorage.filling.toString();
-        }
+        //     let fillingSite: Filling[] = undefined;
+        //     let actualSite: string = undefined;
+        //     if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
+        //         let selectionSite: Selection[] = undefined;
+        //         selectionSite = allSelection;
+        //         actualSite = dataStorage.selection.toString();
+        //     } else if (document.URL.includes("filling")) {
+        //         fillingSite = allFilling;
+        //         actualSite = dataStorage.filling.toString();
+        //     }
     }
 })(Aufgabe2 || (Aufgabe2 = {}));
 //# sourceMappingURL=sushi.js.map
