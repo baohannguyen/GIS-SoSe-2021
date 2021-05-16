@@ -1,7 +1,7 @@
 .container {
      display: flex;
      flex-direction: column;
-     align-items: flex-start;
+     align-items: center;
 }
 .containerNavigation {
     display: flex;
@@ -9,9 +9,11 @@
 }
 h1 {
     color: lightblue;
+    font-family: verdana;
+}
+h2 {
+    color: cornflowerblue;
     font-family: sans-serif;
-    grid-column-start: 1;
-    grid-column-end: 5;
 }
 nav {
     color: royalblue;
@@ -52,8 +54,8 @@ div li {
     align-items: center;
 }
 img {
-    height: 200px;
-    width: 240px;
+    height: 180px;
+    width: 210px;
 }
 #allcontent {
     display: flex;
@@ -64,4 +66,13 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: verdana;
+    font-size: 1.5em;
+}
+#resultPics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 27%;
+    margin-top: 5%;
 }
