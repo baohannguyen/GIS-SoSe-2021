@@ -131,15 +131,11 @@ var Aufgabe2;
             console.log(localStorage.getItem("Auswahl"));
         }
         storage();
-        let selectionSite = undefined;
-        let fillingSite = undefined;
         let actualSite = undefined;
         if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
-            selectionSite = allSelection;
             actualSite = dataStorage.selection.toString();
         }
         else if (document.URL.includes("filling")) {
-            fillingSite = allFilling;
             actualSite = dataStorage.filling.toString();
         }
     }
