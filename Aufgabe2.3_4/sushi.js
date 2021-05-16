@@ -1,8 +1,8 @@
 "use strict";
 var Aufgabe2;
 (function (Aufgabe2) {
-    let dataStorage = null;
     function daten() {
+        let dataStorage = null;
         dataStorage = JSON.parse(Aufgabe2.dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
     }
     daten();

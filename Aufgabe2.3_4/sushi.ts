@@ -20,8 +20,8 @@ namespace Aufgabe2 {
         price: number;
     }
 
-    let dataStorage: Sushi = null;
     function daten(): void {
+        let dataStorage: Sushi = null;
         dataStorage = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
     }
     daten();
