@@ -55,3 +55,13 @@ img {
     height: 200px;
     width: 240px;
 }
+#allcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
