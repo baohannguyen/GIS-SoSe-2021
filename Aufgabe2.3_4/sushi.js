@@ -122,15 +122,15 @@ var Aufgabe2;
                 }
             }
         }
-        function storage() {
-            localStorage.setItem("Auswahl", "Hoso-Maki");
-            console.log(localStorage.getItem("Auswahl"));
-            localStorage.setItem("Auswahl", "Nigiri");
-            console.log(localStorage.getItem("Auswahl"));
-            localStorage.setItem("Auswahl", "Temaki");
-            console.log(localStorage.getItem("Auswahl"));
-        }
-        storage();
+        // function storage(): void {
+        //     localStorage.setItem("Auswahl", "Hoso-Maki");
+        //     console.log(localStorage.getItem("Auswahl"));
+        //     localStorage.setItem("Auswahl", "Nigiri");
+        //     console.log(localStorage.getItem("Auswahl"));
+        //     localStorage.setItem("Auswahl", "Temaki");
+        //     console.log(localStorage.getItem("Auswahl"));
+        // }
+        // storage();
         //     let fillingSite: Filling[] = undefined;
         //     let actualSite: string = undefined;
         //     if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
