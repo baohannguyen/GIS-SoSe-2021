@@ -1,8 +1,8 @@
 "use strict";
 var Aufgabe2;
 (function (Aufgabe2) {
+    let dataStorage = null;
     function daten() {
-        let dataStorage = null;
         dataStorage = JSON.parse(Aufgabe2.dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
     }
     daten();
@@ -131,16 +131,17 @@ var Aufgabe2;
             console.log(localStorage.getItem("Auswahl"));
         }
         storage();
-        //     let fillingSite: Filling[] = undefined;
-        //     let actualSite: string = undefined;
-        //     if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
-        //         let selectionSite: Selection[] = undefined;
-        //         selectionSite = allSelection;
-        //         actualSite = dataStorage.selection.toString();
-        //     } else if (document.URL.includes("filling")) {
-        //         fillingSite = allFilling;
-        //         actualSite = dataStorage.filling.toString();
-        //     }
+        let selectionSite = undefined;
+        let fillingSite = undefined;
+        let actualSite = undefined;
+        if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
+            selectionSite = allSelection;
+            actualSite = dataStorage.selection.toString();
+        }
+        else if (document.URL.includes("filling")) {
+            fillingSite = allFilling;
+            actualSite = dataStorage.filling.toString();
+        }
     }
 })(Aufgabe2 || (Aufgabe2 = {}));
 //# sourceMappingURL=sushi.js.map
