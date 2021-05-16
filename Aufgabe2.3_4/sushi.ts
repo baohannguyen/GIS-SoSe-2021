@@ -102,27 +102,27 @@ namespace Aufgabe2 {
                     button.appendChild(document.createTextNode(allFilling[i].type + " auswählen"));
                     ctn.appendChild(button);
                 }
-                for (let i: number = 0; i < allExtras.length; i++) {
-                    let cont: HTMLDivElement = <HTMLDivElement>document.createElement("div");
-                    cont.setAttribute("class", "containerExtras");
-                    document.querySelector("main").appendChild(cont);
-                    let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-                    image.setAttribute("src", allExtras[i].extra);
-                    cont.appendChild(image);
-                    let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
-                    cont.appendChild(list);
-                    let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
-                    listelement.appendChild(document.createTextNode(allExtras[i].extra));
-                    let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
-                    listelement2.appendChild(document.createTextNode("Preis: " + allExtras[i].price));
-                    cont.appendChild(list);
-                    list.appendChild(listelement);
-                    list.appendChild(listelement2);
-                    let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
-                    button.setAttribute("id", "button" + allExtras[i].extra);
-                    button.appendChild(document.createTextNode(allExtras[i].extra + " auswählen"));
-                    cont.appendChild(button);
-                }
+                // for (let i: number = 0; i < allExtras.length; i++) {
+                //     let cont: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+                //     cont.setAttribute("class", "containerExtras");
+                //     document.querySelector("main").appendChild(cont);
+                //     let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+                //     image.setAttribute("src", allExtras[i].extra);
+                //     cont.appendChild(image);
+                //     let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
+                //     cont.appendChild(list);
+                //     let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+                //     listelement.appendChild(document.createTextNode(allExtras[i].extra));
+                //     let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+                //     listelement2.appendChild(document.createTextNode("Preis: " + allExtras[i].price));
+                //     cont.appendChild(list);
+                //     list.appendChild(listelement);
+                //     list.appendChild(listelement2);
+                //     let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+                //     button.setAttribute("id", "button" + allExtras[i].extra);
+                //     button.appendChild(document.createTextNode(allExtras[i].extra + " auswählen"));
+                //     cont.appendChild(button);
+                // }
 
                 function electType(_event: Event): void {
                     let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
@@ -143,15 +143,15 @@ namespace Aufgabe2 {
                 }
             } 
         }
-        // function storage(): void {
-        //     localStorage.setItem("Auswahl", "Hoso-Maki");
-        //     console.log(localStorage.getItem("Auswahl"));
-        //     localStorage.setItem("Auswahl", "Nigiri");
-        //     console.log(localStorage.getItem("Auswahl"));
-        //     localStorage.setItem("Auswahl", "Temaki");
-        //     console.log(localStorage.getItem("Auswahl"));
-        // }
-        // storage();
+        function storage(): void {
+            localStorage.setItem("Auswahl", "Hoso-Maki");
+            console.log(localStorage.getItem("Auswahl"));
+            localStorage.setItem("Auswahl", "Nigiri");
+            console.log(localStorage.getItem("Auswahl"));
+            localStorage.setItem("Auswahl", "Temaki");
+            console.log(localStorage.getItem("Auswahl"));
+        }
+        storage();
 
     //     let fillingSite: Filling[] = undefined;
         
