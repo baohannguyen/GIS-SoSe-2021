@@ -78,7 +78,7 @@ namespace Aufgabe2 {
                     let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
                     button.setAttribute("id", "button" + allSelection[i].type);
                     button.appendChild(document.createTextNode(allSelection[i].type + " auswählen"));
-                    button.addEventListener("click", electTypeOne);
+                    button.addEventListener("click", electType);
                     container.appendChild(button);
                 }
                 for (let i: number = 0; i < allFilling.length; i++) {
@@ -124,10 +124,13 @@ namespace Aufgabe2 {
                     cont.appendChild(button);
                 }
 
-                function electTypeOne(_event: Event): void {
+                function electType(_event: Event): void {
                     let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
                     switch (button.id) {
                         case "buttonHoso-Maki":
+                            // let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+                            // image.setAttribute("src", allSelection[i].typePicture);
+                            // container.appendChild(image);
                             console.log("Sie haben sich für Hoso-Maki entschieden");
                             break;
                         case "buttonNigiri":

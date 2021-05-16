@@ -58,7 +58,7 @@ var Aufgabe2;
                     let button = document.createElement("button");
                     button.setAttribute("id", "button" + allSelection[i].type);
                     button.appendChild(document.createTextNode(allSelection[i].type + " auswählen"));
-                    button.addEventListener("click", electTypeOne);
+                    button.addEventListener("click", electType);
                     container.appendChild(button);
                 }
                 for (let i = 0; i < allFilling.length; i++) {
@@ -103,10 +103,13 @@ var Aufgabe2;
                     button.appendChild(document.createTextNode(allExtras[i].extra + " auswählen"));
                     cont.appendChild(button);
                 }
-                function electTypeOne(_event) {
+                function electType(_event) {
                     let button = _event.target;
                     switch (button.id) {
                         case "buttonHoso-Maki":
+                            // let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+                            // image.setAttribute("src", allSelection[i].typePicture);
+                            // container.appendChild(image);
                             console.log("Sie haben sich für Hoso-Maki entschieden");
                             break;
                         case "buttonNigiri":

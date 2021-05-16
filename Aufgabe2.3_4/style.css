@@ -46,6 +46,11 @@ div li {
     flex-direction: row;
     align-items: center;
 }
+.containerExtras {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 img {
     height: 200px;
     width: 240px;
