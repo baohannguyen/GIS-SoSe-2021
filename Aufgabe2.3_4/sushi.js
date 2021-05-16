@@ -31,7 +31,7 @@ var Aufgabe2;
             let attributeStorage = Aufgabe2.data[i].split("+");
             switch (attributeStorage[0]) {
                 case "Extras":
-                    allExtras[allExtras.length] = { extra1: attributeStorage[1], extra2: attributeStorage[2], extra3: attributeStorage[3], price: Number(attributeStorage[4]) };
+                    allExtras[allExtras.length] = { extra: attributeStorage[1], price: Number(attributeStorage[2]) };
             }
             seeVar();
             break;
@@ -82,6 +82,27 @@ var Aufgabe2;
                     button.appendChild(document.createTextNode(allFilling[i].type + " auswählen"));
                     ctn.appendChild(button);
                 }
+                for (let i = 0; i < allExtras.length; i++) {
+                    let cont = document.createElement("div");
+                    cont.setAttribute("class", "containerExtras");
+                    document.querySelector("main").appendChild(cont);
+                    let image = document.createElement("img");
+                    image.setAttribute("src", allExtras[i].extra);
+                    cont.appendChild(image);
+                    let list = document.createElement("ul");
+                    cont.appendChild(list);
+                    let listelement = document.createElement("li");
+                    listelement.appendChild(document.createTextNode(allExtras[i].extra));
+                    let listelement2 = document.createElement("li");
+                    listelement2.appendChild(document.createTextNode("Preis: " + allExtras[i].price));
+                    cont.appendChild(list);
+                    list.appendChild(listelement);
+                    list.appendChild(listelement2);
+                    let button = document.createElement("button");
+                    button.setAttribute("id", "button" + allExtras[i].extra);
+                    button.appendChild(document.createTextNode(allExtras[i].extra + " auswählen"));
+                    cont.appendChild(button);
+                }
                 function electTypeOne(_event) {
                     let button = _event.target;
                     switch (button.id) {
@@ -109,7 +130,7 @@ var Aufgabe2;
         storage();
         let fillingSite = undefined;
         let actualSite = undefined;
-        if (document.URL.includes("index2")) {
+        if (document.URL.includes("index2")) { // damit wird abgefragt ob die jetzige seite die index2.html Seite ist
             let selectionSite = undefined;
             selectionSite = allSelection;
             actualSite = dataStorage.selection.toString();
