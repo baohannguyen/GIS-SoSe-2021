@@ -1,0 +1,78 @@
+.container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.containerNavigation {
+    display: flex;
+    align-items: flex-start;
+}
+h1 {
+    color: lightblue;
+    font-family: verdana;
+}
+h2 {
+    color: cornflowerblue;
+    font-family: sans-serif;
+}
+nav {
+    color: royalblue;
+    font-size: 1em;
+    font-family: sans-serif;
+    list-style: none;   
+}
+.navigation {
+    display: inline;
+    text-decoration: none;
+}
+button {
+    background-color: lightblue;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 20%;
+}
+div li {
+    list-style: none;
+    font-family: sans-serif;
+    position: relative;
+    left: 140%; 
+}
+.containerSelection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.containerFilling {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.containerExtras {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img {
+    height: 180px;
+    width: 210px;
+}
+#allcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: verdana;
+    font-size: 1.5em;
+}
+#resultPics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 27%;
+    margin-top: 5%;
+}

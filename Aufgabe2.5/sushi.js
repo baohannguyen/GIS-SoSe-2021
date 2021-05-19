@@ -2,10 +2,12 @@
 var Aufgabe2;
 (function (Aufgabe2) {
     let dataStorage;
-    function changeData() {
-        dataStorage = JSON.parse(Aufgabe2.dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
+    // function changeData(): void {
+    //     dataStorage2 = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
+    // }
+    // changeData();
+    async function communicate(_url) {
     }
-    changeData();
     let allSelection = dataStorage.selection;
     let allFilling = dataStorage.filling;
     let allExtras = dataStorage.extras;

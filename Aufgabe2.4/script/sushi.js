@@ -1,105 +1,102 @@
-namespace Aufgabe2 {
-
-    let dataStorage: Sushi;
-    function changeData(): void {
-        dataStorage = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
+"use strict";
+var Aufgabe2;
+(function (Aufgabe2) {
+    let dataStorage;
+    // function changeData(): void {
+    //     dataStorage2 = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
+    // }
+    // changeData();
+    async function communicate(_url) {
     }
-    changeData();
-
-    let allSelection: Option[] = dataStorage.selection;
-    let allFilling: Option[] = dataStorage.filling;
-    let allExtras: Option[] = dataStorage.extras;
-
-    function seeSelection(): void {
-        for (let i: number = 0; i < allSelection.length; i++) {
-            let container: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+    let allSelection = dataStorage.selection;
+    let allFilling = dataStorage.filling;
+    let allExtras = dataStorage.extras;
+    function seeSelection() {
+        for (let i = 0; i < allSelection.length; i++) {
+            let container = document.createElement("div");
             container.setAttribute("class", "containerSelection");
             document.querySelector("#choices").appendChild(container);
-            let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+            let image = document.createElement("img");
             image.setAttribute("src", allSelection[i].typePicture);
             container.appendChild(image);
-            let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
+            let list = document.createElement("ul");
             container.appendChild(list);
-            let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+            let listelement = document.createElement("li");
             listelement.appendChild(document.createTextNode(allSelection[i].type));
-            let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+            let listelement2 = document.createElement("li");
             listelement2.appendChild(document.createTextNode("Preis: " + allSelection[i].price));
             container.appendChild(list);
             list.appendChild(listelement);
             list.appendChild(listelement2);
-            let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+            let button = document.createElement("button");
             button.setAttribute("id", "button" + allSelection[i].type);
             button.appendChild(document.createTextNode(allSelection[i].type + " auswählen"));
             button.addEventListener("click", electType);
             container.appendChild(button);
         }
     }
-    function seeFilling(): void {
-
-        for (let i: number = 0; i < allFilling.length; i++) {
-            let ctn: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+    function seeFilling() {
+        for (let i = 0; i < allFilling.length; i++) {
+            let ctn = document.createElement("div");
             ctn.setAttribute("class", "containerFilling");
             document.querySelector("#choices").appendChild(ctn);
-            let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+            let image = document.createElement("img");
             image.setAttribute("src", allFilling[i].typePicture);
             ctn.appendChild(image);
-            let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
+            let list = document.createElement("ul");
             ctn.appendChild(list);
-            let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+            let listelement = document.createElement("li");
             listelement.appendChild(document.createTextNode(allFilling[i].type));
-            let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+            let listelement2 = document.createElement("li");
             listelement2.appendChild(document.createTextNode("Preis: " + allFilling[i].price));
             ctn.appendChild(list);
             list.appendChild(listelement);
             list.appendChild(listelement2);
-            let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+            let button = document.createElement("button");
             button.setAttribute("id", "button" + allFilling[i].type);
             button.appendChild(document.createTextNode(allFilling[i].type + " auswählen"));
             button.addEventListener("click", electType);
             ctn.appendChild(button);
         }
-        let img: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-        let optionOne: Option = JSON.parse(localStorage.getItem("Auswahl"));
+        let img = document.createElement("img");
+        let optionOne = JSON.parse(localStorage.getItem("Auswahl"));
         img.setAttribute("src", optionOne.typePicture);
         document.getElementById("selection").appendChild(img);
     }
-   
-
-    function seeExtras(): void {
-        for (let i: number = 0; i < allExtras.length; i++) {
-            let cont: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+    function seeExtras() {
+        for (let i = 0; i < allExtras.length; i++) {
+            let cont = document.createElement("div");
             cont.setAttribute("class", "containerExtras");
             document.querySelector("#choices").appendChild(cont);
-            let image: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+            let image = document.createElement("img");
             image.setAttribute("src", allExtras[i].typePicture);
             cont.appendChild(image);
-            let list: HTMLUListElement = <HTMLUListElement>document.createElement("ul");
+            let list = document.createElement("ul");
             cont.appendChild(list);
-            let listelement: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+            let listelement = document.createElement("li");
             listelement.appendChild(document.createTextNode(allExtras[i].type));
-            let listelement2: HTMLLIElement = <HTMLLIElement>document.createElement("li");
+            let listelement2 = document.createElement("li");
             listelement2.appendChild(document.createTextNode("Preis: " + allExtras[i].price));
             cont.appendChild(list);
             list.appendChild(listelement);
             list.appendChild(listelement2);
-            let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+            let button = document.createElement("button");
             button.setAttribute("id", "button" + allExtras[i].type);
             button.appendChild(document.createTextNode(allExtras[i].type + " auswählen"));
             button.addEventListener("click", electType);
             cont.appendChild(button);
         }
-        let img: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-        let optionOne: Option = JSON.parse(localStorage.getItem("Auswahl"));
+        let img = document.createElement("img");
+        let optionOne = JSON.parse(localStorage.getItem("Auswahl"));
         img.setAttribute("src", optionOne.typePicture);
         document.getElementById("selection").appendChild(img);
-        let imgFilling: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-        let optionTwo: Option = JSON.parse(localStorage.getItem("Füllung"));
+        let imgFilling = document.createElement("img");
+        let optionTwo = JSON.parse(localStorage.getItem("Füllung"));
         imgFilling.setAttribute("src", optionTwo.typePicture);
         document.getElementById("selection").appendChild(imgFilling);
     }
-
-    function electType(_event: Event): void {
-        let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
+    function electType(_event) {
+        let button = _event.target;
         switch (button.id) {
             case "buttonHoso-Maki":
                 localStorage.setItem("Auswahl", JSON.stringify(dataStorage.selection[0]));
@@ -135,7 +132,7 @@ namespace Aufgabe2 {
                 localStorage.setItem("Extras", JSON.stringify(dataStorage.extras[0]));
                 console.log("Sie haben sich für Vegan entschieden");
                 window.location.href = "result.html";
-                break;  
+                break;
             case "buttonScharf":
                 localStorage.setItem("Extras", JSON.stringify(dataStorage.extras[1]));
                 console.log("Sie haben sich für Scharf entschieden");
@@ -148,26 +145,23 @@ namespace Aufgabe2 {
                 break;
         }
     }
-    function seeResult(): void {
-        let img: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-        let optionOne: Option = JSON.parse(localStorage.getItem("Auswahl"));
+    function seeResult() {
+        let img = document.createElement("img");
+        let optionOne = JSON.parse(localStorage.getItem("Auswahl"));
         img.setAttribute("src", optionOne.typePicture);
         document.querySelector("main").appendChild(img);
-        let imgFilling: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-        let optionTwo: Option = JSON.parse(localStorage.getItem("Füllung"));
+        let imgFilling = document.createElement("img");
+        let optionTwo = JSON.parse(localStorage.getItem("Füllung"));
         imgFilling.setAttribute("src", optionTwo.typePicture);
         document.querySelector("main").appendChild(imgFilling);
-        let imgExtras: HTMLImageElement = <HTMLImageElement>document.createElement("img");
-        let optionThree: Option = JSON.parse(localStorage.getItem("Extras"));
+        let imgExtras = document.createElement("img");
+        let optionThree = JSON.parse(localStorage.getItem("Extras"));
         imgExtras.setAttribute("src", optionThree.typePicture);
         document.querySelector("main").appendChild(imgExtras);
     }
-   
-    
-    function site(): void {
-
+    function site() {
         if (document.URL.includes("index2")) { //da wird abgefragt ob die jetzige Seite die index2.html ist 
-           seeSelection();
+            seeSelection();
         }
         else if (document.URL.includes("filling")) {
             seeFilling();
@@ -180,7 +174,5 @@ namespace Aufgabe2 {
         }
     }
     site();
-}
-
-
-
+})(Aufgabe2 || (Aufgabe2 = {}));
+//# sourceMappingURL=sushi.js.map
