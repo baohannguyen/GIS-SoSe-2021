@@ -184,6 +184,7 @@ var Aufgabe2;
             div.id = "dataButton";
             let dataButton = document.createElement("button");
             dataButton.appendChild(document.createTextNode("Sende Daten"));
+            dataButton.setAttribute("id", "sendData");
             dataButton.addEventListener("click", response);
             document.querySelector("div").appendChild(dataButton);
             let emptyAnswer = document.createElement("p");

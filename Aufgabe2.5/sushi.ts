@@ -208,6 +208,7 @@ namespace Aufgabe2 {
             div.id = "dataButton";
             let dataButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
             dataButton.appendChild(document.createTextNode("Sende Daten"));
+            dataButton.setAttribute("id", "sendData");
             dataButton.addEventListener("click", response);
             document.querySelector("div").appendChild(dataButton);
             let emptyAnswer: HTMLParagraphElement = <HTMLParagraphElement>document.createElement("p");
