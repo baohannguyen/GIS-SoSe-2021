@@ -207,5 +207,5 @@ var Aufgabe2;
         }
         site();
     }
-})(Aufgabe2 || (Aufgabe2 = {}));
+})(Aufgabe2 || (Aufgabe2 = {})); //Zusammengearbeitet mit Melanie Müller
 //# sourceMappingURL=sushi.js.map
