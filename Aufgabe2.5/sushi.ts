@@ -18,13 +18,13 @@ namespace Aufgabe2 {
 
     let dataStorage: Sushi;
 
-    async function communicate(_url: RequestInfo): Promise<void> {
+    async function changeData(_url: RequestInfo): Promise<void> {
         let seeJSON: Response = await fetch(_url);
         dataStorage = await seeJSON.json();
 
         mainData();
     }
-    communicate("https://baohannguyen.github.io/GIS-SoSe-2021/Aufgabe2.5/data.json");
+    changeData("https://baohannguyen.github.io/GIS-SoSe-2021/Aufgabe2.5/data.json");
 
     function mainData(): void {
         let allSelection: Option[] = dataStorage.selection;
@@ -181,13 +181,13 @@ namespace Aufgabe2 {
             let response: Response = await fetch(url);
             let message: Message = await response.json();
             console.log(JSON.stringify(message));
-            let emptyAnswer: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("answer");
+            let emptyMessage: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("message");
             if (message.error) {
-                emptyAnswer.style.color = "red";
-                emptyAnswer.innerText = message.error;
+                emptyMessage.style.color = "red";
+                emptyMessage.innerText = message.error;
             } else {
-                emptyAnswer.style.color = "green";
-                emptyAnswer.innerText = message.message;
+                emptyMessage.style.color = "green";
+                emptyMessage.innerText = message.message;
             }
         }
 
@@ -214,9 +214,7 @@ namespace Aufgabe2 {
             let emptyAnswer: HTMLParagraphElement = <HTMLParagraphElement>document.createElement("p");
             emptyAnswer.id = "answer";
             document.body.appendChild(emptyAnswer);
-
         }
-
 
         function site(): void {
 
