@@ -1,11 +1,11 @@
 {
 	"selection": [{
 		"type": "Hoso-Maki",
-		"typePicture": "maki.jpg",
+		"typePicture": "Bilder/maki.jpg",
 		"price": 0.7
 	}, {
 		"type": "Nigiri",
-		"typePicture": "nigiri.jpg",
+		"typePicture": "Bilder/nigiri.jpg",
 		"price": 1
 	}, {
 		"type": "Temaki",

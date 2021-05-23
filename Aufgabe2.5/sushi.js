@@ -6,12 +6,13 @@ var Aufgabe2;
     // }
     // changeData();
     let dataStorage;
-    async function communicate(_url) {
+    //Aufgabe b)
+    async function changeData(_url) {
         let seeJSON = await fetch(_url);
         dataStorage = await seeJSON.json();
         mainData();
     }
-    communicate("https://baohannguyen.github.io/GIS-SoSe-2021/Aufgabe2.5/data.json");
+    changeData("https://baohannguyen.github.io/GIS-SoSe-2021/Aufgabe2.5/data.json");
     function mainData() {
         let allSelection = dataStorage.selection;
         let allFilling = dataStorage.filling;
@@ -157,14 +158,14 @@ var Aufgabe2;
             let response = await fetch(url);
             let message = await response.json();
             console.log(JSON.stringify(message));
-            let emptyAnswer = document.getElementById("answer");
-            if (message.error) {
-                emptyAnswer.style.color = "red";
-                emptyAnswer.innerText = message.error;
+            let emptyMessage = document.getElementById("message");
+            if (message.message) {
+                emptyMessage.style.color = "darkgreen";
+                emptyMessage.innerText = message.message;
             }
             else {
-                emptyAnswer.style.color = "green";
-                emptyAnswer.innerText = message.message;
+                emptyMessage.style.color = "crimson";
+                emptyMessage.innerText = message.error;
             }
         }
         function seeResult() {
@@ -184,12 +185,11 @@ var Aufgabe2;
             div.id = "dataButton";
             let dataButton = document.createElement("button");
             dataButton.appendChild(document.createTextNode("Sende Daten"));
-            dataButton.setAttribute("id", "sendData");
             dataButton.addEventListener("click", response);
             document.querySelector("div").appendChild(dataButton);
-            let emptyAnswer = document.createElement("p");
-            emptyAnswer.id = "answer";
-            document.body.appendChild(emptyAnswer);
+            let emptyMessage = document.createElement("p");
+            emptyMessage.id = "message";
+            document.body.appendChild(emptyMessage);
         }
         function site() {
             if (document.URL.includes("index2")) { //da wird abgefragt ob die jetzige Seite die index2.html ist 

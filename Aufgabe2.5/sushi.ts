@@ -17,7 +17,7 @@ namespace Aufgabe2 {
     // changeData();
 
     let dataStorage: Sushi;
-
+    //Aufgabe b)
     async function changeData(_url: RequestInfo): Promise<void> {
         let seeJSON: Response = await fetch(_url);
         dataStorage = await seeJSON.json();
@@ -169,9 +169,10 @@ namespace Aufgabe2 {
                     break;
             }
         }
+        //Aufgabe c)
         interface Message {
-            error: string;
             message: string;
+            error: string;
         }
 
         async function response(): Promise<void> {
@@ -182,12 +183,12 @@ namespace Aufgabe2 {
             let message: Message = await response.json();
             console.log(JSON.stringify(message));
             let emptyMessage: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("message");
-            if (message.error) {
-                emptyMessage.style.color = "red";
-                emptyMessage.innerText = message.error;
-            } else {
-                emptyMessage.style.color = "green";
+            if (message.message) {
+                emptyMessage.style.color = "darkgreen";
                 emptyMessage.innerText = message.message;
+            } else {
+                emptyMessage.style.color = "crimson";
+                emptyMessage.innerText = message.error;
             }
         }
 
@@ -208,12 +209,11 @@ namespace Aufgabe2 {
             div.id = "dataButton";
             let dataButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
             dataButton.appendChild(document.createTextNode("Sende Daten"));
-            dataButton.setAttribute("id", "sendData");
             dataButton.addEventListener("click", response);
             document.querySelector("div").appendChild(dataButton);
-            let emptyAnswer: HTMLParagraphElement = <HTMLParagraphElement>document.createElement("p");
-            emptyAnswer.id = "answer";
-            document.body.appendChild(emptyAnswer);
+            let emptyMessage: HTMLParagraphElement = <HTMLParagraphElement>document.createElement("p");
+            emptyMessage.id = "message";
+            document.body.appendChild(emptyMessage);
         }
 
         function site(): void {
