@@ -1,10 +1,6 @@
 "use strict";
 var Aufgabe2;
 (function (Aufgabe2) {
-    // function changeData(): void {
-    //     dataStorage = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
-    // }
-    // changeData();
     let dataStorage;
     //Aufgabe b)
     async function changeData(_url) {

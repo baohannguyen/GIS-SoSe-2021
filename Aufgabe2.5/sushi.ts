@@ -9,13 +9,7 @@ namespace Aufgabe2 {
         typePicture: string;
         price: number;
     }
-
-    // function changeData(): void {
-    //     dataStorage = JSON.parse(dataJSON); // JSON-Format wird in ein TypeScript-Objekt konvertiert
-
-    // }
-    // changeData();
-
+    
     let dataStorage: Sushi;
     //Aufgabe b)
     async function changeData(_url: RequestInfo): Promise<void> {
@@ -56,7 +50,6 @@ namespace Aufgabe2 {
             }
         }
         function seeFilling(): void {
-
             for (let i: number = 0; i < allFilling.length; i++) {
                 let ctn: HTMLDivElement = <HTMLDivElement>document.createElement("div");
                 ctn.setAttribute("class", "containerFilling");
@@ -217,7 +210,6 @@ namespace Aufgabe2 {
         }
 
         function site(): void {
-
             if (document.URL.includes("index2")) { //da wird abgefragt ob die jetzige Seite die index2.html ist 
                 seeSelection();
             }
