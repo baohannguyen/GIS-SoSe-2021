@@ -9,7 +9,7 @@ namespace Aufgabe2 {
         typePicture: string;
         price: number;
     }
-    
+
     let dataStorage: Sushi;
     //Aufgabe b)
     async function changeData(_url: RequestInfo): Promise<void> {
@@ -208,7 +208,6 @@ namespace Aufgabe2 {
             emptyMessage.id = "message";
             document.body.appendChild(emptyMessage);
         }
-
         function site(): void {
             if (document.URL.includes("index2")) { //da wird abgefragt ob die jetzige Seite die index2.html ist 
                 seeSelection();
