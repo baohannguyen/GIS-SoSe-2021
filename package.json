@@ -1,0 +1,23 @@
+{
+  "name": "gis-sose-2021",
+  "version": "0.0.1",
+  "description": "Hallo!",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^15.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baohannguyen/GIS-SoSe-2021.git"
+  },
+  "author": "\"Bao Han Nguyen\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baohannguyen/GIS-SoSe-2021/issues"
+  },
+  "homepage": "https://github.com/baohannguyen/GIS-SoSe-2021#readme"
+}
