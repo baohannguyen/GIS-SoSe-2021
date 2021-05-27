@@ -19,7 +19,7 @@ export namespace P_3_1Server {
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
         console.log("I hear voices!");
-        console.log(_request.url);
+        console.log(_request.url); //teilaufgabe 2 c
         _response.setHeader("content-type", "text/html; charset=utf-8"); // wie head in HTML; unsichtbarer Teil; enthält Sachen wie meta,...
         _response.setHeader("Access-Control-Allow-Origin", "*"); //bestimmt wer alles die Antwort empfangen darf
         _response.write(_request.url); //Antwort, was im text steht; request.url -> die antwort wird an der url angehängt
