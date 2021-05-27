@@ -9,3 +9,5 @@ function test(): void {
 }
 
 test();
+//Danach hört der Code auf und deswegen crasht die Heroku Seite
+//Eigentlich sollte ein Listener da sein
