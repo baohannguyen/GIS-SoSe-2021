@@ -17,4 +17,4 @@ namespace AufgabeC {
         console.log(await response.text()); // wandelt in einem text um
         }
 
-    }
+    }//Mit Melanie Müller zusammengearbeitet
