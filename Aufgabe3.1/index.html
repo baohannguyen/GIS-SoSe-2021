@@ -10,14 +10,31 @@
 </head>
 
 <body>
-    <form method="GET" action="https://banhbao.herokuapp.com/" > <!--https://banhbao.herokuapp.com/-->
-        <label for="pw">Passwort</label>
-        <input type="password" placeholder="passwort hier" name="pw">
-        <label for="number">E-Mail</label>
-        <input type="email" placeholder="email hier" name="email">
+    <form method="GET" action="https://banhbao.herokuapp.com">
+        <div>
+            <label for="firstName">Vorname</label>
+            <input type="text" placeholder="Vorname" name="firstName">
+        </div>
+        <div>
+            <label for="lastName">Nachname</label>
+            <input type="text" placeholder="Nachname" name="lastName">
+        </div>
+        <div>
+            <label for="birthday">Geburtsdatum</label>
+            <input type="date" name="birthday">
+        </div>
+        <div>
+            <label for="pw">Passwort</label>
+            <input type="password" placeholder="Passwort" name="pw">
+        </div>
+        <div>
+            <label for="number">E-Mail</label>
+            <input type="email" placeholder="E-Mail" name="email">
+        </div>
 
     </form>
-    <button id="sendButton">Senden</button> <!--für die letzte aufgabe button ändern-->
+    <button id="sendButton">Senden</button>
+    <!--für die letzte aufgabe button ändern-->
 </body>
 
 </html>

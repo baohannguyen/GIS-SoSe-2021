@@ -25,4 +25,4 @@ var P_3_1Server;
         _response.end(); //finished die response
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
-//# sourceMappingURL=bs.skript.js.map
+//# sourceMappingURL=bp_code.js.map

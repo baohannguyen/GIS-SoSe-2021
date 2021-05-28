@@ -8,8 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./Aufgabe3.1/bs.skript.js",
-    "test": "node ./Aufgabe3.1/bs.skript.js"
+    "start": "node ./Aufgabe3.1/bp_code.js",
+    "test": "node ./Aufgabe3.1/bp_code.js"
   },
   "repository": {
     "type": "git",
