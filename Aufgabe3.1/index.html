@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <form method="GET" action="https://banhbao.herokuapp.com">
+<body id="container">
+    <h1>Login</h1>
+    <form method="GET" action="https://banhbao.herokuapp.com/">
         <div>
             <label for="firstName">Vorname</label>
             <input type="text" placeholder="Vorname" name="firstName">
@@ -31,10 +33,11 @@
             <label for="number">E-Mail</label>
             <input type="email" placeholder="E-Mail" name="email">
         </div>
-
     </form>
-    <button id="sendButton">Senden</button>
-    <!--für die letzte aufgabe button ändern-->
+    <span>
+        <button id="sendButton">Senden</button>
+        <!--für die letzte aufgabe button ändern-->
+    </span>
 </body>
 
 </html>
