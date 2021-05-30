@@ -12,7 +12,7 @@ var P_3_1Server;
     let server = Http.createServer(); //neuer Server wird erstellt
     server.addListener("request", handleRequest); //dem Server wird einem Event Listener für "request" hinzugefügt
     server.addListener("listening", handleListen); // das Gleiche für "listening"
-    server.listen(port); // er "hört" ob requests kommen/ auf dem definierten port
+    server.listen(port); // der Server "hört" ob requests kommen
     function handleListen() {
         console.log("Listening"); //wenn er was "hört" gibt er "Listening" in der Konsole aus
     }
