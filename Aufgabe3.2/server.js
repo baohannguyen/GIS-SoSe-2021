@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.P_3_2Server = void 0;
 const Http = require("http"); //Es werden die Funktionalitäten von der Klasse "http" importiert und das wird Http genannt
+const url = require("url");
 var P_3_2Server;
 (function (P_3_2Server) {
     console.log("Starting server"); //wird in der Konsole des Servers ausgegeben
@@ -17,6 +18,9 @@ var P_3_2Server;
         console.log("Listening"); //wenn er was "hört" gibt er "Listening" in der Konsole aus
     }
     function handleRequest(_request, _response) {
+        // let adresse: string = "http://localhost:8100";
+        let q = url.parse(_request.url, true);
+        console.log(q);
         console.log("I hear voices!");
         console.log(_request.url); //Teilaufgabe 2
         _response.setHeader("content-type", "text/html; charset=utf-8"); // wie head in HTML; unsichtbarer Teil; enthält die Meta-Informationen

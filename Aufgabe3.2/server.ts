@@ -21,6 +21,10 @@ export namespace P_3_2Server {
 
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+        // let adresse: string = "http://localhost:8100";
+        let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
+        console.log(q);
+        
         console.log("I hear voices!");
         console.log(_request.url); //Teilaufgabe 2
         _response.setHeader("content-type", "text/html; charset=utf-8"); // wie head in HTML; unsichtbarer Teil; enthält die Meta-Informationen
