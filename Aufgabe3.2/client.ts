@@ -1,5 +1,4 @@
-//Client
-namespace Aufgabe3_1 {
+namespace Aufgabe3_2 {
     interface Data {
         firstName: string;
         lastName: string;
@@ -7,9 +6,10 @@ namespace Aufgabe3_1 {
         password: string;
         email: string;
     }
-
+    
     document.getElementById("sendButton").addEventListener("click", getAnswer);
-
+   
+    
     async function getAnswer(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]); //gibt das formData objekt aus;
         let login: Data = { firstName: formData.get("firstName").toString(), lastName: formData.get("lastName").toString(), birthday: formData.get("birthday").toString(), 
@@ -21,4 +21,4 @@ namespace Aufgabe3_1 {
         console.log(await answer.text()); // wandelt in einem Text um
     }
 
-}//Mit Melanie Müller zusammengearbeitet
+}
