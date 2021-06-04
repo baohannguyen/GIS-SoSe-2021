@@ -18,14 +18,24 @@ var P_3_2Server;
         console.log("Listening"); //wenn er was "hört" gibt er "Listening" in der Konsole aus
     }
     function handleRequest(_request, _response) {
-        // let adresse: string = "http://localhost:8100";
         let q = url.parse(_request.url, true);
-        console.log(q);
+        let queryData = q.query; // Werte werden gespeichert
         console.log("I hear voices!");
-        console.log(_request.url); //Teilaufgabe 2
-        _response.setHeader("content-type", "text/html; charset=utf-8"); // wie head in HTML; unsichtbarer Teil; enthält die Meta-Informationen
+        // console.log(_request.url); //Teilaufgabe 2
         _response.setHeader("Access-Control-Allow-Origin", "*"); //bestimmt wer alles die Antwort empfangen darf
-        _response.write(_request.url); //Antwort, die im Text steht; request.url -> die Antwort wird an der URL angehängt
+        if (q.pathname == "/html") {
+            _response.setHeader("content-type", "text/html; charset=utf-8"); // wie head in HTML; unsichtbarer Teil; enthält die Meta-Informationen
+            let htmlString = "";
+            for (let key in queryData) { // key = wert der unser string durchgeht
+                htmlString += "<p>" + key + ":" + queryData[key] + "</p>";
+            }
+            _response.write(htmlString);
+        }
+        else if (q.pathname == "/json") {
+            _response.setHeader("content-type", "application/json; charset=utf-8");
+            let jsonData = JSON.stringify(queryData); // das Ganze wurde als string umgewandelt
+            _response.write(jsonData); //Antwort, die im Text steht; request.url -> die Antwort wird an der URL angehängt
+        }
         _response.end(); //beendet die response
     }
 })(P_3_2Server = exports.P_3_2Server || (exports.P_3_2Server = {}));
