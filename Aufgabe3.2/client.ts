@@ -19,15 +19,15 @@ namespace Aufgabe3_2 {
             password: formData.get("pw").toString(), email: formData.get("email").toString()
         }; //values von den Daten wurden in das Objekt login gespeichert
         let query: URLSearchParams = new URLSearchParams(<any>login); //eine neue query aus unserem Objekt wurde erstellt 
-        let url: string = "http://localhost:8100"; //da wird die URL gesetzt
+        let url: string = "https://banhbao.herokuapp.com/"; //da wird die URL gesetzt
         switch (button.id) { //bedingung
             case "htmlButton": //den fall wenn es passiert
-                url += "/html";
+                url += "html";
                 //ein div element auf der seite mit dem html sachen befüllen
                 //un bei json muss man in der konsole ausgeben
                 break;
             case "jsonButton":
-                url += "/json";
+                url += "json";
                 break;
         }
 
