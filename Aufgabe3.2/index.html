@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="client.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="container">
     <h1>Login</h1>
     <form method="GET" action="https://banhbao.herokuapp.com/">
@@ -31,11 +33,20 @@
             <label for="email">E-Mail</label>
             <input type="email" placeholder="E-Mail" name="email">
         </div>
+        <!-- <div>
+            <label for="male">Männlich</label>
+            <input type="checkbox" name="male">
+            <label for="female">Weiblich</label>
+            <input type="checkbox" name="female">
+            <label for="divers">Divers</label>
+            <input type="checkbox" name="divers">
+        </div> -->
     </form>
     <span>
         <button id="jsonButton">Sende JSON</button> <!--Button außerhalb des form tags machen oder submit button zu einem normalen button ändern-->
         <button id="htmlButton">Sende HTML</button>
-        <p id="aufrufen"></p>
+        <p id="pTag"></p>
     </span>
 </body>
+
 </html>
