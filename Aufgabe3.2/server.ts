@@ -26,7 +26,6 @@ export namespace P_3_2Server {
         let queryData: ParsedUrlQuery = q.query; // Werte werden gespeichert
 
         console.log("I hear voices!");
-        // console.log(_request.url); //Teilaufgabe 2
         _response.setHeader("Access-Control-Allow-Origin", "*"); //bestimmt wer alles die Antwort empfangen darf
 
         if (q.pathname == "/html") {
@@ -40,7 +39,6 @@ export namespace P_3_2Server {
             _response.setHeader("content-type", "application/json; charset=utf-8");
             let jsonData: string = JSON.stringify(queryData); // das Ganze wurde als string umgewandelt
             _response.write(jsonData); //Antwort, die im Text steht; request.url -> die Antwort wird an der URL angehängt
-
         }
         _response.end(); //beendet die response
     }

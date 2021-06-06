@@ -5,6 +5,7 @@ namespace Aufgabe3_2 {
         birthday: string;
         password: string;
         email: string;
+        data: string;
     }
 
     document.getElementById("jsonButton").addEventListener("click", getAnswer);
@@ -15,7 +16,7 @@ namespace Aufgabe3_2 {
         let button: HTMLButtonElement = <HTMLButtonElement>_e.target; //git element zurück wo wir geklickt haben, bei htmlbutton kriegen wir html und das gleiche für json
         let formData: FormData = new FormData(document.forms[0]); //gibt das formData objekt aus;
         let login: Data = { firstName: formData.get("firstName").toString(), lastName: formData.get("lastName").toString(), birthday: formData.get("birthday").toString(),
-            password: formData.get("pw").toString(), email: formData.get("email").toString()}; //values von den Daten wurden in das Objekt login gespeichert
+            password: formData.get("pw").toString(), email: formData.get("email").toString(), data: formData.get("data").toString()}; //values von den Daten wurden in das Objekt login gespeichert
         let query: URLSearchParams = new URLSearchParams(<any>login); //eine neue query aus unserem Objekt wurde erstellt 
         let url: string = "https://banhbao.herokuapp.com/"; //da wird die URL gesetzt
         switch (button.id) {
@@ -38,6 +39,6 @@ namespace Aufgabe3_2 {
                 console.log(await answer.json());
                 break;
         }
-    }
+    } //Mit Melanie Müller zusammengearbeitet
 
 }

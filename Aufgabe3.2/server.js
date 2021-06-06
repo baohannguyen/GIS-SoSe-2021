@@ -21,7 +21,6 @@ var P_3_2Server;
         let q = url.parse(_request.url, true);
         let queryData = q.query; // Werte werden gespeichert
         console.log("I hear voices!");
-        // console.log(_request.url); //Teilaufgabe 2
         _response.setHeader("Access-Control-Allow-Origin", "*"); //bestimmt wer alles die Antwort empfangen darf
         if (q.pathname == "/html") {
             _response.setHeader("content-type", "text/html; charset=utf-8"); // wie head in HTML; unsichtbarer Teil; enthält die Meta-Informationen
