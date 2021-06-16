@@ -7,7 +7,7 @@ async function connectToDB(_url) {
     await mongoClient.connect(); // liefert eine Promise
     let students = mongoClient.db("Test").collection("Students"); //Collecetion die wir angelegt haben
     // let s: Student = {name: "Max Mustermann", matrikel: 666};
-    // students.insertOne(s);
+    // students.insertOne(s); //limitiert sich auf dem Ersten den man sucht
     let cursor = students.find(); //Cursor = Zeiger auf Elemente, die an auslesen kann
     let result = await cursor.toArray(); // eine Möglichkeit, um aus dem Cursor die gefundenen Elemente rauszukriegen; cursor gibt uns eine Promise zurück
     console.log(result);
