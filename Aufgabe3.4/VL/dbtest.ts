@@ -6,9 +6,15 @@ async function connectToDB(_url: string): Promise<void> {
     let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options); // stellt Verbindung zum Datenbanksystem her (wie wenn man lokal mit mongod eine Verbindung herstellt)
     await mongoClient.connect(); // liefert eine Promise
 
-    let students: Mongo.Collection = mongoClient.db("Test").collection("Students");
-    let cursor: Mongo.Cursor = students.find();
-    console.log(cursor);
+    let students: Mongo.Collection = mongoClient.db("Test").collection("Students"); //Collecetion die wir angelegt haben
+    
+    // let s: Student = {name: "Max Mustermann", matrikel: 666};
+    // students.insertOne(s);
+
+    let cursor: Mongo.Cursor = students.find(); //Cursor = Zeiger auf Elemente, die an auslesen kann
+    let result: Student[] = await cursor.toArray(); // eine Möglichkeit, um aus dem Cursor die gefundenen Elemente rauszukriegen; cursor gibt uns eine Promise zurück
+    console.log(result);
+
     
 
     // let s: Student = {name: "Max Mustermann", matrikel: 666};
@@ -25,7 +31,7 @@ async function connectToDB(_url: string): Promise<void> {
 
 connectToDB("mongodb://localhost:27017");
 
-// interface Student {
-//     name: string;
-//     matrikel: number;
-// }
+interface Student {
+    name: string;
+    matrikel: number;
+}
