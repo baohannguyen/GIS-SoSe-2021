@@ -10,8 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./Aufgabe3.2/server.js",
-    "test": "node ./Aufgabe3.2/server.js"
+    "start": "node ./Aufgabe3.4/server.js",
+    "test": "node ./Aufgabe3.4/server.js"
   },
   "repository": {
     "type": "git",
