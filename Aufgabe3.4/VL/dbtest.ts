@@ -11,24 +11,14 @@ async function connectToDB(_url: string): Promise<void> {
     // let s: Student = {name: "Max Mustermann", matrikel: 666};
     // students.insertOne(s); //limitiert sich auf dem Ersten den man sucht
 
-    let cursor: Mongo.Cursor = students.find(); //Cursor = Zeiger auf Elemente, die an auslesen kann
+    let cursor: Mongo.Cursor = students.find({name: "Melanie Müller"}); //Cursor = Zeiger auf Elemente, die an auslesen kann;
     let result: Student[] = await cursor.toArray(); // eine Möglichkeit, um aus dem Cursor die gefundenen Elemente rauszukriegen; cursor gibt uns eine Promise zurück
     console.log(result);
-
-    
-
-    // let s: Student = {name: "Max Mustermann", matrikel: 666};
-    // students.insertOne(s);
-
-    // let cursor: Mongo.Cursor = students.find({ name: "Andreas Reich hallo" });
-    // let result: Student[] = await cursor.toArray();
-    // console.log(result);
 
     // let s: Student = await students.findOne({ matrikel: 123456 });
     // console.log(s);
     // students.deleteOne({ matrikel: 666 });
 }
-
 connectToDB("mongodb://localhost:27017");
 
 interface Student {
