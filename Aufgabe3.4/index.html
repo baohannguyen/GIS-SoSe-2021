@@ -8,22 +8,24 @@
     <script src="client.js" defer></script>
 </head>
 <body>
-    <h1>Login</h1>
-    <form method="GET" action="https://banhbao.herokuapp.com/">
+    <h1>Profil</h1>
+    <form id="profil">
         <div>
-            <label for="firstName">Vorname</label>
-            <input type="text" placeholder="Vorname" name="firstName">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" name="name">
         </div>
         <div>
-            <label for="birthday">Geburtsdatum</label>
+            <label for="birthday">Geburtstag</label>
             <input type="date" name="birthday">
         </div>
         <div>
             <label for="email">E-Mail</label>
             <input type="email" placeholder="E-Mail" name="email">
         </div>
-        <div>
-            
+    </form>
+        <div id="output">     
         </div>
+        <button id="sendButton">Sende Daten</button>
+        <button id="requestButton">Gib Daten zurück</button>
 </body>
 </html>
