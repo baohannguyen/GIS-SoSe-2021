@@ -1,6 +1,6 @@
 "use strict";
-var Prüfungsaufgabe;
-(function (Prüfungsaufgabe) {
+var Memoryaufgabe;
+(function (Memoryaufgabe) {
     let insertButton = document.getElementById("insertPicture");
     insertButton.addEventListener("click", addPicture);
     async function addPicture() {
@@ -17,5 +17,5 @@ var Prüfungsaufgabe;
         console.log(await response.text());
     }
     getPictures();
-})(Prüfungsaufgabe || (Prüfungsaufgabe = {}));
+})(Memoryaufgabe || (Memoryaufgabe = {}));
 //# sourceMappingURL=client.js.map

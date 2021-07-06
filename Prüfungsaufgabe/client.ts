@@ -1,4 +1,4 @@
-namespace Prüfungsaufgabe {
+namespace Memoryaufgabe {
     interface Pictures {
         link: string;
     }
