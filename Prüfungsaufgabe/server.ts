@@ -28,7 +28,6 @@ export namespace Admin {
     }
     async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> { //IncomingMessage = das was reinkommt bei der Request; ServerResponse = die Antwort, die wir kriegen; Antwort ist schon da, aber sie ist noch leer
         await connectToMongoDB(mongoURL);
-        let example: Mongo.Collection = mongoClient.db("Memory").collection("Bildlinks");
 
         let reqURL: url.UrlWithParsedQuery = url.parse(_request.url, true); //true sorgt dafür dass man es besser lesen kann 
         let queryData: ParsedUrlQuery = reqURL.query;
@@ -37,16 +36,18 @@ export namespace Admin {
         _response.setHeader("content-type", "text/html; charset=utf-8");
 
         switch (reqURL.pathname) {
+            case "/getPicture": //soll die Bilderlinks aus der Datenbank holen ?
+                let example: Mongo.Collection = mongoClient.db("Memory").collection("Bildlinks");
+                // let cursor: Mongo.Cursor = example.find(); //Cursor greif auf die Beispieldaten zu 
+                let pictureURL: Pictures[] = await example.find().toArray();
+                console.log(pictureURL);
+                _response.write(JSON.stringify(pictureURL));
+                break;
             case "/insertURL":
                 console.log(queryData);
-                let examplePic: Pictures = { link: queryData["newPicture"].toString()};
+                let examplePic: Pictures = { link: queryData["newPicture"].toString() };
                 example.insertOne(examplePic);
-                
-            case "/getPicture": //soll die Bilderlinks aus der Datenbank holen ?
-                let cursor: Mongo.Cursor = example.find(); //Cursor greif auf die Beispieldaten zu 
-                let pictureURL: Pictures[] = await cursor.toArray();
-                console.log(pictureURL);
-                break;
+
         }
         _response.end();
     }
