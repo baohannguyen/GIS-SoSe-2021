@@ -10,7 +10,7 @@ var Admin;
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
-    let mongoURL = "mongodb+srv://user_10:password234@gis-cluster.ggwu7.mongodb.net/Beispieldaten?retryWrites=true&w=majority"; //Port von der Datenbank
+    let mongoURL = "mongodb+srv://user_10:password234@gis-cluster.ggwu7.mongodb.net/Memory?retryWrites=true&w=majority"; //Port von der Datenbank
     let mongoClient = undefined; //mongoClient wurde erzeugt, hat aber noch keinen Wert
     console.log(mongoClient);
     let server = Http.createServer();
@@ -22,7 +22,7 @@ var Admin;
     }
     async function handleRequest(_request, _response) {
         await connectToMongoDB(mongoURL);
-        let example = mongoClient.db("Beispieldaten").collection("Katzen");
+        let example = mongoClient.db("Memory").collection("Bildlinks");
         let reqURL = url.parse(_request.url, true); //true sorgt dafür dass man es besser lesen kann 
         let queryData = reqURL.query;
         _response.setHeader("Access-Control-Allow-Origin", "*"); // bestimmt wer alles die Antwort empfangen darf

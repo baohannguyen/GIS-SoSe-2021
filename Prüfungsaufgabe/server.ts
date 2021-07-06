@@ -13,7 +13,7 @@ export namespace Admin {
     if (!port)
         port = 8100;
 
-    let mongoURL: string = "mongodb+srv://user_10:password234@gis-cluster.ggwu7.mongodb.net/Beispieldaten?retryWrites=true&w=majority"; //Port von der Datenbank
+    let mongoURL: string = "mongodb+srv://user_10:password234@gis-cluster.ggwu7.mongodb.net/Memory?retryWrites=true&w=majority"; //Port von der Datenbank
     let mongoClient: Mongo.MongoClient = undefined; //mongoClient wurde erzeugt, hat aber noch keinen Wert
     console.log(mongoClient);
 
@@ -28,7 +28,7 @@ export namespace Admin {
     }
     async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> { //IncomingMessage = das was reinkommt bei der Request; ServerResponse = die Antwort, die wir kriegen; Antwort ist schon da, aber sie ist noch leer
         await connectToMongoDB(mongoURL);
-        let example: Mongo.Collection = mongoClient.db("Beispieldaten").collection("Katzen");
+        let example: Mongo.Collection = mongoClient.db("Memory").collection("Bildlinks");
 
         let reqURL: url.UrlWithParsedQuery = url.parse(_request.url, true); //true sorgt dafür dass man es besser lesen kann 
         let queryData: ParsedUrlQuery = reqURL.query;
