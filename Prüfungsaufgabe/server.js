@@ -23,10 +23,22 @@ var Admin;
     async function handleRequest(_request, _response) {
         await connectToMongoDB(mongoURL);
         let example = mongoClient.db("Beispieldaten").collection("Katzen");
-        let requestURL = url.parse(_request.url, true); //true sorgt dafür dass man es besser lesen kann 
-        let queryData = requestURL.query;
+        let reqURL = url.parse(_request.url, true); //true sorgt dafür dass man es besser lesen kann 
+        let queryData = reqURL.query;
         _response.setHeader("Access-Control-Allow-Origin", "*"); // bestimmt wer alles die Antwort empfangen darf
-        _response.setHeader("content-type", "image/jpeg; charset=utf-8"); // image/jpeg von "https://developer.mozilla.org/en-US/docs/Web/API/Request/headers"; kp ob das richtig ist
+        _response.setHeader("content-type", "text/html; charset=utf-8");
+        switch (reqURL.pathname) {
+            case "/insertURL":
+                console.log(queryData);
+                let examplePic = { link: queryData["newPicture"].toString() };
+                example.insertOne(examplePic);
+            case "/getPicture": //soll die Bilderlinks aus der Datenbank holen ?
+                let cursor = example.find(); //Cursor greif auf die Beispieldaten zu 
+                let pictureURL = await cursor.toArray();
+                console.log(pictureURL);
+                break;
+        }
+        _response.end();
     }
     async function connectToMongoDB(_url) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true }; //MongoClientOptions = Interface; Einstellungen für unsere Verbindung zur Datenbank;
