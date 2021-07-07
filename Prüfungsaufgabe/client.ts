@@ -13,6 +13,8 @@ namespace Memoryaufgabe {
         let url: string = "http://localhost:8100/insertURL"; //URL wird hier gesetzt
         url = url + "?" + query.toString();
         await fetch(url);
+        let form: HTMLFormElement = <HTMLFormElement>document.getElementById("memory");
+        form.reset();
 
     }
     async function getPictures(): Promise<void> {
@@ -20,8 +22,9 @@ namespace Memoryaufgabe {
         let url: string = "http://localhost:8100/getPicture";
         let response: Response = await fetch(url); //speichert die Antwort
         // console.log(await response.text());
-        let dataString: string = await response.text();
-        output.innerHTML = dataString;
+        let dataString: string = await response.json();
+        // output.innerHTML = dataString;
+        
     }
     getPictures();   
     }

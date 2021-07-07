@@ -10,14 +10,16 @@ var Memoryaufgabe;
         let url = "http://localhost:8100/insertURL"; //URL wird hier gesetzt
         url = url + "?" + query.toString();
         await fetch(url);
+        let form = document.getElementById("memory");
+        form.reset();
     }
     async function getPictures() {
         let output = document.getElementById("showPic");
         let url = "http://localhost:8100/getPicture";
         let response = await fetch(url); //speichert die Antwort
         // console.log(await response.text());
-        let dataString = await response.text();
-        output.innerHTML = dataString;
+        let dataString = await response.json();
+        // output.innerHTML = dataString;
     }
     getPictures();
 })(Memoryaufgabe || (Memoryaufgabe = {}));
