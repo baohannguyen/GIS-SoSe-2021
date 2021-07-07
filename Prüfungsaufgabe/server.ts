@@ -17,7 +17,6 @@ export namespace Admin {
     let mongoClient: Mongo.MongoClient = undefined; //mongoClient wurde erzeugt, hat aber noch keinen Wert
     console.log(mongoClient);
 
-
     let server: Http.Server = Http.createServer();
     server.addListener("request", handleRequest); //wenn der Server eine request erhält, wird dann die Funktion handleRequest aufgerufen
     server.addListener("listening", handleListen); //das Gleiche für listening
@@ -37,17 +36,18 @@ export namespace Admin {
 
         switch (reqURL.pathname) {
             case "/getPicture": //soll die Bilderlinks aus der Datenbank holen ?
-                let example: Mongo.Collection = mongoClient.db("Memory").collection("Bildlinks");
+                let picMemory: Mongo.Collection = mongoClient.db("Memory").collection("Bildlinks");
+                let pictureURL: Pictures[] = await picMemory.find().toArray();
                 // let cursor: Mongo.Cursor = example.find(); //Cursor greif auf die Beispieldaten zu 
-                let pictureURL: Pictures[] = await example.find().toArray();
+                // let pictureURL: Pictures[] = await example.find().toArray();
                 console.log(pictureURL);
-                _response.write(JSON.stringify(pictureURL));
+                _response.write(JSON.stringify(pictureURL)); // wird mir als JSON in der Konsole ausgegeben 
                 break;
             case "/insertURL":
                 console.log(queryData);
-                let examplePic: Pictures = { link: queryData["newPicture"].toString() };
-                example.insertOne(examplePic);
-
+                let loadPic: Pictures = { link: queryData["newPicture"].toString() };
+                picMemory.insertOne(loadPic);
+                break;
         }
         _response.end();
     }

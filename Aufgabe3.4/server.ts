@@ -45,7 +45,7 @@ export namespace P_3_4Server {
                 students.insertOne(student);
                 break;
             case "/get": //holt die Daten aus der Datenbank
-                let cursor: Mongo.Cursor = students.find(); //Cursor greift aud die Studenten zu
+                let cursor: Mongo.Cursor = students.find(); //Cursor greift auf die Studenten zu
                 let allStudent: Student[] = await cursor.toArray();
                 _response.write(JSON.stringify(allStudent)); //Array allstudent wurde in einem json konvertiert
                 break;

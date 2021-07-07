@@ -1,0 +1,23 @@
+/* Allgemeine und Smartphone Darstellung*/
+body {
+    background-image: url("bilder/bgpic.jpg");
+    font-family: Verdana, sans-serif;
+}
+h1 {
+    color: rgb(0, 0, 0, 0.555);
+    text-align: center;
+}
+button a {
+    color:black;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+}
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+}
+#name {
+    font-family: Verdana, sans-serif;
+    color: rgb(0, 0, 0, 0.555);
+    text-align: center;
+}

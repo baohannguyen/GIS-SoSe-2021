@@ -34,7 +34,7 @@ var P_3_4Server;
                 students.insertOne(student);
                 break;
             case "/get": //holt die Daten aus der Datenbank
-                let cursor = students.find(); //Cursor greift aud die Studenten zu
+                let cursor = students.find(); //Cursor greift auf die Studenten zu
                 let allStudent = await cursor.toArray();
                 _response.write(JSON.stringify(allStudent)); //Array allstudent wurde in einem json konvertiert
                 break;

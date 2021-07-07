@@ -28,16 +28,18 @@ var Admin;
         _response.setHeader("content-type", "text/html; charset=utf-8");
         switch (reqURL.pathname) {
             case "/getPicture": //soll die Bilderlinks aus der Datenbank holen ?
-                let example = mongoClient.db("Memory").collection("Bildlinks");
+                let picMemory = mongoClient.db("Memory").collection("Bildlinks");
+                let pictureURL = await picMemory.find().toArray();
                 // let cursor: Mongo.Cursor = example.find(); //Cursor greif auf die Beispieldaten zu 
-                let pictureURL = await example.find().toArray();
+                // let pictureURL: Pictures[] = await example.find().toArray();
                 console.log(pictureURL);
-                _response.write(JSON.stringify(pictureURL));
+                _response.write(JSON.stringify(pictureURL)); // wird mir als JSON in der Konsole ausgegeben 
                 break;
             case "/insertURL":
                 console.log(queryData);
-                let examplePic = { link: queryData["newPicture"].toString() };
-                example.insertOne(examplePic);
+                let loadPic = { link: queryData["newPicture"].toString() };
+                picMemory.insertOne(loadPic);
+                break;
         }
         _response.end();
     }
