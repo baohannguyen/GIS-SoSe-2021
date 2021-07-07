@@ -57,6 +57,7 @@ export namespace Admin {
         mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect(); //verbindet mongoclient mit der Datenbank
     }
+    connectToMongoDB("mongodb://localhost:27017");
 }
 
 
